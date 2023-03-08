@@ -6,5 +6,10 @@ namespace GroupProject_106
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            label1.Text = Consumer.Integral.ToString();
+        }
     }
 }

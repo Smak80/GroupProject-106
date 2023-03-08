@@ -8,8 +8,10 @@ using System.Threading.Tasks;
 
 namespace GroupProject_106
 {
+    public delegate void Finishdelegate();
     public class Producer
     {
+        public event Finishdelegate? Finish;
         double a;
         double b;
         double dx;
@@ -22,8 +24,16 @@ namespace GroupProject_106
 
         public void Start()
         {
+            /*
+            1 - 2757
+            2 - 1703
+            3 - 1273
+            4 - 1089
+
+             */
             object locker = new object();
-            var threadCount = 3;
+            var threadCount = 5;
+            var counter = 0;
             for (int tn = 0; tn < threadCount; tn++)
             {
                 var t = new Thread(() =>
@@ -31,9 +41,11 @@ namespace GroupProject_106
                     double result = 0;
                     for (double i = a; i <= b; i += dx * threadCount)
                     {
-                        result += Program.F(i) * dx;
+                        result += Form1.F(i) * dx;
                     }
                     CommonData.Put(result);
+                    counter++;
+                    if (counter == threadCount && Finish != null) Finish();
                 });
                 t.IsBackground = true;
                 t.Start();

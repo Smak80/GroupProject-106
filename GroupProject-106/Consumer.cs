@@ -11,6 +11,7 @@ namespace GroupProject_106
     {
         static double integral;
         public static double Integral { get => integral; }
+
         public Consumer()
         {
             integral = 0;

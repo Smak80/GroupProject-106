@@ -9,4 +9,55 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Include="obj\Debug\net7.0-windows\.NETCoreApp,Version=v7.0.AssemblyAttributes.cs" />
+    <Compile Include="obj\Debug\net7.0-windows\GroupProject-106.AssemblyInfo.cs" />
+    <Compile Include="obj\Debug\net7.0-windows\GroupProject-106.GlobalUsings.g.cs" />
+    <Compile Include="obj\Debug\net7.0-windows\Parsing.AssemblyInfo.cs" />
+    <Compile Include="obj\Debug\net7.0-windows\Parsing.GlobalUsings.g.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="bin\Debug\net7.0-windows\Parsing.deps.json" />
+    <Content Include="bin\Debug\net7.0-windows\Parsing.runtimeconfig.json" />
+    <Content Include="obj\Debug\net7.0-windows\Parsing.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\net7.0-windows\Parsing.designer.deps.json" />
+    <Content Include="obj\Debug\net7.0-windows\Parsing.designer.runtimeconfig.json" />
+    <Content Include="obj\GroupProject-106.csproj.nuget.dgspec.json" />
+    <Content Include="obj\Parsing.csproj.nuget.dgspec.json" />
+    <Content Include="obj\project.assets.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="bin\Debug\net7.0-windows\Parsing.dll" />
+    <None Include="bin\Debug\net7.0-windows\Parsing.exe" />
+    <None Include="bin\Debug\net7.0-windows\Parsing.pdb" />
+    <None Include="obj\Debug\net7.0-windows\apphost.exe" />
+    <None Include="obj\Debug\net7.0-windows\GroupProject-106.AssemblyInfoInputs.cache" />
+    <None Include="obj\Debug\net7.0-windows\GroupProject-106.assets.cache" />
+    <None Include="obj\Debug\net7.0-windows\GroupProject-106.csproj.AssemblyReference.cache" />
+    <None Include="obj\Debug\net7.0-windows\GroupProject-106.GeneratedMSBuildEditorConfig.editorconfig" />
+    <None Include="obj\Debug\net7.0-windows\Parsing.AssemblyInfoInputs.cache" />
+    <None Include="obj\Debug\net7.0-windows\Parsing.assets.cache" />
+    <None Include="obj\Debug\net7.0-windows\Parsing.csproj.AssemblyReference.cache" />
+    <None Include="obj\Debug\net7.0-windows\Parsing.csproj.BuildWithSkipAnalyzers" />
+    <None Include="obj\Debug\net7.0-windows\Parsing.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\net7.0-windows\Parsing.csproj.GenerateResource.cache" />
+    <None Include="obj\Debug\net7.0-windows\Parsing.dll" />
+    <None Include="obj\Debug\net7.0-windows\Parsing.Form1.resources" />
+    <None Include="obj\Debug\net7.0-windows\Parsing.GeneratedMSBuildEditorConfig.editorconfig" />
+    <None Include="obj\Debug\net7.0-windows\Parsing.genruntimeconfig.cache" />
+    <None Include="obj\Debug\net7.0-windows\Parsing.pdb" />
+    <None Include="obj\Debug\net7.0-windows\refint\Parsing.dll" />
+    <None Include="obj\Debug\net7.0-windows\ref\Parsing.dll" />
+    <None Include="obj\GroupProject-106.csproj.nuget.g.props" />
+    <None Include="obj\GroupProject-106.csproj.nuget.g.targets" />
+    <None Include="obj\Parsing.csproj.nuget.g.props" />
+    <None Include="obj\Parsing.csproj.nuget.g.targets" />
+    <None Include="obj\project.nuget.cache" />
+    <None Include="Parsing.csproj" />
+    <None Include="Parsing.csproj.user" />
+    <None Include="Parsing.sln" />
+  </ItemGroup>
+
 </Project>

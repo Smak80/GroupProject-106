@@ -1,4 +1,4 @@
-namespace GroupProject_106
+namespace Parsing
 {
     internal static class Program
     {

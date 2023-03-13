@@ -1,4 +1,6 @@
-﻿namespace GroupProject_106
+﻿using System.Windows.Forms;
+
+namespace GroupProject_106
 {
     partial class History
     {

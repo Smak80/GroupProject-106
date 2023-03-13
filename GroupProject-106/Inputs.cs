@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WinFormsApp1
+namespace GroupProject_106
 {
     internal class Inputs
     {

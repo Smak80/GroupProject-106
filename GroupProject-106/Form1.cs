@@ -1,6 +1,7 @@
 using Microsoft.VisualBasic;
 using System;
 using System.ComponentModel;
+using System.Collections.Generic;
 using System.Data;
 using System.Net.Sockets;
 using System.Numerics;
@@ -11,6 +12,7 @@ using System.Windows.Forms;
 using System.Xml.Linq;
 using WinFormsApp1;
 using static System.Windows.Forms.DataFormats;
+using System.Linq;
 
 namespace GroupProject_106
 {
@@ -29,7 +31,7 @@ namespace GroupProject_106
         public Form1(string expression)
         {
             InitializeComponent();
-            textBox1.Text += expression;
+            Formula.Text += expression;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -50,10 +52,10 @@ namespace GroupProject_106
         private void label1_Click(object sender, EventArgs e)
         {
             Button B = (Button)sender;
-            textBox1.Text = textBox1.Text + B.Text;
+            Formula.Text = Formula.Text + B.Text;
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void Formula_TextChanged(object sender, EventArgs e)
         {
 
         }
@@ -61,99 +63,99 @@ namespace GroupProject_106
         private void button9_Click(object sender, EventArgs e)
         {
             Button One = (Button)sender;
-            textBox1.Text = textBox1.Text + One.Text;
+            Formula.Text = Formula.Text + One.Text;
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
             Button Two = (Button)sender;
-            textBox1.Text = textBox1.Text + Two.Text;
+            Formula.Text = Formula.Text + Two.Text;
         }
 
         private void button11_Click(object sender, EventArgs e)
         {
             Button Three = (Button)sender;
-            textBox1.Text = textBox1.Text + Three.Text;
+            Formula.Text = Formula.Text + Three.Text;
         }
 
         private void button12_Click(object sender, EventArgs e)
         {
             Button Three = (Button)sender;
-            textBox1.Text = textBox1.Text + Three.Text;
+            Formula.Text = Formula.Text + Three.Text;
         }
 
         private void button16_Click(object sender, EventArgs e)
         {
             Button Three = (Button)sender;
-            textBox1.Text = textBox1.Text + Three.Text;
+            Formula.Text = Formula.Text + Three.Text;
         }
 
         private void button18_Click(object sender, EventArgs e)
         {
             Button Three = (Button)sender;
-            textBox1.Text = textBox1.Text + Three.Text;
+            Formula.Text = Formula.Text + Three.Text;
         }
 
         private void button17_Click(object sender, EventArgs e)
         {
             Button Three = (Button)sender;
-            textBox1.Text = textBox1.Text + Three.Text;
+            Formula.Text = Formula.Text + Three.Text;
         }
 
         private void button13_Click(object sender, EventArgs e)
         {
             Button Three = (Button)sender;
-            textBox1.Text = textBox1.Text + Three.Text;
+            Formula.Text = Formula.Text + Three.Text;
         }
 
         private void button14_Click(object sender, EventArgs e)
         {
             Button Three = (Button)sender;
-            textBox1.Text = textBox1.Text + Three.Text;
+            Formula.Text = Formula.Text + Three.Text;
         }
 
         private void button15_Click(object sender, EventArgs e)
         {
             Button Three = (Button)sender;
-            textBox1.Text = textBox1.Text + Three.Text;
+            Formula.Text = Formula.Text + Three.Text;
         }
 
         private void button20_Click(object sender, EventArgs e)
         {
-            textBox1.Text = "";
+            Formula.Text = "";
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
             Button Three = (Button)sender;
-            textBox1.Text = textBox1.Text + Three.Text;
+            Formula.Text = Formula.Text + Three.Text;
         }
 
         private void button21_Click(object sender, EventArgs e)
         {
             Button Three = (Button)sender;
-            textBox1.Text = textBox1.Text + Three.Text;
+            Formula.Text = Formula.Text + Three.Text;
         }
 
         private void button23_Click(object sender, EventArgs e)
         {
-            textBox1.Text = textBox1.Text + "(-";
+            Formula.Text = Formula.Text + "(-";
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
             Button Three = (Button)sender;
-            textBox1.Text = textBox1.Text + Three.Text;
+            Formula.Text = Formula.Text + Three.Text;
         }
 
         private void button19_Click(object sender, EventArgs e)
         {
-            string[] arr = textBox1.Lines.ToArray();
+            string[] arr = Formula.Lines.ToArray();
             for (int i = 0; i < arr.Length; i++)
             {
                 arr[i] = arr[i].Remove(arr.Length, 1);
             }
-            textBox1.Lines = arr;
+            Formula.Lines = arr;
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -164,31 +166,31 @@ namespace GroupProject_106
             switch (selectedItem.ToString())
             {
                 case "cos()":
-                    textBox1.Text = textBox1.Text + "cos(";
+                    Formula.Text = Formula.Text + "cos(";
                     break;
                 case "sin()":
-                    textBox1.Text = textBox1.Text + "sin(";
+                    Formula.Text = Formula.Text + "sin(";
                     break;
                 case "tg()":
-                    textBox1.Text = textBox1.Text + "tg(";
+                    Formula.Text = Formula.Text + "tg(";
                     break;
                 case "ctg()":
-                    textBox1.Text = textBox1.Text + "ctg(";
+                    Formula.Text = Formula.Text + "ctg(";
                     break;
                 case "ln()":
-                    textBox1.Text = textBox1.Text + "ln(";
+                    Formula.Text = Formula.Text + "ln(";
                     break;
                 case "log(x,y)":
-                    textBox1.Text = textBox1.Text + "log(";
+                    Formula.Text = Formula.Text + "log(";
                     break;
                 case "pi":
-                    textBox1.Text = textBox1.Text + "pi";
+                    Formula.Text = Formula.Text + "pi";
                     break;
                 case "e":
-                    textBox1.Text = textBox1.Text + "e";
+                    Formula.Text = Formula.Text + "e";
                     break;
                 case "const":
-                    textBox1.Text = textBox1.Text + "const";
+                    Formula.Text = Formula.Text + "const";
                     break;
             }
         }
@@ -196,17 +198,17 @@ namespace GroupProject_106
         private void button2_Click(object sender, EventArgs e)
         {
             Button Three = (Button)sender;
-            textBox1.Text = textBox1.Text + Three.Text;
+            Formula.Text = Formula.Text + Three.Text;
         }
 
-        private void numericUpDown4_ValueChanged(object sender, EventArgs e)
+        private void UpperIntegralRange_ValueChanged(object sender, EventArgs e)
         {
-            a = Convert.ToInt32(numericUpDown4.Value);
+            a = Convert.ToInt32(UpperIntegralRange.Value);
         }
 
-        private void numericUpDown3_ValueChanged(object sender, EventArgs e)
+        private void LowerIntegralRange_ValueChanged(object sender, EventArgs e)
         {
-            b = Convert.ToInt32(numericUpDown2.Value);
+            b = Convert.ToInt32(Accuracy.Value);
         }
 
         /*private void button22_Click(object sender, EventArgs e)
@@ -214,14 +216,14 @@ namespace GroupProject_106
             
         }
         */
-        private void button8_Click(object sender, EventArgs e)
+        private void Count_Click(object sender, EventArgs e)
         {
-            if (textBox1.Lines != null)
+            if (Formula.Lines != null)
             {
-                inputs.Add(textBox1.Text);
+                inputs.Add(Formula.Text);
                 //i++;
             }
-            textBox1.Clear();
+            Formula.Clear();
             if (flag == false)
             {
 
@@ -276,7 +278,7 @@ namespace GroupProject_106
 
         private void button25_Click(object sender, EventArgs e)
         {
-            textBox1.Text = textBox1.Text + "^(";
+            Formula.Text = Formula.Text + "^(";
         }
 
         private void button26_Click(object sender, EventArgs e)
@@ -292,7 +294,7 @@ namespace GroupProject_106
             //Const.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        /*private void button1_Click(object sender, EventArgs e)
         {
             expressionTreeNode = new ExpressionTreeNode(preparsed_expression);
             try
@@ -320,7 +322,7 @@ namespace GroupProject_106
         private void panel1_DataContextChanged(object sender, EventArgs e)
         {
 
-        }
+        }*/
     }
 }
 //ïðè ñîçäàíèè êîíñòàíòû ââîäèòñÿ áóêâà ñ êëàâèàòóðû, äîëæíà âûëåçòè íîâàÿ ôîðìà äëÿ ââåäåíèÿ êîíñòàíòû

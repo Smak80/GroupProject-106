@@ -1,4 +1,7 @@
-namespace Parsing
+using System;
+using System.Windows.Forms;
+
+namespace GroupProject_106
 {
     internal static class Program
     {

@@ -10,9 +10,11 @@ namespace GroupProject_106
         private void button1_MouseClick(object sender, MouseEventArgs e)
         {
             //считываем строку с интерфейса
+            string expr = " (sin(x) * cos(x))";
+            CheckForSyntax check = new CheckForSyntax(expr);
 
             //проверяем правильно ли написано выражение
-            if () {
+            if (check.ExpressionDiagnostic()) {
 
             //если все ок , парсим , интегрируем
             

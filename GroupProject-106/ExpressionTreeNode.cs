@@ -80,7 +80,6 @@ namespace Parsing
                     else if (operators.Contains(_preparsed_expression[count_sym].ToString()))
                     {
                         currentIndex = list_of_parsed_elem.Count - 1;
-                        //Always after (
                         if (last_operation == "(")
                         {
                             int index = list_of_parsed_elem.LastIndexOf(last_operation);
@@ -93,7 +92,7 @@ namespace Parsing
 
                             list_of_parsed_elem[currentIndex + 1] = _preparsed_expression[count_sym].ToString();
                         }
-                        //priority
+                        //проверка на приоритет
                         else
                         {
                             currentIndex = list_of_parsed_elem.Count - 1;

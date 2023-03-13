@@ -20,7 +20,18 @@ namespace GroupProject_106
         }
         private bool BracketDiagnostic() 
         {
-            return true;
+            Stack<char> c = new Stack<char>();
+            for(int i = 0; i < expr.Length; i++)
+            {
+                if (expr[i] == '(') c.Push(expr[i]);
+                else if (expr[i] == ')') 
+                {
+                    if(c.Count > 0) c.Pop();
+                    else return false;
+                }
+            }
+            if(c.Count > 0) return false;
+            else return true;
         }
         private bool WordDiagnostic() 
         {

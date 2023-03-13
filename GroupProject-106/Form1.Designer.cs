@@ -39,7 +39,7 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(281, 23);
             textBox1.TabIndex = 0;
-            textBox1.Text = "Введите подынтегральную функцию...";
+            textBox1.Text = "v";
             textBox1.TextChanged += textBox1_TextChanged;
             // 
             // button1

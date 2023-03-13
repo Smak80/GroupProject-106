@@ -6,7 +6,25 @@ using System.Threading.Tasks;
 
 namespace GroupProject_106
 {
-    internal class CheckForSyntax
+    public class CheckForSyntax
     {
+        private string expr;
+        public CheckForSyntax(string expr) 
+        {
+            this.expr = expr;   
+        }
+
+        public bool ExpressionDiagnostic() 
+        {
+            return BracketDiagnostic() && WordDiagnostic();
+        }
+        private bool BracketDiagnostic() 
+        {
+            return true;
+        }
+        private bool WordDiagnostic() 
+        {
+            return true;
+        }
     }
 }

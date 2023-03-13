@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+
             label1 = new Label();
             button1 = new Button();
             label2 = new Label();
@@ -64,6 +65,7 @@
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+
             Controls.Add(label2);
             Controls.Add(button1);
             Controls.Add(label1);

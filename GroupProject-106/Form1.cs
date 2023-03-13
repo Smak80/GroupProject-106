@@ -35,8 +35,14 @@ namespace GroupProject_106
             p1.Finish += ShowResult;
             stopwatch.Reset();
             stopwatch.Start();
-            c.Start(0.001);
-            p1.Start();
+            string expr = " (sin(x) * cos(x))";
+            CheckForSyntax check = new CheckForSyntax(expr);
+            if (check.ExpressionDiagnostic()) {
+            
+            
+                c.Start(0.001);
+                p1.Start();
+            }
         }
     }
 }

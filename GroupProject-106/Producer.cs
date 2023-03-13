@@ -41,7 +41,7 @@ namespace GroupProject_106
                     double result = 0;
                     for (double i = a; i <= b; i += dx * threadCount)
                     {
-                        result += Form1.F(i) * dx;
+                        //result += Form1.F(i) * dx;
                     }
                     CommonData.Put(result);
                     counter++;

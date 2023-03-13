@@ -1,4 +1,4 @@
-﻿namespace GroupProject_106
+﻿namespace Parsing
 {
     partial class Form1
     {
@@ -606,7 +606,6 @@
         }
 
         #endregion
-
         private Panel panel1;
         private Panel panel2;
         private Button button8;

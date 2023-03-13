@@ -231,7 +231,7 @@ namespace GroupProject_106
                 listbox10.Items.Clear();
                 foreach (var constantValue in constants)
                 {
-                    listbox10.Items.Add(constantValue.ToString()); //связывание данных
+                    listbox10.Items.Add(constantValue.ToString()); //Г±ГўГїГ§Г»ГўГ Г­ГЁГҐ Г¤Г Г­Г­Г»Гµ
                 }
             }
         }
@@ -258,7 +258,7 @@ namespace GroupProject_106
             /*ListBox listBox3 = new ListBox();
             listBox3.Items.Clear();
             foreach (var a in inputs) {
-                listBox3.Items.Add(a); //связывание данных
+                listBox3.Items.Add(a); //Г±ГўГїГ§Г»ГўГ Г­ГЁГҐ Г¤Г Г­Г­Г»Гµ
             }
             textBox1.Text = k;*/
             /*if (k > 0)
@@ -287,16 +287,46 @@ namespace GroupProject_106
             listbox10.Items.Clear();
             foreach (var constantValue in constants)
             {
-                listbox10.Items.Add(constantValue.ToString()); //связывание данных
+                listbox10.Items.Add(constantValue.ToString()); //Г±ГўГїГ§Г»ГўГ Г­ГЁГҐ Г¤Г Г­Г­Г»Гµ
             }
             //Const.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            expressionTreeNode = new ExpressionTreeNode(preparsed_expression);
+            try
+            {
+                result = expressionTreeNode.StartParse();
+
+                foreach (var item in result)
+                {
+                    listBox1.Items.Add(item);
+                }
+
+            }
+            catch (NullReferenceException)
+            {
+                MessageBox.Show("Г‚Г» ГўГўГҐГ«ГЁ ГЇГіГ±ГІГіГѕ Г±ГІГ°Г®ГЄГі!");
+            }
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            preparsed_expression = textBox1.Text;
+        }
+
+        private void panel1_DataContextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
-//при создании константы вводится буква с клавиатуры, должна вылезти новая форма для введения константы
-//вставляем кнопку,по нажантию которой вылезет новая форма
-//проект->добавить новвую форму
-//по {кнопка2_клик}
+//ГЇГ°ГЁ Г±Г®Г§Г¤Г Г­ГЁГЁ ГЄГ®Г­Г±ГІГ Г­ГІГ» ГўГўГ®Г¤ГЁГІГ±Гї ГЎГіГЄГўГ  Г± ГЄГ«Г ГўГЁГ ГІГіГ°Г», Г¤Г®Г«Г¦Г­Г  ГўГ»Г«ГҐГ§ГІГЁ Г­Г®ГўГ Гї ГґГ®Г°Г¬Г  Г¤Г«Гї ГўГўГҐГ¤ГҐГ­ГЁГї ГЄГ®Г­Г±ГІГ Г­ГІГ»
+//ГўГ±ГІГ ГўГ«ГїГҐГ¬ ГЄГ­Г®ГЇГЄГі,ГЇГ® Г­Г Г¦Г Г­ГІГЁГѕ ГЄГ®ГІГ®Г°Г®Г© ГўГ»Г«ГҐГ§ГҐГІ Г­Г®ГўГ Гї ГґГ®Г°Г¬Г 
+//ГЇГ°Г®ГҐГЄГІ->Г¤Г®ГЎГ ГўГЁГІГј Г­Г®ГўГўГіГѕ ГґГ®Г°Г¬Гі
+//ГЇГ® {ГЄГ­Г®ГЇГЄГ 2_ГЄГ«ГЁГЄ}
 /*
  * constants.CleaR(0
 constants.Add(new() {Name ="X", Value = 0.0});
@@ -305,18 +335,18 @@ constants.Add(new() {Name ="v", Value = 0.0});
 inputs.Add(new() {Value = ""});
 var frm2 = new Form2(constants);
 
-//Binding list заполняем выражениями
+//Binding list Г§Г ГЇГ®Г«Г­ГїГҐГ¬ ГўГ»Г°Г Г¦ГҐГ­ГЁГїГ¬ГЁ
 
 frm2.ShowDialog();
-для неограниченных констант ввести table(flow0layoutpalnel
-получим табличку
-в одной ячейке названия константы
-во второй значения
-определяем колчисевт остолбцов и ячекк динамически
-чтобы это сделать - при создании формы передаем информацию о колве значений и 
-то что выше не надо
+Г¤Г«Гї Г­ГҐГ®ГЈГ°Г Г­ГЁГ·ГҐГ­Г­Г»Гµ ГЄГ®Г­Г±ГІГ Г­ГІ ГўГўГҐГ±ГІГЁ table(flow0layoutpalnel
+ГЇГ®Г«ГіГ·ГЁГ¬ ГІГ ГЎГ«ГЁГ·ГЄГі
+Гў Г®Г¤Г­Г®Г© ГїГ·ГҐГ©ГЄГҐ Г­Г Г§ГўГ Г­ГЁГї ГЄГ®Г­Г±ГІГ Г­ГІГ»
+ГўГ® ГўГІГ®Г°Г®Г© Г§Г­Г Г·ГҐГ­ГЁГї
+Г®ГЇГ°ГҐГ¤ГҐГ«ГїГҐГ¬ ГЄГ®Г«Г·ГЁГ±ГҐГўГІ Г®Г±ГІГ®Г«ГЎГ¶Г®Гў ГЁ ГїГ·ГҐГЄГЄ Г¤ГЁГ­Г Г¬ГЁГ·ГҐГ±ГЄГЁ
+Г·ГІГ®ГЎГ» ГЅГІГ® Г±Г¤ГҐГ«Г ГІГј - ГЇГ°ГЁ Г±Г®Г§Г¤Г Г­ГЁГЁ ГґГ®Г°Г¬Г» ГЇГҐГ°ГҐГ¤Г ГҐГ¬ ГЁГ­ГґГ®Г°Г¬Г Г¶ГЁГѕ Г® ГЄГ®Г«ГўГҐ Г§Г­Г Г·ГҐГ­ГЁГ© ГЁ 
+ГІГ® Г·ГІГ® ГўГ»ГёГҐ Г­ГҐ Г­Г Г¤Г®
 !!!DATAGridVIEW
-НОВЫЙ dвспомогательный класс constant values
+ГЌГЋГ‚Г›Г‰ dГўГ±ГЇГ®Г¬Г®ГЈГ ГІГҐГ«ГјГ­Г»Г© ГЄГ«Г Г±Г± constant values
 [DisplayName("const names")]
 public string Name{get;set;]
 [DisplayName("values")]
@@ -327,30 +357,30 @@ public override striing TOstring(0{
 ]
 
 
-вверзду форм.сс
+ГўГўГҐГ°Г§Г¤Гі ГґГ®Г°Г¬.Г±Г±
 BindingList<ConstantValues> constants = new(0);
 
 
 public class Form2 : form
 {
     private Bindinglist<ConstantValues>.
-..см фото... = _constats;
+..Г±Г¬ ГґГ®ГІГ®... = _constats;
 ...
 datraGridView.DataSource=
 }
 
-добавляем listbox после frm2 в баттон2клик
-показываем что пользователь ввел
+Г¤Г®ГЎГ ГўГ«ГїГҐГ¬ listbox ГЇГ®Г±Г«ГҐ frm2 Гў ГЎГ ГІГІГ®Г­2ГЄГ«ГЁГЄ
+ГЇГ®ГЄГ Г§Г»ГўГ ГҐГ¬ Г·ГІГ® ГЇГ®Г«ГјГ§Г®ГўГ ГІГҐГ«Гј ГўГўГҐГ«
 frm2.ShowDiealog
 listbox1.Items.Clear(0;
 foreach(var constantValue int constants0 {
- listbox1.Items.Add(constantValue.ToString(00; //связывание данных
+ listbox1.Items.Add(constantValue.ToString(00; //Г±ГўГїГ§Г»ГўГ Г­ГЁГҐ Г¤Г Г­Г­Г»Гµ
 
 ]
 
 $"error in {e.RowIndex}"
 
-запретить добавлять блоьше констант чем выдает строчек программа
-фддщцгыукещф
-allowusertoaddrows////свойства панели
+Г§Г ГЇГ°ГҐГІГЁГІГј Г¤Г®ГЎГ ГўГ«ГїГІГј ГЎГ«Г®ГјГёГҐ ГЄГ®Г­Г±ГІГ Г­ГІ Г·ГҐГ¬ ГўГ»Г¤Г ГҐГІ Г±ГІГ°Г®Г·ГҐГЄ ГЇГ°Г®ГЈГ°Г Г¬Г¬Г 
+ГґГ¤Г¤Г№Г¶ГЈГ»ГіГЄГҐГ№Гґ
+allowusertoaddrows////Г±ГўГ®Г©Г±ГІГўГ  ГЇГ Г­ГҐГ«ГЁ
 */

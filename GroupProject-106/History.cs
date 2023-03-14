@@ -19,12 +19,10 @@ namespace GroupProject_106
     {
         public List<string> inputs;
         public int k = -1;
-        //public string _name;
-        private Form F;
-        //public TextBox textBox1;
+        public string name;
         public History()//Form Form
         {
-            //F = Form;
+            //textBox1 = F;
             InitializeComponent();
             listBox3.SelectedIndexChanged += listBox3_SelectedIndexChanged;
             //dataGridView1.DataError += DataGridView1OnDataError;
@@ -75,7 +73,7 @@ namespace GroupProject_106
             
             if (listBox3.SelectedItem != null)
             {
-                ///F. = listBox3.SelectedItem.ToString(); // получаем имя из текстового поля
+                name = listBox3.SelectedItem.ToString(); // получаем имя из текстового поля
                 //var frm1 = new Form1(name);
                 //frm1.ShowDialog();
 

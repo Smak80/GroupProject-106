@@ -16,13 +16,16 @@ namespace WinFormsApp1
 
         public List<string> data = new List<string>();
         private BindingList<ConstantValues>? _constants;
-        public Const(BindingList<ConstantValues> constants)
+        public Const(BindingList<ConstantValues> constants, bool flag)
         {
             InitializeComponent();
             _constants = constants;
-            constants.Add(new() { Name = "a", Value = 0.0 });
-            constants.Add(new() { Name = "b", Value = 0.0 });
-            constants.Add(new() { Name = "c", Value = 0.0 });
+            if (flag == false)
+            {
+                constants.Add(new() { Name = "a", Value = 0.0 });
+                constants.Add(new() { Name = "b", Value = 0.0 });
+                constants.Add(new() { Name = "c", Value = 0.0 });
+            }
             dataGridView1.DataSource = _constants;
             dataGridView1.DataError += dataGridView1_DataError;
             

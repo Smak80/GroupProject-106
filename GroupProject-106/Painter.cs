@@ -20,6 +20,8 @@ namespace Test_Graph_painting
 
         private double Ymax=10;
         private double Ymin=-10;
+        private double Xmin;
+        private double Xmax;
 
         private double multiplierX;
         private double multiplierY;
@@ -65,6 +67,8 @@ namespace Test_Graph_painting
                 this.step = step == 0.0 ? 1 : step;
                 Ymax = Up;
                 Ymin = D;
+                Xmax = U; 
+                Xmin=L;
 
                 diffX = Math.Abs(U - L) / 1;
                 diffY = (Math.Abs(Ymax) + Math.Abs(Ymin)) / 1;
@@ -82,7 +86,7 @@ namespace Test_Graph_painting
             else isCorrectInput = false;
 
         }
-        public void PaintCordPlane(double L, double U, double Up, double D, double step,bool z)
+        public void PaintCordPlane()
         {
             //
             if (isCorrectInput) 
@@ -91,16 +95,16 @@ namespace Test_Graph_painting
                 mainGraphics.DrawLine(p, 0, (int)Y, containerSize.Width, (int)Y);
 
                 // draw Y-line
-                if (L <= 0 && U >= 0)
+                if (Xmin <= 0 && Xmax >= 0)
                 {
                     mainGraphics.DrawLine(p, (int)X, 0, (int)X, containerSize.Height);
                     drawLines(X, p, diffY);
                 }
-                else if (L > 0 && U > 0)
+                else if (Xmin > 0 && Xmax > 0)
                 {
                     drawLines(0, p, diffY);
                 }
-                else if (U < 0 && L < 0)
+                else if (Xmax < 0 && Xmin < 0)
                 {
                     drawLines(containerSize.Width, p, diffY);
                 }
@@ -117,7 +121,7 @@ namespace Test_Graph_painting
                     if (c == cond || i == 0)
                     {
                         mainGraphics.DrawLine(p, (int)(i), (int)(Y - 10), (int)(i), (int)(Y + 10));
-                        mainGraphics.DrawString(Math.Round(L + 1 * i / multiplierX, 2).ToString(), Control.DefaultFont, brush, new Point((int)i, (int)(Y + 15)));
+                        mainGraphics.DrawString(Math.Round(Xmin + 1 * i / multiplierX, 2).ToString(), Control.DefaultFont, brush, new Point((int)i, (int)(Y + 15)));
                         c = 0;
                     }
                     mainGraphics.DrawLine(p, (int)(i), (int)(Y - 5), (int)(i), (int)(Y + 5));

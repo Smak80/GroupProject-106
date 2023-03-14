@@ -13,6 +13,7 @@ using System.Xml.Linq;
 using WinFormsApp1;
 using static System.Windows.Forms.DataFormats;
 using System.Linq;
+using Test_Graph_painting;
 
 namespace GroupProject_106
 {
@@ -22,22 +23,18 @@ namespace GroupProject_106
         private int a;
         private int b;
         private bool flag = false;
-
-        //public int k;
+        private Painter g;
+        
         List<string> inputs = new List<string>();
         //BindingList<Inputs> input = new BindingList<Inputs>();
         //BindingList<Const> constants = new BindingList<Const>();
         BindingList<ConstantValues> constants = new();
-        /// <summary>
-        //bool flag = true;
-        /// </summary>
-        /// <param name="expression"></param>
-        //inputs[0] = "0";
-        //var History = new History(inputs);
+
         public Form1(string expression)
         {
             InitializeComponent();
             Formula.Text += expression;
+            g= new Painter(GraphPanel.CreateGraphics());
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -216,14 +213,10 @@ namespace GroupProject_106
         {
             b = Convert.ToInt32(Accuracy.Value);
         }
-
-        /*private void button22_Click(object sender, EventArgs e)
-        {
-            
-        }
-        */
         private void Count_Click(object sender, EventArgs e)
         {
+            g.initCoord((double)LowerIntegralRange.Value, (double)UpperIntegralRange.Value, (double)YMax.Value, (double)YMin.Value, (double)Accuracy.Value);
+            g.PaintCordPlane();
             if (Formula.Lines != null)
             {
                 inputs.Add(Formula.Text);
@@ -232,6 +225,8 @@ namespace GroupProject_106
             CheckForSyntax check = new CheckForSyntax(Formula.Text);
             if (check.ExpressionDiagnostic())
             {
+                // Graph inisiallise
+                
                 // izmenenaya stroka dlya adeli 
                 string expression = check.ExprAdjustment();
 
@@ -257,35 +252,12 @@ namespace GroupProject_106
 
         private void button24_Click(object sender, EventArgs e)
         {
-            //inputs.Add(new());
-            //inputs.Add(new() {Value = ""});
             var History = new History();
             History.inputs = inputs;
-            //int m = History.k;
-            //History.textBox1 = textBox1;
-            /*DataTable table = new DataTable();
-            table.Rows.Add(textBox1.Text);
-            dataGridView1.DataSource = table;*/
-            //inputs.Add(textBox1.Text);
-            //History.ShowDialog();
-            /*ListBox listBox3 = new ListBox();
-            listBox3.Items.Clear();
-            foreach (var a in inputs) {
-                listBox3.Items.Add(a); //ñâÿçûâàíèå äàííûõ
-            }
-            textBox1.Text = k;*/
-            /*if (k > 0)
-            {
-                textBox1.Text = inputs[k];
-            }*/
+
             History.ShowDialog();
-            ///Formula = name;
-            //Hide();
-            //Form1.Close();
-            //History.Visible
-            /*int j = 0;
-            if (j % 2 == 0) richTextBox1.Visible = true;
-            else richTextBox1.Visible = false;*/
+            Formula.Text = History.name;
+            History.Dispose();
         }
 
         private void button25_Click(object sender, EventArgs e)
@@ -310,96 +282,5 @@ namespace GroupProject_106
         {
             Application.Exit();
         }
-
-        /*private void button1_Click(object sender, EventArgs e)
-        {
-            expressionTreeNode = new ExpressionTreeNode(preparsed_expression);
-            try
-            {
-                result = expressionTreeNode.StartParse();
-
-                foreach (var item in result)
-                {
-                    listBox1.Items.Add(item);
-                }
-
-            }
-            catch (NullReferenceException)
-            {
-                MessageBox.Show("Âû ââåëè ïóñòóþ ñòðîêó!");
-            }
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            preparsed_expression = textBox1.Text;
-        }
-
-        private void panel1_DataContextChanged(object sender, EventArgs e)
-        {
-
-        }*/
     }
 }
-//ïðè ñîçäàíèè êîíñòàíòû ââîäèòñÿ áóêâà ñ êëàâèàòóðû, äîëæíà âûëåçòè íîâàÿ ôîðìà äëÿ ââåäåíèÿ êîíñòàíòû
-//âñòàâëÿåì êíîïêó,ïî íàæàíòèþ êîòîðîé âûëåçåò íîâàÿ ôîðìà
-//ïðîåêò->äîáàâèòü íîââóþ ôîðìó
-//ïî {êíîïêà2_êëèê}
-/*
- * constants.CleaR(0
-constants.Add(new() {Name ="X", Value = 0.0});
-constants.Add(new() {Name ="Constant", Value = 0.0});
-constants.Add(new() {Name ="v", Value = 0.0});
-inputs.Add(new() {Value = ""});
-var frm2 = new Form2(constants);
-
-//Binding list çàïîëíÿåì âûðàæåíèÿìè
-
-frm2.ShowDialog();
-äëÿ íåîãðàíè÷åííûõ êîíñòàíò ââåñòè table(flow0layoutpalnel
-ïîëó÷èì òàáëè÷êó
-â îäíîé ÿ÷åéêå íàçâàíèÿ êîíñòàíòû
-âî âòîðîé çíà÷åíèÿ
-îïðåäåëÿåì êîë÷èñåâò îñòîëáöîâ è ÿ÷åêê äèíàìè÷åñêè
-÷òîáû ýòî ñäåëàòü - ïðè ñîçäàíèè ôîðìû ïåðåäàåì èíôîðìàöèþ î êîëâå çíà÷åíèé è 
-òî ÷òî âûøå íå íàäî
-!!!DATAGridVIEW
-ÍÎÂÛÉ dâñïîìîãàòåëüíûé êëàññ constant values
-[DisplayName("const names")]
-public string Name{get;set;]
-[DisplayName("values")]
-public double Value{get; set;]
-public override striing TOstring(0{
-    return $"{Name]={Value]";
-
-]
-
-
-ââåðçäó ôîðì.ññ
-BindingList<ConstantValues> constants = new(0);
-
-
-public class Form2 : form
-{
-    private Bindinglist<ConstantValues>.
-..ñì ôîòî... = _constats;
-...
-datraGridView.DataSource=
-}
-
-äîáàâëÿåì listbox ïîñëå frm2 â áàòòîí2êëèê
-ïîêàçûâàåì ÷òî ïîëüçîâàòåëü ââåë
-frm2.ShowDiealog
-listbox1.Items.Clear(0;
-foreach(var constantValue int constants0 {
- listbox1.Items.Add(constantValue.ToString(00; //ñâÿçûâàíèå äàííûõ
-
-]
-
-$"error in {e.RowIndex}"
-
-çàïðåòèòü äîáàâëÿòü áëîüøå êîíñòàíò ÷åì âûäàåò ñòðî÷åê ïðîãðàììà
-ôääùöãûóêåùô
-allowusertoaddrows////ñâîéñòâà ïàíåëè
-*/

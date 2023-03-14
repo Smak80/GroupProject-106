@@ -215,7 +215,6 @@ namespace GroupProject_106
         }
         private void Count_Click(object sender, EventArgs e)
         {
-            
             if (Formula.Lines != null)
             {
                 inputs.Add(Formula.Text);

@@ -18,14 +18,20 @@ namespace GroupProject_106
 {
     public partial class Form1 : Form
     {
+        public string name = "";
         private int a;
         private int b;
+        private bool flag = false;
+
         //public int k;
         List<string> inputs = new List<string>();
         //BindingList<Inputs> input = new BindingList<Inputs>();
         //BindingList<Const> constants = new BindingList<Const>();
         BindingList<ConstantValues> constants = new();
-        bool flag = true;
+        /// <summary>
+        //bool flag = true;
+        /// </summary>
+        /// <param name="expression"></param>
         //inputs[0] = "0";
         //var History = new History(inputs);
         public Form1(string expression)
@@ -239,7 +245,7 @@ namespace GroupProject_106
                  */
 
 
-                Formula.Clear();
+                //Formula.Clear();
             }
         }
 
@@ -272,8 +278,9 @@ namespace GroupProject_106
             {
                 textBox1.Text = inputs[k];
             }*/
-            History.Show();
-            Hide();
+            History.ShowDialog();
+            ///Formula = name;
+            //Hide();
             //Form1.Close();
             //History.Visible
             /*int j = 0;
@@ -288,7 +295,7 @@ namespace GroupProject_106
 
         private void button26_Click(object sender, EventArgs e)
         {
-            var frm2 = new Const(constants);
+            var frm2 = new Const(constants, flag);
             ListBox listbox10 = new ListBox();
             frm2.ShowDialog();
             listbox10.Items.Clear();
@@ -297,6 +304,11 @@ namespace GroupProject_106
                 listbox10.Items.Add(constantValue.ToString()); //ñâÿçûâàíèå äàííûõ
             }
             //Const.Show();
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
 
         /*private void button1_Click(object sender, EventArgs e)

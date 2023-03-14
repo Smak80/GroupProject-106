@@ -37,5 +37,9 @@ namespace GroupProject_106
         {
             return true;
         }
+        public string ExprAdjustment()
+        {
+            return expr;
+        }
     }
 }

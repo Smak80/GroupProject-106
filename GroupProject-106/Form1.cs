@@ -221,20 +221,25 @@ namespace GroupProject_106
             if (Formula.Lines != null)
             {
                 inputs.Add(Formula.Text);
-                //i++;
             }
-            Formula.Clear();
-            if (flag == false)
-            {
 
-                var frm2 = new Const(constants);
-                ListBox listbox10 = new ListBox();
-                frm2.ShowDialog();
-                listbox10.Items.Clear();
-                foreach (var constantValue in constants)
-                {
-                    listbox10.Items.Add(constantValue.ToString()); //ñâÿçûâàíèå äàííûõ
-                }
+            CheckForSyntax check = new CheckForSyntax(Formula.Text);
+            if (check.ExpressionDiagnostic())
+            {
+                // izmenenaya stroka dlya adeli 
+                string expression = check.ExprAdjustment();
+
+
+                /*
+                 
+                 zdes proishodit parsing
+ 
+                 i schet integrala
+                 
+                 */
+
+
+                Formula.Clear();
             }
         }
 

@@ -4,41 +4,39 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
+using System;
+using System.Collections.Generic;
+using System.Data.Common;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
-namespace Parsing
+namespace GroupProject_106
 {
-    internal class ExpressionTree
+    public class ExpressionTree
     {
+        /*private ExpressionTreeNode root;
+        public ExpressionTreeNode Root => root;
+        public ExpressionTree(string expression)
+        {
+            root = new ExpressionTreeNode(expression,1);
+        }*/
         private ExpressionTreeNode Root { get; set; }
 
+        private int Count { get; set; }
 
-        public ExpressionTreeNode AddNewNode(ExpressionTreeNode newNode, ExpressionTreeNode currentNode = null)
+        public void Add(string expression)
         {
             if (Root == null)
             {
-                Root = newNode;
-                newNode.ParentNode = null;
+                Root = new ExpressionTreeNode(expression);
+                Count = 1;
+                return;
             }
 
-            currentNode = currentNode ?? Root;
-
-            newNode.ParentNode = currentNode;
-
-            int result; 
-
-            return (result = newNode._preparsed_expression.CompareTo(currentNode._preparsed_expression)) == 0
-                ? currentNode 
-                : result < 0
-                    ? currentNode.LeftNode == null
-                        ? (currentNode.LeftNode = newNode)
-                        : AddNewNode(newNode, currentNode.LeftNode)
-                    : currentNode.RightNode == null
-                        ? (currentNode.RightNode = newNode)
-                        : AddNewNode(newNode, currentNode.RightNode);
-
-
+            Root.Add(expression);
+            Count++;
         }
-
 
 
     }

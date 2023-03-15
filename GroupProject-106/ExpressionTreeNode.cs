@@ -6,23 +6,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Parsing
+namespace GroupProject_106
 {
-    public enum Side
-    {
-        Left,
-        Right
-    }
-    internal class ExpressionTreeNode
+    public class ExpressionTreeNode
     {
         internal string _preparsed_expression;
 
         private List<string> list_of_parsed_elem = new List<string>();
 
-        private readonly List<string> operators = new() { "(", "+", "-", "*", "/", "^", ")", "(", "()" };
+        internal readonly List<string> operators = new List<string>() { "(", "+", "-", "*", "/", "^", ")", "(", "()" };
 
-        private readonly List<string> functions = new() 
-        { "sin", "cos", "tan", "cot", 
+        internal readonly List<string> functions = new List<string>()
+        { "sin", "cos", "tan", "cot",
           "asin", "acos", "atan", "acot",
           "loge", "log10", "log", "exp",
           "tanh", "sinh", "cosh", "coth",
@@ -32,15 +27,83 @@ namespace Parsing
 
         internal ExpressionTreeNode RightNode { get; set; }
 
-        internal  ExpressionTreeNode ParentNode { get; set; }
+        private string list_elem { get; set; } //добавляемое значение
 
-        public ExpressionTreeNode(string preparsed_expression)
+
+        public ExpressionTreeNode(string func, int a = 0)
         {
-            _preparsed_expression = preparsed_expression;
+            list_elem = func;
+            LeftNode = null;
+            RightNode = null;
+        }
+
+        public ExpressionTreeNode(string func, ExpressionTreeNode leftNode, ExpressionTreeNode rightNode)
+        {
+            list_elem = func;
+            LeftNode = leftNode;
+            RightNode = rightNode;
+        }
+
+
+
+        public void Add(string list_elem)
+        {
+            var Node = new ExpressionTreeNode(list_elem);
+
+            if (RightNode == null)
+            {
+                if (operators.Contains(list_elem)) //если это операция
+                {
+                    RightNode = Node; //кладём в правое поддерево
+                }
+
+                else
+                {
+                    RightNode.Add(list_elem); //если это функция или константа, то вызываем рекурсивно
+                }
+            }
+            if (LeftNode == null)
+            {
+                if (!operators.Contains(list_elem))
+                {
+                    LeftNode = Node;
+                }
+                else
+                {
+                    LeftNode.Add(list_elem);
+                }
+            }
+
 
         }
 
-        public List<string> StartParse ()
+        public List<ExpressionTreeNode> PostOrder(ExpressionTreeNode node) //обход слева-направо
+        {
+            var list = new List<ExpressionTreeNode>();
+            if (node != null)
+            {
+                if (node.LeftNode != null)
+                {
+                    list.AddRange(PostOrder(node.LeftNode));
+                }
+                if (node.RightNode != null)
+                {
+                    list.AddRange(PostOrder(node.RightNode));
+                }
+                list.Add(node);
+            }
+            return list;
+        }
+
+
+
+        public ExpressionTreeNode(string preparsed_expression)
+        {
+            _preparsed_expression = preparsed_expression; //начальная строка, вводимая пользователем
+
+        }
+
+        public List<string> StartParse()
         {
             if (_preparsed_expression == null)
             {
@@ -60,15 +123,15 @@ namespace Parsing
                     if (_preparsed_expression[count_sym] == '(')
                     {
                         list_of_parsed_elem.Add(_preparsed_expression[count_sym].ToString());
-                        currentIndex = list_of_parsed_elem.Count - 1;
                         while (operators.Contains(list_of_parsed_elem[currentIndex]) && operators.LastIndexOf(_preparsed_expression[count_sym].ToString()) > operators.IndexOf(list_of_parsed_elem[currentIndex]))
                         {
-                            list_of_parsed_elem[currentIndex] = list_of_parsed_elem[currentIndex - 1];
+                            list_of_parsed_elem[currentIndex + 1] = list_of_parsed_elem[currentIndex]; //вставляем скобку перед последней операцией
                             currentIndex--;
                         }
-                        list_of_parsed_elem[currentIndex] = _preparsed_expression[count_sym].ToString();
+                        list_of_parsed_elem[currentIndex + 1] = _preparsed_expression[count_sym].ToString();
                         last_operation = _preparsed_expression[count_sym].ToString();
                         count_sym++;
+                        continue;
                     }
                     else if (_preparsed_expression[count_sym] == ')')
                     {
@@ -76,6 +139,7 @@ namespace Parsing
                         list_of_parsed_elem[list_of_parsed_elem.LastIndexOf("(")] = "()";
                         last_operation = "()";
                         count_sym++;
+                        continue;
                     }
                     else if (operators.Contains(_preparsed_expression[count_sym].ToString()))
                     {
@@ -86,7 +150,7 @@ namespace Parsing
                             list_of_parsed_elem.Add(last_operation);
                             while (currentIndex >= index)
                             {
-                                list_of_parsed_elem[currentIndex + 1] = list_of_parsed_elem[currentIndex];
+                                list_of_parsed_elem[currentIndex + 1] = list_of_parsed_elem[currentIndex]; //вставляем операцию перед скобкой
                                 currentIndex--;
                             }
 
@@ -113,7 +177,7 @@ namespace Parsing
                         count_sym++;
                     }
 
-                    if (operand_1 == "")
+                    else if (operand_1 == "")
                     {
                         while (count_sym < _preparsed_expression.Length && !operators.Contains(_preparsed_expression[count_sym].ToString()))
                         {
@@ -129,7 +193,7 @@ namespace Parsing
 
                     }
 
-                    
+
                     else if (operand_2 == "")
                     {
                         currentIndex = list_of_parsed_elem.Count - 1;
@@ -159,7 +223,7 @@ namespace Parsing
                         {
                             if (functions.Contains(operand_2))
                             {
-                                list_of_parsed_elem[currentIndex] = list_of_parsed_elem[currentIndex - 2];
+                                list_of_parsed_elem[currentIndex] = list_of_parsed_elem[currentIndex - 2]; //сдвигаем на 2 символа, если композиция
                             }
                             else
                             {
@@ -177,20 +241,53 @@ namespace Parsing
 
                     }
                 }
-                
+
             }
             return list_of_parsed_elem;
-            
+
         }
 
-        public Side? NodeSide =>
-            ParentNode == null ? null : ParentNode.LeftNode == this ? Side.Left : Side.Right; //расположение узла относительно родителя
+
+
 
         public override string ToString()
         {
             return _preparsed_expression.ToString();
         }
 
-        //public ExpressionTreeNode FindNode(string expression, )
+        /*public double ExprTreeTarvase(ExpressionTreeNode self , double x)
+        {
+            switch (self.list_elem)
+            {
+                case "+":
+                    return ExprTreeTarvase(self.LeftNode, x) + ExprTreeTarvase(self.RightNode, x);
+                case "-":
+                    return ExprTreeTarvase(self.LeftNode, x) - ExprTreeTarvase(self.RightNode, x);
+                case "*":
+                    return ExprTreeTarvase(self.LeftNode, x) * ExprTreeTarvase(self.RightNode, x);
+                case "/":
+                    return ExprTreeTarvase(self.LeftNode, x) / ExprTreeTarvase(self.RightNode, x);
+                case "^":
+                    return Math.Pow(ExprTreeTarvase(self.LeftNode, x),ExprTreeTarvase(self.RightNode, x));
+                case "()":
+                    switch (self.LeftNode.list_elem)
+                    {
+                        case "sin":
+                            return Math.Sin(ExprTreeTarvase(self.RightNode , x));
+                        case "cos":
+                            return Math.Cos(ExprTreeTarvase(self.RightNode, x));
+                        case "tan":
+                            return Math.Tan(ExprTreeTarvase(self.RightNode, x));
+                        case "cot":
+                            return 1/Math.Tan(ExprTreeTarvase(self.RightNode, x));
+                        case "ln":
+                            return Math.Log(ExprTreeTarvase(self.RightNode, x));
+                    }
+                    break;
+                case "x": return x;
+                default: return Convert.ToDouble(self.list_elem);
+            }
+            return 8;
+        }*/
     }
 }

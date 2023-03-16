@@ -288,7 +288,7 @@ namespace GroupProject_106
                 inputs.Add(Formula.Text);
             }
 
-            InputDataCheckAndCorrect check = new InputDataCheckAndCorrect(Formula.Text ?? "", listbox10);
+            InputDataCheckAndCorrect check = new InputDataCheckAndCorrect(Formula.Text ?? "", listbox10 , (double)LowerIntegralRange.Value , (double)UpperIntegralRange.Value);
             if (check.InputDataDiagnostic())
             {
                 // Graph inisiallise

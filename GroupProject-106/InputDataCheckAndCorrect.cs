@@ -13,8 +13,27 @@ namespace GroupProject_106
         private string expr;
         private string[] funcs = { "cos", "sin", "tan", "cot", "ln" , "x" };
         private Dictionary<string, string> namesAndConsts = new Dictionary<string, string> { ["pi"] = "3,14159" , ["e"] = "2,71828" };
-        public InputDataCheckAndCorrect(string expr) 
+        public InputDataCheckAndCorrect(string expr , ListBox listbox) 
         {
+            foreach(string item in listbox.Items)
+            {
+                string save1 = "";
+                string save2 = "";
+                for (int i = 0; i < item.Length; i++)
+                {
+                    if (item[i] == '=')
+                    {
+                        save1 = save2;
+                    }
+                    save2 += item[i];
+                }
+                save2 = "";
+                for(int i = save1.Length+1; i < item.Length; i++)
+                {
+                    save2 += item[i];
+                }
+                namesAndConsts.Add(save1 , save2);
+            }
             this.expr = expr;
         }
 

@@ -71,6 +71,8 @@ namespace GroupProject_106
             this.YMax = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
             this.YMin = new System.Windows.Forms.NumericUpDown();
+            this.l_x = new System.Windows.Forms.Label();
+            this.l_y = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Accuracy)).BeginInit();
             this.panel2.SuspendLayout();
@@ -312,6 +314,11 @@ namespace GroupProject_106
             0,
             262144});
             this.Accuracy.Location = new System.Drawing.Point(106, 305);
+            this.Accuracy.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
             this.Accuracy.Minimum = new decimal(new int[] {
             1,
             0,
@@ -324,7 +331,7 @@ namespace GroupProject_106
             1,
             0,
             0,
-            655360});
+            131072});
             // 
             // textBox2
             // 
@@ -334,7 +341,7 @@ namespace GroupProject_106
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(65, 20);
             this.textBox2.TabIndex = 21;
-            this.textBox2.Text = "Accuracy:";
+            this.textBox2.Text = "Delta:";
             // 
             // comboBox1
             // 
@@ -618,19 +625,24 @@ namespace GroupProject_106
             this.GraphPanel.Name = "GraphPanel";
             this.GraphPanel.Size = new System.Drawing.Size(572, 483);
             this.GraphPanel.TabIndex = 2;
+            this.GraphPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.GraphPanel_MouseMove);
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
-            this.tableLayoutPanel1.ColumnCount = 4;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40.5904F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 59.4096F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 109F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 184F));
+            this.tableLayoutPanel1.ColumnCount = 6;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.66667F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.33333F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 94F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 108F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 79F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 69F));
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.YMax, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.label4, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.YMin, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.l_x, 4, 0);
+            this.tableLayoutPanel1.Controls.Add(this.l_y, 5, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(300, 501);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
@@ -646,7 +658,7 @@ namespace GroupProject_106
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(4, 1);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(102, 39);
+            this.label3.Size = new System.Drawing.Size(91, 39);
             this.label3.TabIndex = 0;
             this.label3.Text = "Y Min";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -658,14 +670,14 @@ namespace GroupProject_106
             0,
             0,
             131072});
-            this.YMax.Location = new System.Drawing.Point(382, 4);
+            this.YMax.Location = new System.Drawing.Point(308, 4);
             this.YMax.Minimum = new decimal(new int[] {
             99,
             0,
             0,
             -2147483648});
             this.YMax.Name = "YMax";
-            this.YMax.Size = new System.Drawing.Size(150, 27);
+            this.YMax.Size = new System.Drawing.Size(102, 27);
             this.YMax.TabIndex = 3;
             this.YMax.Value = new decimal(new int[] {
             10,
@@ -679,9 +691,9 @@ namespace GroupProject_106
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(272, 1);
+            this.label4.Location = new System.Drawing.Point(213, 1);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(103, 39);
+            this.label4.Size = new System.Drawing.Size(88, 39);
             this.label4.TabIndex = 1;
             this.label4.Text = "Y Max";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -693,7 +705,7 @@ namespace GroupProject_106
             0,
             0,
             131072});
-            this.YMin.Location = new System.Drawing.Point(113, 4);
+            this.YMin.Location = new System.Drawing.Point(102, 4);
             this.YMin.Maximum = new decimal(new int[] {
             99,
             0,
@@ -705,13 +717,29 @@ namespace GroupProject_106
             0,
             -2147483648});
             this.YMin.Name = "YMin";
-            this.YMin.Size = new System.Drawing.Size(150, 27);
+            this.YMin.Size = new System.Drawing.Size(104, 27);
             this.YMin.TabIndex = 2;
             this.YMin.Value = new decimal(new int[] {
             10,
             0,
             0,
             -2147483648});
+            // 
+            // l_x
+            // 
+            this.l_x.AutoSize = true;
+            this.l_x.Location = new System.Drawing.Point(417, 1);
+            this.l_x.Name = "l_x";
+            this.l_x.Size = new System.Drawing.Size(0, 20);
+            this.l_x.TabIndex = 4;
+            // 
+            // l_y
+            // 
+            this.l_y.AutoSize = true;
+            this.l_y.Location = new System.Drawing.Point(497, 1);
+            this.l_y.Name = "l_y";
+            this.l_y.Size = new System.Drawing.Size(0, 20);
+            this.l_y.TabIndex = 5;
             // 
             // Form1
             // 
@@ -785,5 +813,7 @@ namespace GroupProject_106
         private NumericUpDown YMax;
         private Label label4;
         private NumericUpDown YMin;
+        private Label l_x;
+        private Label l_y;
     }
 }

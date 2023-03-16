@@ -15,16 +15,16 @@ namespace GroupProject_106
         private Size containerSize;
         private Graphics mainGraphics;
 
-        private double X;
-        private double Y;
+        public double X { get; set; }
+        public double Y{ get; set; }
 
         private double Ymax=10;
         private double Ymin=-10;
         private double Xmin;
         private double Xmax;
 
-        private double multiplierX;
-        private double multiplierY;
+        public double multiplierX { get; set; }
+        public double multiplierY { get; set; }
 
         private double step = 1;
 
@@ -165,7 +165,7 @@ namespace GroupProject_106
                 PointF[] pois = new PointF[2] { points[points.Length - 2], points[points.Length - 1] };
                
                 k++;
-                mainGraphics.FillRectangle(brushR, (int)(X + x * multiplierX), (int)(Y - (y < 0 ? 0 : y * multiplierY)), (int)(step * multiplierX) < 1 ? 1 : (int)(step * multiplierX), (int)(Math.Abs(y) * multiplierY));
+                mainGraphics.FillRectangle(brushR, (int)(X + x * multiplierX), (int)(Y - (y < 0 ? 0 : y * multiplierY)), (int)(step * multiplierX) < 1 ? 1 : (int)(step * multiplierX)+1, (int)(Math.Abs(y) * multiplierY));
             }
             
         }

@@ -13,6 +13,7 @@ using System.Xml.Linq;
 using WinFormsApp1;
 using static System.Windows.Forms.DataFormats;
 using System.Linq;
+using System.Reflection.Emit;
 
 namespace GroupProject_106
 {
@@ -276,6 +277,16 @@ namespace GroupProject_106
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void GraphPanel_MouseMove(object sender, MouseEventArgs e)
+        {
+            /*if (e.X < g.X) l_x.Text = (0 - e.X / g.multiplierX).ToString();
+            if (e.X > g.X) l_x.Text = (e.X / g.multiplierX).ToString();
+            if (e.Y < g.Y) l_y.Text = (0 + e.Y / g.multiplierX).ToString();
+            if (e.Y > g.Y) l_y.Text = (0-e.Y / g.multiplierX).ToString();
+            // l_x.Text = (g.X + (double)(e.X) / g.multiplierX).ToString();
+            //l_y.Text = (g.Y - (e.Y < 0 ? 0 : e.Y / g.multiplierY)).ToString();*/
         }
     }
 }

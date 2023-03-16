@@ -225,6 +225,10 @@ namespace GroupProject_106
 
                 // izmenenaya stroka dlya adeli 
                 string expression = check.ExprChangeForParsing();
+                ExprTree exprTree = new ExprTree(expression);
+
+                //exprTree.ExprTreeTarvase(exprTree.Root, 2); 
+
                 /*
                  
                  zdes proishodit parsing

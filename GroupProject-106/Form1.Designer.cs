@@ -30,791 +30,761 @@ namespace GroupProject_106
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button26 = new System.Windows.Forms.Button();
-            this.b_Power = new System.Windows.Forms.Button();
-            this.button24 = new System.Windows.Forms.Button();
-            this.b_X = new System.Windows.Forms.Button();
-            this.b_Comma = new System.Windows.Forms.Button();
-            this.b_Plus = new System.Windows.Forms.Button();
-            this.b_Minus = new System.Windows.Forms.Button();
-            this.b_Multiply = new System.Windows.Forms.Button();
-            this.b_Divide = new System.Windows.Forms.Button();
-            this.b_RightBracket = new System.Windows.Forms.Button();
-            this.b_LeftBracket = new System.Windows.Forms.Button();
-            this.b_Erase = new System.Windows.Forms.Button();
-            this.b_Back = new System.Windows.Forms.Button();
-            this.Accuracy = new System.Windows.Forms.NumericUpDown();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.b_6 = new System.Windows.Forms.Button();
-            this.b_7 = new System.Windows.Forms.Button();
-            this.b_5 = new System.Windows.Forms.Button();
-            this.b_0 = new System.Windows.Forms.Button();
-            this.b_9 = new System.Windows.Forms.Button();
-            this.b_8 = new System.Windows.Forms.Button();
-            this.b_4 = new System.Windows.Forms.Button();
-            this.b_3 = new System.Windows.Forms.Button();
-            this.b_2 = new System.Windows.Forms.Button();
-            this.b_1 = new System.Windows.Forms.Button();
-            this.b_Count = new System.Windows.Forms.Button();
-            this.button22 = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.Formula = new System.Windows.Forms.TextBox();
-            this.UpperIntegralRange = new System.Windows.Forms.NumericUpDown();
-            this.LowerIntegralRange = new System.Windows.Forms.NumericUpDown();
-            this.label1 = new System.Windows.Forms.Label();
-            this.GraphPanel = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.YMax = new System.Windows.Forms.NumericUpDown();
-            this.label4 = new System.Windows.Forms.Label();
-            this.YMin = new System.Windows.Forms.NumericUpDown();
-            this.l_x = new System.Windows.Forms.Label();
-            this.l_y = new System.Windows.Forms.Label();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.l_Result = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Accuracy)).BeginInit();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.UpperIntegralRange)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.LowerIntegralRange)).BeginInit();
-            this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.YMax)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.YMin)).BeginInit();
-            this.tableLayoutPanel2.SuspendLayout();
-            this.SuspendLayout();
+            panel1 = new Panel();
+            button26 = new Button();
+            b_Power = new Button();
+            button24 = new Button();
+            b_X = new Button();
+            b_Comma = new Button();
+            b_Plus = new Button();
+            b_Minus = new Button();
+            b_Multiply = new Button();
+            b_Divide = new Button();
+            b_RightBracket = new Button();
+            b_LeftBracket = new Button();
+            b_Erase = new Button();
+            b_Back = new Button();
+            Accuracy = new NumericUpDown();
+            textBox2 = new TextBox();
+            comboBox1 = new ComboBox();
+            b_6 = new Button();
+            b_7 = new Button();
+            b_5 = new Button();
+            b_0 = new Button();
+            b_9 = new Button();
+            b_8 = new Button();
+            b_4 = new Button();
+            b_3 = new Button();
+            b_2 = new Button();
+            b_1 = new Button();
+            b_Count = new Button();
+            button22 = new Button();
+            panel2 = new Panel();
+            label2 = new Label();
+            Formula = new TextBox();
+            UpperIntegralRange = new NumericUpDown();
+            LowerIntegralRange = new NumericUpDown();
+            label1 = new Label();
+            GraphPanel = new Panel();
+            tableLayoutPanel1 = new TableLayoutPanel();
+            label3 = new Label();
+            YMax = new NumericUpDown();
+            label4 = new Label();
+            YMin = new NumericUpDown();
+            l_x = new Label();
+            l_y = new Label();
+            tableLayoutPanel2 = new TableLayoutPanel();
+            label5 = new Label();
+            l_Result = new Label();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)Accuracy).BeginInit();
+            panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)UpperIntegralRange).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)LowerIntegralRange).BeginInit();
+            tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)YMax).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)YMin).BeginInit();
+            tableLayoutPanel2.SuspendLayout();
+            SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel1.Controls.Add(this.button26);
-            this.panel1.Controls.Add(this.b_Power);
-            this.panel1.Controls.Add(this.button24);
-            this.panel1.Controls.Add(this.b_X);
-            this.panel1.Controls.Add(this.b_Comma);
-            this.panel1.Controls.Add(this.b_Plus);
-            this.panel1.Controls.Add(this.b_Minus);
-            this.panel1.Controls.Add(this.b_Multiply);
-            this.panel1.Controls.Add(this.b_Divide);
-            this.panel1.Controls.Add(this.b_RightBracket);
-            this.panel1.Controls.Add(this.b_LeftBracket);
-            this.panel1.Controls.Add(this.b_Erase);
-            this.panel1.Controls.Add(this.b_Back);
-            this.panel1.Controls.Add(this.Accuracy);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.b_6);
-            this.panel1.Controls.Add(this.b_7);
-            this.panel1.Controls.Add(this.b_5);
-            this.panel1.Controls.Add(this.b_0);
-            this.panel1.Controls.Add(this.b_9);
-            this.panel1.Controls.Add(this.b_8);
-            this.panel1.Controls.Add(this.b_4);
-            this.panel1.Controls.Add(this.b_3);
-            this.panel1.Controls.Add(this.b_2);
-            this.panel1.Controls.Add(this.b_1);
-            this.panel1.Controls.Add(this.b_Count);
-            this.panel1.Location = new System.Drawing.Point(6, 187);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(292, 345);
-            this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_1);
+            panel1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            panel1.BackColor = SystemColors.ButtonHighlight;
+            panel1.Controls.Add(button26);
+            panel1.Controls.Add(b_Power);
+            panel1.Controls.Add(button24);
+            panel1.Controls.Add(b_X);
+            panel1.Controls.Add(b_Comma);
+            panel1.Controls.Add(b_Plus);
+            panel1.Controls.Add(b_Minus);
+            panel1.Controls.Add(b_Multiply);
+            panel1.Controls.Add(b_Divide);
+            panel1.Controls.Add(b_RightBracket);
+            panel1.Controls.Add(b_LeftBracket);
+            panel1.Controls.Add(b_Erase);
+            panel1.Controls.Add(b_Back);
+            panel1.Controls.Add(Accuracy);
+            panel1.Controls.Add(textBox2);
+            panel1.Controls.Add(comboBox1);
+            panel1.Controls.Add(b_6);
+            panel1.Controls.Add(b_7);
+            panel1.Controls.Add(b_5);
+            panel1.Controls.Add(b_0);
+            panel1.Controls.Add(b_9);
+            panel1.Controls.Add(b_8);
+            panel1.Controls.Add(b_4);
+            panel1.Controls.Add(b_3);
+            panel1.Controls.Add(b_2);
+            panel1.Controls.Add(b_1);
+            panel1.Controls.Add(b_Count);
+            panel1.Location = new Point(8, 234);
+            panel1.Margin = new Padding(4);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(365, 431);
+            panel1.TabIndex = 0;
+            panel1.Paint += panel1_Paint_1;
             // 
             // button26
             // 
-            this.button26.BackColor = System.Drawing.SystemColors.Window;
-            this.button26.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button26.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.button26.Location = new System.Drawing.Point(39, 216);
-            this.button26.Name = "button26";
-            this.button26.Size = new System.Drawing.Size(158, 27);
-            this.button26.TabIndex = 38;
-            this.button26.Text = "Const";
-            this.button26.UseVisualStyleBackColor = false;
-            this.button26.Click += new System.EventHandler(this.button26_Click);
+            button26.BackColor = SystemColors.Window;
+            button26.FlatStyle = FlatStyle.Flat;
+            button26.ForeColor = SystemColors.Highlight;
+            button26.Location = new Point(49, 270);
+            button26.Margin = new Padding(4);
+            button26.Name = "button26";
+            button26.Size = new Size(198, 34);
+            button26.TabIndex = 38;
+            button26.Text = "Const";
+            button26.UseVisualStyleBackColor = false;
+            button26.Click += button26_Click;
             // 
             // b_Power
             // 
-            this.b_Power.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
-            this.b_Power.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.b_Power.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.b_Power.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.b_Power.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.b_Power.Location = new System.Drawing.Point(64, 142);
-            this.b_Power.Name = "b_Power";
-            this.b_Power.Size = new System.Drawing.Size(40, 37);
-            this.b_Power.TabIndex = 37;
-            this.b_Power.Text = "^";
-            this.b_Power.UseVisualStyleBackColor = true;
-            this.b_Power.Click += new System.EventHandler(this.button25_Click);
+            b_Power.FlatAppearance.BorderColor = SystemColors.Highlight;
+            b_Power.FlatStyle = FlatStyle.Flat;
+            b_Power.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            b_Power.ForeColor = SystemColors.Highlight;
+            b_Power.ImageAlign = ContentAlignment.TopCenter;
+            b_Power.Location = new Point(80, 178);
+            b_Power.Margin = new Padding(4);
+            b_Power.Name = "b_Power";
+            b_Power.Size = new Size(50, 46);
+            b_Power.TabIndex = 37;
+            b_Power.Text = "^";
+            b_Power.UseVisualStyleBackColor = true;
+            b_Power.Click += button25_Click;
             // 
             // button24
             // 
-            this.button24.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button24.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button24.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.button24.Location = new System.Drawing.Point(202, 216);
-            this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(59, 58);
-            this.button24.TabIndex = 36;
-            this.button24.Text = "⏱";
-            this.button24.UseVisualStyleBackColor = true;
-            this.button24.Click += new System.EventHandler(this.button24_Click);
+            button24.FlatStyle = FlatStyle.Flat;
+            button24.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            button24.ForeColor = SystemColors.Highlight;
+            button24.Location = new Point(252, 270);
+            button24.Margin = new Padding(4);
+            button24.Name = "button24";
+            button24.Size = new Size(74, 72);
+            button24.TabIndex = 36;
+            button24.Text = "⏱";
+            button24.UseVisualStyleBackColor = true;
+            button24.Click += button24_Click;
             // 
             // b_X
             // 
-            this.b_X.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
-            this.b_X.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.b_X.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.b_X.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.b_X.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.b_X.Location = new System.Drawing.Point(157, 141);
-            this.b_X.Name = "b_X";
-            this.b_X.Size = new System.Drawing.Size(40, 37);
-            this.b_X.TabIndex = 33;
-            this.b_X.Text = "x";
-            this.b_X.UseVisualStyleBackColor = true;
-            this.b_X.Click += new System.EventHandler(this.button9_Click);
+            b_X.FlatAppearance.BorderColor = SystemColors.Highlight;
+            b_X.FlatStyle = FlatStyle.Flat;
+            b_X.Font = new Font("Arial", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            b_X.ForeColor = SystemColors.Highlight;
+            b_X.ImageAlign = ContentAlignment.TopCenter;
+            b_X.Location = new Point(196, 176);
+            b_X.Margin = new Padding(4);
+            b_X.Name = "b_X";
+            b_X.Size = new Size(50, 46);
+            b_X.TabIndex = 33;
+            b_X.Text = "x";
+            b_X.UseVisualStyleBackColor = true;
+            b_X.Click += button9_Click;
             // 
             // b_Comma
             // 
-            this.b_Comma.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
-            this.b_Comma.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.b_Comma.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.b_Comma.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.b_Comma.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.b_Comma.Location = new System.Drawing.Point(110, 141);
-            this.b_Comma.Name = "b_Comma";
-            this.b_Comma.Size = new System.Drawing.Size(40, 37);
-            this.b_Comma.TabIndex = 32;
-            this.b_Comma.Text = ",";
-            this.b_Comma.UseVisualStyleBackColor = true;
-            this.b_Comma.Click += new System.EventHandler(this.button9_Click);
+            b_Comma.FlatAppearance.BorderColor = SystemColors.Highlight;
+            b_Comma.FlatStyle = FlatStyle.Flat;
+            b_Comma.Font = new Font("Arial", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            b_Comma.ForeColor = SystemColors.Highlight;
+            b_Comma.ImageAlign = ContentAlignment.TopCenter;
+            b_Comma.Location = new Point(138, 176);
+            b_Comma.Margin = new Padding(4);
+            b_Comma.Name = "b_Comma";
+            b_Comma.Size = new Size(50, 46);
+            b_Comma.TabIndex = 32;
+            b_Comma.Text = ",";
+            b_Comma.UseVisualStyleBackColor = true;
+            b_Comma.Click += button9_Click;
             // 
             // b_Plus
             // 
-            this.b_Plus.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.b_Plus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.b_Plus.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.b_Plus.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.b_Plus.Location = new System.Drawing.Point(244, 17);
-            this.b_Plus.Name = "b_Plus";
-            this.b_Plus.Size = new System.Drawing.Size(32, 33);
-            this.b_Plus.TabIndex = 31;
-            this.b_Plus.Text = "+";
-            this.b_Plus.UseVisualStyleBackColor = true;
-            this.b_Plus.Click += new System.EventHandler(this.button9_Click);
+            b_Plus.FlatAppearance.BorderColor = SystemColors.ButtonHighlight;
+            b_Plus.FlatStyle = FlatStyle.Flat;
+            b_Plus.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            b_Plus.ForeColor = SystemColors.Highlight;
+            b_Plus.Location = new Point(305, 21);
+            b_Plus.Margin = new Padding(4);
+            b_Plus.Name = "b_Plus";
+            b_Plus.Size = new Size(40, 41);
+            b_Plus.TabIndex = 31;
+            b_Plus.Text = "+";
+            b_Plus.UseVisualStyleBackColor = true;
+            b_Plus.Click += button9_Click;
             // 
             // b_Minus
             // 
-            this.b_Minus.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.b_Minus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.b_Minus.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.b_Minus.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.b_Minus.Location = new System.Drawing.Point(206, 17);
-            this.b_Minus.Name = "b_Minus";
-            this.b_Minus.Size = new System.Drawing.Size(32, 33);
-            this.b_Minus.TabIndex = 30;
-            this.b_Minus.Text = "-";
-            this.b_Minus.UseVisualStyleBackColor = true;
-            this.b_Minus.Click += new System.EventHandler(this.button9_Click);
+            b_Minus.FlatAppearance.BorderColor = SystemColors.ButtonHighlight;
+            b_Minus.FlatStyle = FlatStyle.Flat;
+            b_Minus.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            b_Minus.ForeColor = SystemColors.Highlight;
+            b_Minus.Location = new Point(258, 21);
+            b_Minus.Margin = new Padding(4);
+            b_Minus.Name = "b_Minus";
+            b_Minus.Size = new Size(40, 41);
+            b_Minus.TabIndex = 30;
+            b_Minus.Text = "-";
+            b_Minus.UseVisualStyleBackColor = true;
+            b_Minus.Click += button9_Click;
             // 
             // b_Multiply
             // 
-            this.b_Multiply.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.b_Multiply.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.b_Multiply.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.b_Multiply.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.b_Multiply.Location = new System.Drawing.Point(168, 17);
-            this.b_Multiply.Name = "b_Multiply";
-            this.b_Multiply.Size = new System.Drawing.Size(32, 33);
-            this.b_Multiply.TabIndex = 29;
-            this.b_Multiply.Text = "*";
-            this.b_Multiply.UseVisualStyleBackColor = true;
-            this.b_Multiply.Click += new System.EventHandler(this.button9_Click);
+            b_Multiply.FlatAppearance.BorderColor = SystemColors.ButtonHighlight;
+            b_Multiply.FlatStyle = FlatStyle.Flat;
+            b_Multiply.Font = new Font("Arial", 13F, FontStyle.Bold, GraphicsUnit.Point);
+            b_Multiply.ForeColor = SystemColors.Highlight;
+            b_Multiply.Location = new Point(210, 21);
+            b_Multiply.Margin = new Padding(4);
+            b_Multiply.Name = "b_Multiply";
+            b_Multiply.Size = new Size(40, 41);
+            b_Multiply.TabIndex = 29;
+            b_Multiply.Text = "*";
+            b_Multiply.UseVisualStyleBackColor = true;
+            b_Multiply.Click += button9_Click;
             // 
             // b_Divide
             // 
-            this.b_Divide.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.b_Divide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.b_Divide.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.b_Divide.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.b_Divide.Location = new System.Drawing.Point(130, 17);
-            this.b_Divide.Name = "b_Divide";
-            this.b_Divide.Size = new System.Drawing.Size(32, 33);
-            this.b_Divide.TabIndex = 28;
-            this.b_Divide.Text = "/";
-            this.b_Divide.UseVisualStyleBackColor = true;
-            this.b_Divide.Click += new System.EventHandler(this.button9_Click);
+            b_Divide.FlatAppearance.BorderColor = SystemColors.ButtonHighlight;
+            b_Divide.FlatStyle = FlatStyle.Flat;
+            b_Divide.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            b_Divide.ForeColor = SystemColors.Highlight;
+            b_Divide.Location = new Point(162, 21);
+            b_Divide.Margin = new Padding(4);
+            b_Divide.Name = "b_Divide";
+            b_Divide.Size = new Size(40, 41);
+            b_Divide.TabIndex = 28;
+            b_Divide.Text = "/";
+            b_Divide.UseVisualStyleBackColor = true;
+            b_Divide.Click += button9_Click;
             // 
             // b_RightBracket
             // 
-            this.b_RightBracket.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.b_RightBracket.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.b_RightBracket.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.b_RightBracket.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.b_RightBracket.Location = new System.Drawing.Point(92, 17);
-            this.b_RightBracket.Name = "b_RightBracket";
-            this.b_RightBracket.Size = new System.Drawing.Size(32, 33);
-            this.b_RightBracket.TabIndex = 27;
-            this.b_RightBracket.Text = ")";
-            this.b_RightBracket.UseVisualStyleBackColor = true;
-            this.b_RightBracket.Click += new System.EventHandler(this.button9_Click);
+            b_RightBracket.FlatAppearance.BorderColor = SystemColors.ButtonHighlight;
+            b_RightBracket.FlatStyle = FlatStyle.Flat;
+            b_RightBracket.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            b_RightBracket.ForeColor = SystemColors.Highlight;
+            b_RightBracket.Location = new Point(115, 21);
+            b_RightBracket.Margin = new Padding(4);
+            b_RightBracket.Name = "b_RightBracket";
+            b_RightBracket.Size = new Size(40, 41);
+            b_RightBracket.TabIndex = 27;
+            b_RightBracket.Text = ")";
+            b_RightBracket.UseVisualStyleBackColor = true;
+            b_RightBracket.Click += button9_Click;
             // 
             // b_LeftBracket
             // 
-            this.b_LeftBracket.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.b_LeftBracket.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.b_LeftBracket.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.b_LeftBracket.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.b_LeftBracket.Location = new System.Drawing.Point(54, 17);
-            this.b_LeftBracket.Name = "b_LeftBracket";
-            this.b_LeftBracket.Size = new System.Drawing.Size(32, 33);
-            this.b_LeftBracket.TabIndex = 26;
-            this.b_LeftBracket.Text = "(";
-            this.b_LeftBracket.UseVisualStyleBackColor = true;
-            this.b_LeftBracket.Click += new System.EventHandler(this.button9_Click);
+            b_LeftBracket.FlatAppearance.BorderColor = SystemColors.ButtonHighlight;
+            b_LeftBracket.FlatStyle = FlatStyle.Flat;
+            b_LeftBracket.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            b_LeftBracket.ForeColor = SystemColors.Highlight;
+            b_LeftBracket.Location = new Point(68, 21);
+            b_LeftBracket.Margin = new Padding(4);
+            b_LeftBracket.Name = "b_LeftBracket";
+            b_LeftBracket.Size = new Size(40, 41);
+            b_LeftBracket.TabIndex = 26;
+            b_LeftBracket.Text = "(";
+            b_LeftBracket.UseVisualStyleBackColor = true;
+            b_LeftBracket.Click += button9_Click;
             // 
             // b_Erase
             // 
-            this.b_Erase.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.b_Erase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.b_Erase.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.b_Erase.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.b_Erase.Location = new System.Drawing.Point(16, 17);
-            this.b_Erase.Name = "b_Erase";
-            this.b_Erase.Size = new System.Drawing.Size(32, 33);
-            this.b_Erase.TabIndex = 25;
-            this.b_Erase.Text = "C";
-            this.b_Erase.UseVisualStyleBackColor = true;
-            this.b_Erase.Click += new System.EventHandler(this.button20_Click);
+            b_Erase.FlatAppearance.BorderColor = SystemColors.ButtonHighlight;
+            b_Erase.FlatStyle = FlatStyle.Flat;
+            b_Erase.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            b_Erase.ForeColor = SystemColors.Highlight;
+            b_Erase.Location = new Point(20, 21);
+            b_Erase.Margin = new Padding(4);
+            b_Erase.Name = "b_Erase";
+            b_Erase.Size = new Size(40, 41);
+            b_Erase.TabIndex = 25;
+            b_Erase.Text = "C";
+            b_Erase.UseVisualStyleBackColor = true;
+            b_Erase.Click += button20_Click;
             // 
             // b_Back
             // 
-            this.b_Back.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
-            this.b_Back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.b_Back.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.b_Back.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.b_Back.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.b_Back.Location = new System.Drawing.Point(206, 141);
-            this.b_Back.Name = "b_Back";
-            this.b_Back.Size = new System.Drawing.Size(40, 37);
-            this.b_Back.TabIndex = 24;
-            this.b_Back.Text = "⏴";
-            this.b_Back.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.b_Back.UseVisualStyleBackColor = true;
-            this.b_Back.Click += new System.EventHandler(this.button19_Click);
+            b_Back.FlatAppearance.BorderColor = SystemColors.Highlight;
+            b_Back.FlatStyle = FlatStyle.Flat;
+            b_Back.Font = new Font("Arial", 13F, FontStyle.Bold, GraphicsUnit.Point);
+            b_Back.ForeColor = SystemColors.Highlight;
+            b_Back.ImageAlign = ContentAlignment.TopCenter;
+            b_Back.Location = new Point(258, 176);
+            b_Back.Margin = new Padding(4);
+            b_Back.Name = "b_Back";
+            b_Back.Size = new Size(50, 46);
+            b_Back.TabIndex = 24;
+            b_Back.Text = "⏴";
+            b_Back.TextAlign = ContentAlignment.TopCenter;
+            b_Back.UseVisualStyleBackColor = true;
+            b_Back.Click += button19_Click;
             // 
             // Accuracy
             // 
-            this.Accuracy.DecimalPlaces = 3;
-            this.Accuracy.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.Accuracy.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            262144});
-            this.Accuracy.Location = new System.Drawing.Point(110, 247);
-            this.Accuracy.Maximum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.Accuracy.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            655360});
-            this.Accuracy.Name = "Accuracy";
-            this.Accuracy.Size = new System.Drawing.Size(87, 27);
-            this.Accuracy.TabIndex = 22;
-            this.Accuracy.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            131072});
+            Accuracy.DecimalPlaces = 3;
+            Accuracy.ForeColor = SystemColors.Highlight;
+            Accuracy.Increment = new decimal(new int[] { 1, 0, 0, 262144 });
+            Accuracy.Location = new Point(138, 309);
+            Accuracy.Margin = new Padding(4);
+            Accuracy.Maximum = new decimal(new int[] { 10, 0, 0, 0 });
+            Accuracy.Minimum = new decimal(new int[] { 1, 0, 0, 655360 });
+            Accuracy.Name = "Accuracy";
+            Accuracy.Size = new Size(109, 31);
+            Accuracy.TabIndex = 22;
+            Accuracy.Value = new decimal(new int[] { 1, 0, 0, 131072 });
             // 
             // textBox2
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.textBox2.Location = new System.Drawing.Point(39, 249);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(65, 20);
-            this.textBox2.TabIndex = 21;
-            this.textBox2.Text = "Delta:";
+            textBox2.BorderStyle = BorderStyle.None;
+            textBox2.ForeColor = SystemColors.Highlight;
+            textBox2.Location = new Point(49, 311);
+            textBox2.Margin = new Padding(4);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(81, 24);
+            textBox2.TabIndex = 21;
+            textBox2.Text = "Delta:";
             // 
             // comboBox1
             // 
-            this.comboBox1.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.comboBox1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.comboBox1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "sin()",
-            "cos()",
-            "tan()",
-            "cot()",
-            "ln()",
-            "pi",
-            "e"});
-            this.comboBox1.Location = new System.Drawing.Point(39, 185);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(222, 25);
-            this.comboBox1.TabIndex = 1;
-            this.comboBox1.Text = "Functions";
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            comboBox1.BackColor = SystemColors.HighlightText;
+            comboBox1.FlatStyle = FlatStyle.System;
+            comboBox1.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            comboBox1.ForeColor = SystemColors.Highlight;
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "sin()", "cos()", "tan()", "cot()", "ln()", "pi", "e" });
+            comboBox1.Location = new Point(49, 231);
+            comboBox1.Margin = new Padding(4);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(276, 29);
+            comboBox1.TabIndex = 1;
+            comboBox1.Text = "Functions";
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // b_6
             // 
-            this.b_6.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
-            this.b_6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.b_6.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.b_6.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.b_6.Location = new System.Drawing.Point(39, 99);
-            this.b_6.Name = "b_6";
-            this.b_6.Size = new System.Drawing.Size(40, 37);
-            this.b_6.TabIndex = 10;
-            this.b_6.Text = "6";
-            this.b_6.UseVisualStyleBackColor = true;
-            this.b_6.Click += new System.EventHandler(this.button9_Click);
+            b_6.FlatAppearance.BorderColor = SystemColors.Highlight;
+            b_6.FlatStyle = FlatStyle.Flat;
+            b_6.Font = new Font("Arial", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            b_6.ForeColor = SystemColors.Highlight;
+            b_6.Location = new Point(49, 124);
+            b_6.Margin = new Padding(4);
+            b_6.Name = "b_6";
+            b_6.Size = new Size(50, 46);
+            b_6.TabIndex = 10;
+            b_6.Text = "6";
+            b_6.UseVisualStyleBackColor = true;
+            b_6.Click += button9_Click;
             // 
             // b_7
             // 
-            this.b_7.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
-            this.b_7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.b_7.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.b_7.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.b_7.Location = new System.Drawing.Point(84, 99);
-            this.b_7.Name = "b_7";
-            this.b_7.Size = new System.Drawing.Size(40, 37);
-            this.b_7.TabIndex = 9;
-            this.b_7.Text = "7";
-            this.b_7.UseVisualStyleBackColor = true;
-            this.b_7.Click += new System.EventHandler(this.button9_Click);
+            b_7.FlatAppearance.BorderColor = SystemColors.Highlight;
+            b_7.FlatStyle = FlatStyle.Flat;
+            b_7.Font = new Font("Arial", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            b_7.ForeColor = SystemColors.Highlight;
+            b_7.Location = new Point(105, 124);
+            b_7.Margin = new Padding(4);
+            b_7.Name = "b_7";
+            b_7.Size = new Size(50, 46);
+            b_7.TabIndex = 9;
+            b_7.Text = "7";
+            b_7.UseVisualStyleBackColor = true;
+            b_7.Click += button9_Click;
             // 
             // b_5
             // 
-            this.b_5.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
-            this.b_5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.b_5.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.b_5.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.b_5.Location = new System.Drawing.Point(223, 56);
-            this.b_5.Name = "b_5";
-            this.b_5.Size = new System.Drawing.Size(40, 37);
-            this.b_5.TabIndex = 8;
-            this.b_5.Text = "5";
-            this.b_5.UseVisualStyleBackColor = true;
-            this.b_5.Click += new System.EventHandler(this.button9_Click);
+            b_5.FlatAppearance.BorderColor = SystemColors.Highlight;
+            b_5.FlatStyle = FlatStyle.Flat;
+            b_5.Font = new Font("Arial", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            b_5.ForeColor = SystemColors.Highlight;
+            b_5.Location = new Point(279, 70);
+            b_5.Margin = new Padding(4);
+            b_5.Name = "b_5";
+            b_5.Size = new Size(50, 46);
+            b_5.TabIndex = 8;
+            b_5.Text = "5";
+            b_5.UseVisualStyleBackColor = true;
+            b_5.Click += button9_Click;
             // 
             // b_0
             // 
-            this.b_0.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
-            this.b_0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.b_0.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.b_0.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.b_0.Location = new System.Drawing.Point(223, 99);
-            this.b_0.Name = "b_0";
-            this.b_0.Size = new System.Drawing.Size(40, 37);
-            this.b_0.TabIndex = 7;
-            this.b_0.Text = "0";
-            this.b_0.UseVisualStyleBackColor = true;
-            this.b_0.Click += new System.EventHandler(this.button9_Click);
+            b_0.FlatAppearance.BorderColor = SystemColors.Highlight;
+            b_0.FlatStyle = FlatStyle.Flat;
+            b_0.Font = new Font("Arial", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            b_0.ForeColor = SystemColors.Highlight;
+            b_0.Location = new Point(279, 124);
+            b_0.Margin = new Padding(4);
+            b_0.Name = "b_0";
+            b_0.Size = new Size(50, 46);
+            b_0.TabIndex = 7;
+            b_0.Text = "0";
+            b_0.UseVisualStyleBackColor = true;
+            b_0.Click += button9_Click;
             // 
             // b_9
             // 
-            this.b_9.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
-            this.b_9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.b_9.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.b_9.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.b_9.Location = new System.Drawing.Point(176, 99);
-            this.b_9.Name = "b_9";
-            this.b_9.Size = new System.Drawing.Size(40, 37);
-            this.b_9.TabIndex = 6;
-            this.b_9.Text = "9";
-            this.b_9.UseVisualStyleBackColor = true;
-            this.b_9.Click += new System.EventHandler(this.button9_Click);
+            b_9.FlatAppearance.BorderColor = SystemColors.Highlight;
+            b_9.FlatStyle = FlatStyle.Flat;
+            b_9.Font = new Font("Arial", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            b_9.ForeColor = SystemColors.Highlight;
+            b_9.Location = new Point(220, 124);
+            b_9.Margin = new Padding(4);
+            b_9.Name = "b_9";
+            b_9.Size = new Size(50, 46);
+            b_9.TabIndex = 6;
+            b_9.Text = "9";
+            b_9.UseVisualStyleBackColor = true;
+            b_9.Click += button9_Click;
             // 
             // b_8
             // 
-            this.b_8.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
-            this.b_8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.b_8.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.b_8.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.b_8.Location = new System.Drawing.Point(129, 99);
-            this.b_8.Name = "b_8";
-            this.b_8.Size = new System.Drawing.Size(40, 37);
-            this.b_8.TabIndex = 5;
-            this.b_8.Text = "8";
-            this.b_8.UseVisualStyleBackColor = true;
-            this.b_8.Click += new System.EventHandler(this.button9_Click);
+            b_8.FlatAppearance.BorderColor = SystemColors.Highlight;
+            b_8.FlatStyle = FlatStyle.Flat;
+            b_8.Font = new Font("Arial", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            b_8.ForeColor = SystemColors.Highlight;
+            b_8.Location = new Point(161, 124);
+            b_8.Margin = new Padding(4);
+            b_8.Name = "b_8";
+            b_8.Size = new Size(50, 46);
+            b_8.TabIndex = 5;
+            b_8.Text = "8";
+            b_8.UseVisualStyleBackColor = true;
+            b_8.Click += button9_Click;
             // 
             // b_4
             // 
-            this.b_4.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
-            this.b_4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.b_4.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.b_4.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.b_4.Location = new System.Drawing.Point(176, 56);
-            this.b_4.Name = "b_4";
-            this.b_4.Size = new System.Drawing.Size(40, 37);
-            this.b_4.TabIndex = 4;
-            this.b_4.Text = "4";
-            this.b_4.UseVisualStyleBackColor = true;
-            this.b_4.Click += new System.EventHandler(this.button9_Click);
+            b_4.FlatAppearance.BorderColor = SystemColors.Highlight;
+            b_4.FlatStyle = FlatStyle.Flat;
+            b_4.Font = new Font("Arial", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            b_4.ForeColor = SystemColors.Highlight;
+            b_4.Location = new Point(220, 70);
+            b_4.Margin = new Padding(4);
+            b_4.Name = "b_4";
+            b_4.Size = new Size(50, 46);
+            b_4.TabIndex = 4;
+            b_4.Text = "4";
+            b_4.UseVisualStyleBackColor = true;
+            b_4.Click += button9_Click;
             // 
             // b_3
             // 
-            this.b_3.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
-            this.b_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.b_3.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.b_3.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.b_3.Location = new System.Drawing.Point(129, 56);
-            this.b_3.Name = "b_3";
-            this.b_3.Size = new System.Drawing.Size(40, 37);
-            this.b_3.TabIndex = 3;
-            this.b_3.Text = "3";
-            this.b_3.UseVisualStyleBackColor = true;
-            this.b_3.Click += new System.EventHandler(this.button9_Click);
+            b_3.FlatAppearance.BorderColor = SystemColors.Highlight;
+            b_3.FlatStyle = FlatStyle.Flat;
+            b_3.Font = new Font("Arial", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            b_3.ForeColor = SystemColors.Highlight;
+            b_3.Location = new Point(161, 70);
+            b_3.Margin = new Padding(4);
+            b_3.Name = "b_3";
+            b_3.Size = new Size(50, 46);
+            b_3.TabIndex = 3;
+            b_3.Text = "3";
+            b_3.UseVisualStyleBackColor = true;
+            b_3.Click += button9_Click;
             // 
             // b_2
             // 
-            this.b_2.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
-            this.b_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.b_2.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.b_2.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.b_2.Location = new System.Drawing.Point(84, 56);
-            this.b_2.Name = "b_2";
-            this.b_2.Size = new System.Drawing.Size(40, 37);
-            this.b_2.TabIndex = 2;
-            this.b_2.Text = "2";
-            this.b_2.UseVisualStyleBackColor = true;
-            this.b_2.Click += new System.EventHandler(this.button9_Click);
+            b_2.FlatAppearance.BorderColor = SystemColors.Highlight;
+            b_2.FlatStyle = FlatStyle.Flat;
+            b_2.Font = new Font("Arial", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            b_2.ForeColor = SystemColors.Highlight;
+            b_2.Location = new Point(105, 70);
+            b_2.Margin = new Padding(4);
+            b_2.Name = "b_2";
+            b_2.Size = new Size(50, 46);
+            b_2.TabIndex = 2;
+            b_2.Text = "2";
+            b_2.UseVisualStyleBackColor = true;
+            b_2.Click += button9_Click;
             // 
             // b_1
             // 
-            this.b_1.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
-            this.b_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.b_1.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.b_1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.b_1.Location = new System.Drawing.Point(40, 56);
-            this.b_1.Name = "b_1";
-            this.b_1.Size = new System.Drawing.Size(40, 37);
-            this.b_1.TabIndex = 1;
-            this.b_1.Text = "1";
-            this.b_1.UseVisualStyleBackColor = true;
-            this.b_1.Click += new System.EventHandler(this.button9_Click);
+            b_1.FlatAppearance.BorderColor = SystemColors.Highlight;
+            b_1.FlatStyle = FlatStyle.Flat;
+            b_1.Font = new Font("Arial", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            b_1.ForeColor = SystemColors.Highlight;
+            b_1.Location = new Point(50, 70);
+            b_1.Margin = new Padding(4);
+            b_1.Name = "b_1";
+            b_1.Size = new Size(50, 46);
+            b_1.TabIndex = 1;
+            b_1.Text = "1";
+            b_1.UseVisualStyleBackColor = true;
+            b_1.Click += button9_Click;
             // 
             // b_Count
             // 
-            this.b_Count.BackColor = System.Drawing.SystemColors.Highlight;
-            this.b_Count.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.b_Count.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.b_Count.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.b_Count.Location = new System.Drawing.Point(2, 291);
-            this.b_Count.Name = "b_Count";
-            this.b_Count.Size = new System.Drawing.Size(292, 50);
-            this.b_Count.TabIndex = 0;
-            this.b_Count.Text = "Count In Mind";
-            this.b_Count.UseVisualStyleBackColor = false;
-            this.b_Count.Click += new System.EventHandler(this.Count_Click);
+            b_Count.BackColor = SystemColors.Highlight;
+            b_Count.FlatStyle = FlatStyle.Flat;
+            b_Count.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            b_Count.ForeColor = SystemColors.ButtonHighlight;
+            b_Count.Location = new Point(2, 364);
+            b_Count.Margin = new Padding(4);
+            b_Count.Name = "b_Count";
+            b_Count.Size = new Size(365, 62);
+            b_Count.TabIndex = 0;
+            b_Count.Text = "Count In Mind";
+            b_Count.UseVisualStyleBackColor = false;
+            b_Count.Click += Count_Click;
             // 
             // button22
             // 
-            this.button22.Location = new System.Drawing.Point(0, 0);
-            this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(75, 23);
-            this.button22.TabIndex = 1;
+            button22.Location = new Point(0, 0);
+            button22.Margin = new Padding(4);
+            button22.Name = "button22";
+            button22.Size = new Size(94, 29);
+            button22.TabIndex = 1;
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.Highlight;
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.Formula);
-            this.panel2.Controls.Add(this.UpperIntegralRange);
-            this.panel2.Controls.Add(this.LowerIntegralRange);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(0, 2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(292, 128);
-            this.panel2.TabIndex = 0;
+            panel2.BackColor = SystemColors.Highlight;
+            panel2.Controls.Add(label2);
+            panel2.Controls.Add(Formula);
+            panel2.Controls.Add(UpperIntegralRange);
+            panel2.Controls.Add(LowerIntegralRange);
+            panel2.Controls.Add(label1);
+            panel2.Location = new Point(0, 2);
+            panel2.Margin = new Padding(4);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(365, 160);
+            panel2.TabIndex = 0;
+            panel2.Paint += panel2_Paint_1;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(259, 47);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 26);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "dx";
+            label2.AutoSize = true;
+            label2.Font = new Font("Microsoft Sans Serif", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.ForeColor = SystemColors.ButtonHighlight;
+            label2.Location = new Point(324, 59);
+            label2.Margin = new Padding(4, 0, 4, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(39, 30);
+            label2.TabIndex = 4;
+            label2.Text = "dx";
             // 
             // Formula
             // 
-            this.Formula.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Formula.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.Formula.Location = new System.Drawing.Point(101, 47);
-            this.Formula.Name = "Formula";
-            this.Formula.Size = new System.Drawing.Size(156, 30);
-            this.Formula.TabIndex = 3;
+            Formula.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            Formula.ForeColor = SystemColors.Highlight;
+            Formula.Location = new Point(126, 59);
+            Formula.Margin = new Padding(4);
+            Formula.Name = "Formula";
+            Formula.Size = new Size(194, 35);
+            Formula.TabIndex = 3;
             // 
             // UpperIntegralRange
             // 
-            this.UpperIntegralRange.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.UpperIntegralRange.DecimalPlaces = 1;
-            this.UpperIntegralRange.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.UpperIntegralRange.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.UpperIntegralRange.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            131072});
-            this.UpperIntegralRange.Location = new System.Drawing.Point(12, 10);
-            this.UpperIntegralRange.Minimum = new decimal(new int[] {
-            99,
-            0,
-            0,
-            -2147483648});
-            this.UpperIntegralRange.Name = "UpperIntegralRange";
-            this.UpperIntegralRange.Size = new System.Drawing.Size(47, 21);
-            this.UpperIntegralRange.TabIndex = 2;
+            UpperIntegralRange.BorderStyle = BorderStyle.None;
+            UpperIntegralRange.DecimalPlaces = 1;
+            UpperIntegralRange.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            UpperIntegralRange.ForeColor = SystemColors.Highlight;
+            UpperIntegralRange.Increment = new decimal(new int[] { 1, 0, 0, 131072 });
+            UpperIntegralRange.Location = new Point(15, 4);
+            UpperIntegralRange.Margin = new Padding(4);
+            UpperIntegralRange.Maximum = new decimal(new int[] { 10000, 0, 0, 0 });
+            UpperIntegralRange.Minimum = new decimal(new int[] { 10000, 0, 0, int.MinValue });
+            UpperIntegralRange.Name = "UpperIntegralRange";
+            UpperIntegralRange.Size = new Size(109, 24);
+            UpperIntegralRange.TabIndex = 2;
+            UpperIntegralRange.Value = new decimal(new int[] { 10, 0, 0, 0 });
             // 
             // LowerIntegralRange
             // 
-            this.LowerIntegralRange.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.LowerIntegralRange.DecimalPlaces = 1;
-            this.LowerIntegralRange.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LowerIntegralRange.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.LowerIntegralRange.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            131072});
-            this.LowerIntegralRange.Location = new System.Drawing.Point(12, 91);
-            this.LowerIntegralRange.Maximum = new decimal(new int[] {
-            99,
-            0,
-            0,
-            0});
-            this.LowerIntegralRange.Minimum = new decimal(new int[] {
-            100,
-            0,
-            0,
-            -2147483648});
-            this.LowerIntegralRange.Name = "LowerIntegralRange";
-            this.LowerIntegralRange.Size = new System.Drawing.Size(47, 21);
-            this.LowerIntegralRange.TabIndex = 1;
+            LowerIntegralRange.BorderStyle = BorderStyle.None;
+            LowerIntegralRange.DecimalPlaces = 1;
+            LowerIntegralRange.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            LowerIntegralRange.ForeColor = SystemColors.Highlight;
+            LowerIntegralRange.Increment = new decimal(new int[] { 1, 0, 0, 131072 });
+            LowerIntegralRange.Location = new Point(15, 118);
+            LowerIntegralRange.Margin = new Padding(4);
+            LowerIntegralRange.Maximum = new decimal(new int[] { 10000, 0, 0, 0 });
+            LowerIntegralRange.Minimum = new decimal(new int[] { 10000, 0, 0, int.MinValue });
+            LowerIntegralRange.Name = "LowerIntegralRange";
+            LowerIntegralRange.Size = new Size(109, 24);
+            LowerIntegralRange.TabIndex = 1;
+            LowerIntegralRange.Value = new decimal(new int[] { 10, 0, 0, int.MinValue });
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 45F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(62, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 85);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "∫";
+            label1.AutoSize = true;
+            label1.Font = new Font("Microsoft Sans Serif", 45F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.ForeColor = SystemColors.ButtonHighlight;
+            label1.Location = new Point(78, 12);
+            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(68, 102);
+            label1.TabIndex = 1;
+            label1.Text = "∫";
             // 
             // GraphPanel
             // 
-            this.GraphPanel.Location = new System.Drawing.Point(300, 12);
-            this.GraphPanel.Name = "GraphPanel";
-            this.GraphPanel.Size = new System.Drawing.Size(572, 483);
-            this.GraphPanel.TabIndex = 2;
-            this.GraphPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.GraphPanel_MouseMove);
+            GraphPanel.Location = new Point(375, 15);
+            GraphPanel.Margin = new Padding(4);
+            GraphPanel.Name = "GraphPanel";
+            GraphPanel.Size = new Size(715, 604);
+            GraphPanel.TabIndex = 2;
+            GraphPanel.MouseMove += GraphPanel_MouseMove;
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
-            this.tableLayoutPanel1.ColumnCount = 6;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.66667F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.33333F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 94F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 108F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 79F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 69F));
-            this.tableLayoutPanel1.Controls.Add(this.label3, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.YMax, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label4, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.YMin, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.l_x, 4, 0);
-            this.tableLayoutPanel1.Controls.Add(this.l_y, 5, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(300, 501);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(572, 41);
-            this.tableLayoutPanel1.TabIndex = 3;
+            tableLayoutPanel1.CellBorderStyle = TableLayoutPanelCellBorderStyle.Single;
+            tableLayoutPanel1.ColumnCount = 6;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 46.66667F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 53.33333F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 118F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 135F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 99F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 89F));
+            tableLayoutPanel1.Controls.Add(label3, 0, 0);
+            tableLayoutPanel1.Controls.Add(YMax, 3, 0);
+            tableLayoutPanel1.Controls.Add(label4, 2, 0);
+            tableLayoutPanel1.Controls.Add(YMin, 1, 0);
+            tableLayoutPanel1.Controls.Add(l_x, 4, 0);
+            tableLayoutPanel1.Controls.Add(l_y, 5, 0);
+            tableLayoutPanel1.Location = new Point(375, 626);
+            tableLayoutPanel1.Margin = new Padding(4);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 1;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel1.Size = new Size(715, 51);
+            tableLayoutPanel1.TabIndex = 3;
             // 
             // label3
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(4, 1);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(94, 39);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Y Min";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            label3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            label3.AutoSize = true;
+            label3.Location = new Point(5, 1);
+            label3.Margin = new Padding(4, 0, 4, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(116, 49);
+            label3.TabIndex = 0;
+            label3.Text = "Y Min";
+            label3.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // YMax
             // 
-            this.YMax.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            131072});
-            this.YMax.Location = new System.Drawing.Point(315, 4);
-            this.YMax.Minimum = new decimal(new int[] {
-            99,
-            0,
-            0,
-            -2147483648});
-            this.YMax.Name = "YMax";
-            this.YMax.Size = new System.Drawing.Size(102, 27);
-            this.YMax.TabIndex = 3;
-            this.YMax.Value = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
+            YMax.Increment = new decimal(new int[] { 1, 0, 0, 131072 });
+            YMax.Location = new Point(392, 5);
+            YMax.Margin = new Padding(4);
+            YMax.Name = "YMax";
+            YMax.Size = new Size(127, 31);
+            YMax.TabIndex = 3;
+            YMax.Value = new decimal(new int[] { 10, 0, 0, 0 });
             // 
             // label4
             // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(220, 1);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(88, 39);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Y Max";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            label4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            label4.AutoSize = true;
+            label4.Location = new Point(273, 1);
+            label4.Margin = new Padding(4, 0, 4, 0);
+            label4.Name = "label4";
+            label4.Size = new Size(110, 49);
+            label4.TabIndex = 1;
+            label4.Text = "Y Max";
+            label4.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // YMin
             // 
-            this.YMin.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            131072});
-            this.YMin.Location = new System.Drawing.Point(105, 4);
-            this.YMin.Maximum = new decimal(new int[] {
-            99,
-            0,
-            0,
-            0});
-            this.YMin.Minimum = new decimal(new int[] {
-            100,
-            0,
-            0,
-            -2147483648});
-            this.YMin.Name = "YMin";
-            this.YMin.Size = new System.Drawing.Size(104, 27);
-            this.YMin.TabIndex = 2;
-            this.YMin.Value = new decimal(new int[] {
-            10,
-            0,
-            0,
-            -2147483648});
+            YMin.Increment = new decimal(new int[] { 1, 0, 0, 131072 });
+            YMin.Location = new Point(130, 5);
+            YMin.Margin = new Padding(4);
+            YMin.Maximum = new decimal(new int[] { 99, 0, 0, 0 });
+            YMin.Name = "YMin";
+            YMin.Size = new Size(130, 31);
+            YMin.TabIndex = 2;
             // 
             // l_x
             // 
-            this.l_x.AutoSize = true;
-            this.l_x.Location = new System.Drawing.Point(424, 1);
-            this.l_x.Name = "l_x";
-            this.l_x.Size = new System.Drawing.Size(0, 20);
-            this.l_x.TabIndex = 4;
+            l_x.AutoSize = true;
+            l_x.Location = new Point(528, 1);
+            l_x.Margin = new Padding(4, 0, 4, 0);
+            l_x.Name = "l_x";
+            l_x.Size = new Size(0, 25);
+            l_x.TabIndex = 4;
             // 
             // l_y
             // 
-            this.l_y.AutoSize = true;
-            this.l_y.Location = new System.Drawing.Point(504, 1);
-            this.l_y.Name = "l_y";
-            this.l_y.Size = new System.Drawing.Size(0, 20);
-            this.l_y.TabIndex = 5;
+            l_y.AutoSize = true;
+            l_y.Location = new Point(628, 1);
+            l_y.Margin = new Padding(4, 0, 4, 0);
+            l_y.Name = "l_y";
+            l_y.Size = new Size(0, 25);
+            l_y.TabIndex = 5;
             // 
             // tableLayoutPanel2
             // 
-            this.tableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
-            this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.98592F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 69.01408F));
-            this.tableLayoutPanel2.Controls.Add(this.label5, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.l_Result, 1, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(8, 136);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 1;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(284, 45);
-            this.tableLayoutPanel2.TabIndex = 4;
+            tableLayoutPanel2.CellBorderStyle = TableLayoutPanelCellBorderStyle.Single;
+            tableLayoutPanel2.ColumnCount = 2;
+            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 30.98592F));
+            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 69.01408F));
+            tableLayoutPanel2.Controls.Add(label5, 0, 0);
+            tableLayoutPanel2.Controls.Add(l_Result, 1, 0);
+            tableLayoutPanel2.Location = new Point(10, 170);
+            tableLayoutPanel2.Margin = new Padding(4);
+            tableLayoutPanel2.Name = "tableLayoutPanel2";
+            tableLayoutPanel2.RowCount = 1;
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel2.Size = new Size(355, 56);
+            tableLayoutPanel2.TabIndex = 4;
             // 
             // label5
             // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(4, 1);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(81, 43);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Result:";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            label5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.ForeColor = SystemColors.Highlight;
+            label5.Location = new Point(5, 1);
+            label5.Margin = new Padding(4, 0, 4, 0);
+            label5.Name = "label5";
+            label5.Size = new Size(101, 54);
+            label5.TabIndex = 0;
+            label5.Text = "Result:";
+            label5.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // l_Result
             // 
-            this.l_Result.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.l_Result.AutoSize = true;
-            this.l_Result.Location = new System.Drawing.Point(92, 1);
-            this.l_Result.Name = "l_Result";
-            this.l_Result.Size = new System.Drawing.Size(188, 43);
-            this.l_Result.TabIndex = 1;
-            this.l_Result.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            l_Result.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            l_Result.AutoSize = true;
+            l_Result.Location = new Point(115, 1);
+            l_Result.Margin = new Padding(4, 0, 4, 0);
+            l_Result.Name = "l_Result";
+            l_Result.Size = new Size(235, 54);
+            l_Result.TabIndex = 1;
+            l_Result.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(884, 542);
-            this.Controls.Add(this.tableLayoutPanel2);
-            this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.GraphPanel);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.button22);
-            this.Controls.Add(this.panel1);
-            this.MaximumSize = new System.Drawing.Size(902, 589);
-            this.MinimumSize = new System.Drawing.Size(902, 589);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Accuracy)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.UpperIntegralRange)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.LowerIntegralRange)).EndInit();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.YMax)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.YMin)).EndInit();
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ButtonHighlight;
+            ClientSize = new Size(1100, 666);
+            Controls.Add(tableLayoutPanel2);
+            Controls.Add(tableLayoutPanel1);
+            Controls.Add(GraphPanel);
+            Controls.Add(panel2);
+            Controls.Add(button22);
+            Controls.Add(panel1);
+            Margin = new Padding(4);
+            MaximumSize = new Size(1122, 722);
+            MinimumSize = new Size(1122, 722);
+            Name = "Form1";
+            Text = "Form1";
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)Accuracy).EndInit();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)UpperIntegralRange).EndInit();
+            ((System.ComponentModel.ISupportInitialize)LowerIntegralRange).EndInit();
+            tableLayoutPanel1.ResumeLayout(false);
+            tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)YMax).EndInit();
+            ((System.ComponentModel.ISupportInitialize)YMin).EndInit();
+            tableLayoutPanel2.ResumeLayout(false);
+            tableLayoutPanel2.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion

@@ -14,6 +14,7 @@ using WinFormsApp1;
 using static System.Windows.Forms.DataFormats;
 using System.Linq;
 using System.Reflection.Emit;
+using System.Diagnostics;
 
 namespace GroupProject_106
 {
@@ -24,6 +25,7 @@ namespace GroupProject_106
         private int b;
         private bool flag = false;
         public Painter g;
+        object drawlocker = new();
 
         ListBox listbox10 = new ListBox();
         List<string> inputs = new List<string>();
@@ -35,7 +37,7 @@ namespace GroupProject_106
         {
             InitializeComponent();
             Formula.Text += expression;
-            g= new Painter(GraphPanel.CreateGraphics());
+            g = new Painter(GraphPanel.CreateGraphics());
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -156,7 +158,7 @@ namespace GroupProject_106
             }
             Formula.Lines = arr;
             */
-            if(Formula.Text !="") Formula.Text = Formula.Text.Remove(Formula.Text.Length - 1);
+            if (Formula.Text != "") Formula.Text = Formula.Text.Remove(Formula.Text.Length - 1);
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -208,6 +210,61 @@ namespace GroupProject_106
         {
             b = Convert.ToInt32(Accuracy.Value);
         }
+
+        public void FinishFunc()
+        {
+            if (InvokeRequired) l_Result.Invoke(FinishFunc);
+            else
+            {
+                l_Result.Text = Consumer.Integral.ToString();
+                LowerIntegralRange.Enabled = true;
+                UpperIntegralRange.Enabled = true;
+                Accuracy.Enabled = true;
+                Formula.Enabled = true;
+                comboBox1.Enabled = true;
+                b_0.Enabled = true;
+                b_1.Enabled = true;
+                b_2.Enabled = true;
+                b_3.Enabled = true;
+                b_4.Enabled = true;
+                b_5.Enabled = true;
+                b_6.Enabled = true;
+                b_7.Enabled = true;
+                b_8.Enabled = true;
+                b_9.Enabled = true;
+                b_Back.Enabled = true;
+                b_Comma.Enabled = true;
+                b_Count.Enabled = true;
+                b_Divide.Enabled = true;
+                b_Erase.Enabled = true;
+                b_LeftBracket.Enabled = true;
+                b_Minus.Enabled = true;
+                b_Multiply.Enabled = true;
+                b_Plus.Enabled = true;
+                b_Power.Enabled = true;
+                b_RightBracket.Enabled = true;
+                b_X.Enabled = true;
+            }
+        }
+
+        public void DrawFunc(List<double[]> coordinates)
+        {
+            if (InvokeRequired)
+            {
+                Invoke(DrawFunc, coordinates);
+            }
+            else
+            {
+                lock (drawlocker)
+                {
+                    foreach (var coord in coordinates)
+                    {
+                        g.PaintGraph(coord[0], coord[1]);
+                    }
+                }
+            }
+        }
+
         private void Count_Click(object sender, EventArgs e)
         {
             if (Formula.Lines != null)
@@ -215,16 +272,55 @@ namespace GroupProject_106
                 inputs.Add(Formula.Text);
             }
 
-            InputDataCheckAndCorrect check = new InputDataCheckAndCorrect(Formula.Text ?? "" , listbox10);
+            InputDataCheckAndCorrect check = new InputDataCheckAndCorrect(Formula.Text ?? "", listbox10);
             if (check.InputDataDiagnostic())
             {
                 // Graph inisiallise
                 g.initCoord((double)LowerIntegralRange.Value, (double)UpperIntegralRange.Value, (double)YMax.Value, (double)YMin.Value, (double)Accuracy.Value);
                 g.PaintCordPlane();
 
-
                 // izmenenaya stroka dlya adeli 
                 string expression = check.ExprChangeForParsing();
+                Formula.Text = expression;
+
+                double deltha = (double)Accuracy.Value;
+                double start = (double)LowerIntegralRange.Value;
+                double end = (double)UpperIntegralRange.Value;
+                LowerIntegralRange.Enabled = false;
+                UpperIntegralRange.Enabled = false;
+                Accuracy.Enabled = false;
+                Formula.Enabled = false;
+                comboBox1.Enabled = false;
+                b_0.Enabled = false;
+                b_1.Enabled = false;
+                b_2.Enabled = false;
+                b_3.Enabled = false;
+                b_4.Enabled = false;
+                b_5.Enabled = false;
+                b_6.Enabled = false;
+                b_7.Enabled = false;
+                b_8.Enabled = false;
+                b_9.Enabled = false;
+                b_Back.Enabled = false;
+                b_Comma.Enabled = false;
+                b_Count.Enabled = false;
+                b_Divide.Enabled = false;
+                b_Erase.Enabled = false;
+                b_LeftBracket.Enabled = false;
+                b_Minus.Enabled = false;
+                b_Multiply.Enabled = false;
+                b_Plus.Enabled = false;
+                b_Power.Enabled = false;
+                b_RightBracket.Enabled = false;
+                b_X.Enabled = false;
+                Producer p1 = new Producer(start, end, deltha);
+                Consumer c = new Consumer();
+                p1.Draw += DrawFunc;
+                p1.Finish += FinishFunc;
+                c.Start(0.001);
+                p1.Start();
+
+
                 ExprTree exprTree = new ExprTree(expression);
 
                 //exprTree.ExprTreeTarvase(exprTree.Root, 2); 
@@ -267,7 +363,7 @@ namespace GroupProject_106
         {
             var frm2 = new Const(constants, flag);
             flag = true;
-            
+
             frm2.ShowDialog();
             listbox10.Items.Clear();
             foreach (var constantValue in constants)
@@ -293,6 +389,11 @@ namespace GroupProject_106
         }
 
         private void panel1_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint_1(object sender, PaintEventArgs e)
         {
 
         }

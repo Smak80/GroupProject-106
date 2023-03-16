@@ -34,7 +34,6 @@ namespace GroupProject_106
             this.button26 = new System.Windows.Forms.Button();
             this.b_Power = new System.Windows.Forms.Button();
             this.button24 = new System.Windows.Forms.Button();
-            this.b_ChangeSign = new System.Windows.Forms.Button();
             this.b_X = new System.Windows.Forms.Button();
             this.b_Comma = new System.Windows.Forms.Button();
             this.b_Plus = new System.Windows.Forms.Button();
@@ -89,7 +88,6 @@ namespace GroupProject_106
             this.panel1.Controls.Add(this.button26);
             this.panel1.Controls.Add(this.b_Power);
             this.panel1.Controls.Add(this.button24);
-            this.panel1.Controls.Add(this.b_ChangeSign);
             this.panel1.Controls.Add(this.b_X);
             this.panel1.Controls.Add(this.b_Comma);
             this.panel1.Controls.Add(this.b_Plus);
@@ -130,6 +128,7 @@ namespace GroupProject_106
             this.button26.TabIndex = 38;
             this.button26.Text = "Const";
             this.button26.UseVisualStyleBackColor = false;
+            this.button26.Click += new System.EventHandler(this.button26_Click);
             // 
             // b_Power
             // 
@@ -138,12 +137,13 @@ namespace GroupProject_106
             this.b_Power.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.b_Power.ForeColor = System.Drawing.SystemColors.Highlight;
             this.b_Power.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.b_Power.Location = new System.Drawing.Point(35, 175);
+            this.b_Power.Location = new System.Drawing.Point(60, 175);
             this.b_Power.Name = "b_Power";
             this.b_Power.Size = new System.Drawing.Size(40, 37);
             this.b_Power.TabIndex = 37;
             this.b_Power.Text = "^";
             this.b_Power.UseVisualStyleBackColor = true;
+            this.b_Power.Click += new System.EventHandler(this.button25_Click);
             // 
             // button24
             // 
@@ -156,20 +156,7 @@ namespace GroupProject_106
             this.button24.TabIndex = 36;
             this.button24.Text = "⏱";
             this.button24.UseVisualStyleBackColor = true;
-            // 
-            // b_ChangeSign
-            // 
-            this.b_ChangeSign.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
-            this.b_ChangeSign.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.b_ChangeSign.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.b_ChangeSign.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.b_ChangeSign.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.b_ChangeSign.Location = new System.Drawing.Point(80, 174);
-            this.b_ChangeSign.Name = "b_ChangeSign";
-            this.b_ChangeSign.Size = new System.Drawing.Size(40, 37);
-            this.b_ChangeSign.TabIndex = 35;
-            this.b_ChangeSign.Text = "+/-";
-            this.b_ChangeSign.UseVisualStyleBackColor = true;
+            this.button24.Click += new System.EventHandler(this.button24_Click);
             // 
             // b_X
             // 
@@ -178,12 +165,13 @@ namespace GroupProject_106
             this.b_X.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.b_X.ForeColor = System.Drawing.SystemColors.Highlight;
             this.b_X.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.b_X.Location = new System.Drawing.Point(172, 174);
+            this.b_X.Location = new System.Drawing.Point(153, 174);
             this.b_X.Name = "b_X";
             this.b_X.Size = new System.Drawing.Size(40, 37);
             this.b_X.TabIndex = 33;
             this.b_X.Text = "x";
             this.b_X.UseVisualStyleBackColor = true;
+            this.b_X.Click += new System.EventHandler(this.button9_Click);
             // 
             // b_Comma
             // 
@@ -192,12 +180,13 @@ namespace GroupProject_106
             this.b_Comma.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.b_Comma.ForeColor = System.Drawing.SystemColors.Highlight;
             this.b_Comma.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.b_Comma.Location = new System.Drawing.Point(125, 174);
+            this.b_Comma.Location = new System.Drawing.Point(106, 174);
             this.b_Comma.Name = "b_Comma";
             this.b_Comma.Size = new System.Drawing.Size(40, 37);
             this.b_Comma.TabIndex = 32;
             this.b_Comma.Text = ",";
             this.b_Comma.UseVisualStyleBackColor = true;
+            this.b_Comma.Click += new System.EventHandler(this.button9_Click);
             // 
             // b_Plus
             // 
@@ -211,6 +200,7 @@ namespace GroupProject_106
             this.b_Plus.TabIndex = 31;
             this.b_Plus.Text = "+";
             this.b_Plus.UseVisualStyleBackColor = true;
+            this.b_Plus.Click += new System.EventHandler(this.button9_Click);
             // 
             // b_Minus
             // 
@@ -224,6 +214,7 @@ namespace GroupProject_106
             this.b_Minus.TabIndex = 30;
             this.b_Minus.Text = "-";
             this.b_Minus.UseVisualStyleBackColor = true;
+            this.b_Minus.Click += new System.EventHandler(this.button9_Click);
             // 
             // b_Multiply
             // 
@@ -237,6 +228,7 @@ namespace GroupProject_106
             this.b_Multiply.TabIndex = 29;
             this.b_Multiply.Text = "*";
             this.b_Multiply.UseVisualStyleBackColor = true;
+            this.b_Multiply.Click += new System.EventHandler(this.button9_Click);
             // 
             // b_Divide
             // 
@@ -250,6 +242,7 @@ namespace GroupProject_106
             this.b_Divide.TabIndex = 28;
             this.b_Divide.Text = "/";
             this.b_Divide.UseVisualStyleBackColor = true;
+            this.b_Divide.Click += new System.EventHandler(this.button9_Click);
             // 
             // b_RightBracket
             // 
@@ -263,6 +256,7 @@ namespace GroupProject_106
             this.b_RightBracket.TabIndex = 27;
             this.b_RightBracket.Text = ")";
             this.b_RightBracket.UseVisualStyleBackColor = true;
+            this.b_RightBracket.Click += new System.EventHandler(this.button9_Click);
             // 
             // b_LeftBracket
             // 
@@ -276,6 +270,7 @@ namespace GroupProject_106
             this.b_LeftBracket.TabIndex = 26;
             this.b_LeftBracket.Text = "(";
             this.b_LeftBracket.UseVisualStyleBackColor = true;
+            this.b_LeftBracket.Click += new System.EventHandler(this.button9_Click);
             // 
             // b_Erase
             // 
@@ -289,6 +284,7 @@ namespace GroupProject_106
             this.b_Erase.TabIndex = 25;
             this.b_Erase.Text = "C";
             this.b_Erase.UseVisualStyleBackColor = true;
+            this.b_Erase.Click += new System.EventHandler(this.button20_Click);
             // 
             // b_Back
             // 
@@ -297,13 +293,14 @@ namespace GroupProject_106
             this.b_Back.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.b_Back.ForeColor = System.Drawing.SystemColors.Highlight;
             this.b_Back.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.b_Back.Location = new System.Drawing.Point(219, 174);
+            this.b_Back.Location = new System.Drawing.Point(202, 174);
             this.b_Back.Name = "b_Back";
             this.b_Back.Size = new System.Drawing.Size(40, 37);
             this.b_Back.TabIndex = 24;
             this.b_Back.Text = "⏴";
             this.b_Back.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.b_Back.UseVisualStyleBackColor = true;
+            this.b_Back.Click += new System.EventHandler(this.button19_Click);
             // 
             // Accuracy
             // 
@@ -349,18 +346,17 @@ namespace GroupProject_106
             this.comboBox1.Items.AddRange(new object[] {
             "sin()",
             "cos()",
-            "tg()",
-            "ctg()",
+            "tan()",
+            "cot()",
             "ln()",
-            "log(x,y)",
             "pi",
-            "e",
-            "const"});
+            "e"});
             this.comboBox1.Location = new System.Drawing.Point(35, 243);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(222, 25);
             this.comboBox1.TabIndex = 1;
             this.comboBox1.Text = "Functions";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // b_6
             // 
@@ -374,6 +370,7 @@ namespace GroupProject_106
             this.b_6.TabIndex = 10;
             this.b_6.Text = "6";
             this.b_6.UseVisualStyleBackColor = true;
+            this.b_6.Click += new System.EventHandler(this.button9_Click);
             // 
             // b_7
             // 
@@ -387,6 +384,7 @@ namespace GroupProject_106
             this.b_7.TabIndex = 9;
             this.b_7.Text = "7";
             this.b_7.UseVisualStyleBackColor = true;
+            this.b_7.Click += new System.EventHandler(this.button9_Click);
             // 
             // b_5
             // 
@@ -400,6 +398,7 @@ namespace GroupProject_106
             this.b_5.TabIndex = 8;
             this.b_5.Text = "5";
             this.b_5.UseVisualStyleBackColor = true;
+            this.b_5.Click += new System.EventHandler(this.button9_Click);
             // 
             // b_0
             // 
@@ -413,6 +412,7 @@ namespace GroupProject_106
             this.b_0.TabIndex = 7;
             this.b_0.Text = "0";
             this.b_0.UseVisualStyleBackColor = true;
+            this.b_0.Click += new System.EventHandler(this.button9_Click);
             // 
             // b_9
             // 
@@ -426,6 +426,7 @@ namespace GroupProject_106
             this.b_9.TabIndex = 6;
             this.b_9.Text = "9";
             this.b_9.UseVisualStyleBackColor = true;
+            this.b_9.Click += new System.EventHandler(this.button9_Click);
             // 
             // b_8
             // 
@@ -439,6 +440,7 @@ namespace GroupProject_106
             this.b_8.TabIndex = 5;
             this.b_8.Text = "8";
             this.b_8.UseVisualStyleBackColor = true;
+            this.b_8.Click += new System.EventHandler(this.button9_Click);
             // 
             // b_4
             // 
@@ -452,6 +454,7 @@ namespace GroupProject_106
             this.b_4.TabIndex = 4;
             this.b_4.Text = "4";
             this.b_4.UseVisualStyleBackColor = true;
+            this.b_4.Click += new System.EventHandler(this.button9_Click);
             // 
             // b_3
             // 
@@ -465,6 +468,7 @@ namespace GroupProject_106
             this.b_3.TabIndex = 3;
             this.b_3.Text = "3";
             this.b_3.UseVisualStyleBackColor = true;
+            this.b_3.Click += new System.EventHandler(this.button9_Click);
             // 
             // b_2
             // 
@@ -478,6 +482,7 @@ namespace GroupProject_106
             this.b_2.TabIndex = 2;
             this.b_2.Text = "2";
             this.b_2.UseVisualStyleBackColor = true;
+            this.b_2.Click += new System.EventHandler(this.button9_Click);
             // 
             // b_1
             // 
@@ -485,12 +490,13 @@ namespace GroupProject_106
             this.b_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b_1.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.b_1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.b_1.Location = new System.Drawing.Point(35, 89);
+            this.b_1.Location = new System.Drawing.Point(36, 89);
             this.b_1.Name = "b_1";
             this.b_1.Size = new System.Drawing.Size(40, 37);
             this.b_1.TabIndex = 1;
             this.b_1.Text = "1";
             this.b_1.UseVisualStyleBackColor = true;
+            this.b_1.Click += new System.EventHandler(this.button9_Click);
             // 
             // b_Count
             // 
@@ -554,7 +560,17 @@ namespace GroupProject_106
             this.UpperIntegralRange.DecimalPlaces = 1;
             this.UpperIntegralRange.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.UpperIntegralRange.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.UpperIntegralRange.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
             this.UpperIntegralRange.Location = new System.Drawing.Point(12, 10);
+            this.UpperIntegralRange.Minimum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            -2147483648});
             this.UpperIntegralRange.Name = "UpperIntegralRange";
             this.UpperIntegralRange.Size = new System.Drawing.Size(47, 21);
             this.UpperIntegralRange.TabIndex = 2;
@@ -565,7 +581,22 @@ namespace GroupProject_106
             this.LowerIntegralRange.DecimalPlaces = 1;
             this.LowerIntegralRange.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.LowerIntegralRange.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.LowerIntegralRange.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
             this.LowerIntegralRange.Location = new System.Drawing.Point(12, 91);
+            this.LowerIntegralRange.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.LowerIntegralRange.Minimum = new decimal(new int[] {
+            100,
+            0,
+            0,
+            -2147483648});
             this.LowerIntegralRange.Name = "LowerIntegralRange";
             this.LowerIntegralRange.Size = new System.Drawing.Size(47, 21);
             this.LowerIntegralRange.TabIndex = 1;
@@ -590,6 +621,7 @@ namespace GroupProject_106
             // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel1.ColumnCount = 4;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40.5904F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 59.4096F));
@@ -612,9 +644,9 @@ namespace GroupProject_106
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 0);
+            this.label3.Location = new System.Drawing.Point(4, 1);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(104, 41);
+            this.label3.Size = new System.Drawing.Size(102, 39);
             this.label3.TabIndex = 0;
             this.label3.Text = "Y Min";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -626,7 +658,7 @@ namespace GroupProject_106
             0,
             0,
             131072});
-            this.YMax.Location = new System.Drawing.Point(383, 3);
+            this.YMax.Location = new System.Drawing.Point(382, 4);
             this.YMax.Minimum = new decimal(new int[] {
             99,
             0,
@@ -647,9 +679,9 @@ namespace GroupProject_106
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(274, 0);
+            this.label4.Location = new System.Drawing.Point(272, 1);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(103, 41);
+            this.label4.Size = new System.Drawing.Size(103, 39);
             this.label4.TabIndex = 1;
             this.label4.Text = "Y Max";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -661,7 +693,7 @@ namespace GroupProject_106
             0,
             0,
             131072});
-            this.YMin.Location = new System.Drawing.Point(113, 3);
+            this.YMin.Location = new System.Drawing.Point(113, 4);
             this.YMin.Maximum = new decimal(new int[] {
             99,
             0,
@@ -692,6 +724,8 @@ namespace GroupProject_106
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.button22);
             this.Controls.Add(this.panel1);
+            this.MaximumSize = new System.Drawing.Size(902, 589);
+            this.MinimumSize = new System.Drawing.Size(902, 589);
             this.Name = "Form1";
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
@@ -742,7 +776,6 @@ namespace GroupProject_106
         private Button b_Erase;
         private Button button22;
         private Button b_X;
-        private Button b_ChangeSign;
         private Button button24;
         private Button b_Power;
         private Button button26;

@@ -608,6 +608,7 @@ namespace GroupProject_106
             UpperIntegralRange.Location = new Point(15, 4);
             UpperIntegralRange.Margin = new Padding(4);
             UpperIntegralRange.Maximum = new decimal(new int[] { 10000, 0, 0, 0 });
+            UpperIntegralRange.Minimum = new decimal(new int[] { 10000, 0, 0, int.MinValue });
             UpperIntegralRange.Name = "UpperIntegralRange";
             UpperIntegralRange.Size = new Size(109, 24);
             UpperIntegralRange.TabIndex = 2;
@@ -691,6 +692,7 @@ namespace GroupProject_106
             YMax.Location = new Point(392, 5);
             YMax.Margin = new Padding(4);
             YMax.Maximum = new decimal(new int[] { 10000, 0, 0, 0 });
+            YMax.Minimum = new decimal(new int[] { 10000, 0, 0, int.MinValue });
             YMax.Name = "YMax";
             YMax.Size = new Size(127, 31);
             YMax.TabIndex = 3;
@@ -713,9 +715,11 @@ namespace GroupProject_106
             YMin.Location = new Point(130, 5);
             YMin.Margin = new Padding(4);
             YMin.Maximum = new decimal(new int[] { 10000, 0, 0, 0 });
+            YMin.Minimum = new decimal(new int[] { 10000, 0, 0, int.MinValue });
             YMin.Name = "YMin";
             YMin.Size = new Size(130, 31);
             YMin.TabIndex = 2;
+            YMin.Value = new decimal(new int[] { 10, 0, 0, int.MinValue });
             // 
             // l_x
             // 

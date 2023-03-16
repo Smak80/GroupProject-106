@@ -31,7 +31,8 @@ namespace GroupProject_106
 
         double F(double x)
         {
-            return tree.ExprTreeTarvase(tree.Root, x); 
+            return tree.ExprTreeTarvase(tree.Root, x);
+            //return Math.Pow(Math.Sin(2 * x), 2) - Math.Cos(3 * (x * x * x * x));
         }
 
         public void Start()

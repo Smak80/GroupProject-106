@@ -15,12 +15,55 @@ namespace GroupProject_106
         private Dictionary<string, string> namesAndConsts = new Dictionary<string, string> { ["pi"] = "3,14159" , ["e"] = "2,71828" };
         public InputDataCheckAndCorrect(string expr) 
         {
-            this.expr = ExprAdjustment(expr);
+            this.expr = expr;
         }
 
         public bool InputDataDiagnostic() 
         {
-            return BracketDiagnostic() && WordDiagnostic() && SgnDiagnostic();
+            return ConstantDiagnostic() && BracketDiagnostic() && WordDiagnostic() && SgnDiagnostic();
+        }
+        private bool ConstantDiagnostic()
+        {
+            foreach (var item in namesAndConsts)
+            {
+                foreach(var f in funcs)
+                {
+                    if (funcs.Equals(item.Key))
+                    {
+                        MessageBox.Show("Ошибка! Название константы занято.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return false;
+                    }
+                }
+                for(int i = 0; i < item.Key.Length; i++)
+                {
+                    if (IsSgn(item.Key[i]) || item.Key[i] == ',' || item.Key[i] == '(' || item.Key[i] == ')')
+                    {
+                        MessageBox.Show("Ошибка! Запрещенный символ в названии константы.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return false;
+                    }
+                }
+            }
+            string save = "";
+            string result = "";
+            bool flag = false;
+            for (int i = 0; i <= expr.Length; i++)
+            {
+                if (i == expr.Length || expr[i] == '(' || expr[i] == ')' || expr[i] == ',' || IsSgn(expr[i]) || expr[i] == ' ')
+                {
+                    if (IsConst(save)) result += namesAndConsts[expr[i] + ""];
+                    else result += save;
+                    save = "";
+                    if (i != expr.Length && expr[i] != ' ' && !flag)
+                    {
+                        result += expr[i];
+                        flag = false;
+                    }
+                }
+                else save += expr[i];
+            }
+            expr = result;
+            return true;
+
         }
         private bool BracketDiagnostic() 
         {
@@ -205,28 +248,6 @@ namespace GroupProject_106
         {
             if (ch == '+' || ch == '-' || ch == '*' || ch == '/' || ch == '^') return true;
             return false;
-        }
-        private string ExprAdjustment(string expr)
-        {
-            string save = "";
-            string result = "";
-            bool flag = false;
-            for (int i = 0; i <= expr.Length; i++)
-            {
-                if (i == expr.Length || expr[i] == '(' || expr[i] == ')' || expr[i] == ',' || IsSgn(expr[i]) || expr[i] == ' ')
-                {
-                    if (IsConst(save)) result += namesAndConsts[expr[i] + ""];
-                    else result += save;
-                    save = "";
-                    if (i != expr.Length && expr[i] != ' ' && !flag)
-                    {
-                        result += expr[i];
-                        flag = false;
-                    }
-                }
-                else save += expr[i];
-            }
-            return result;
         }
         public string ExprChangeForParsing()
         {

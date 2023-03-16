@@ -20,6 +20,7 @@ namespace GroupProject_106
 {
     public partial class Form1 : Form
     {
+        Stopwatch sw = new();
         public string name = "";
         private int a;
         private int b;
@@ -38,6 +39,7 @@ namespace GroupProject_106
             InitializeComponent();
             Formula.Text += expression;
             g = new Painter(GraphPanel.CreateGraphics());
+            
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -216,7 +218,7 @@ namespace GroupProject_106
             if (num > 0)
             {
                 int order = 0;
-                while(num < 1)
+                while (num < 1)
                 {
                     order++;
                     num *= 10;
@@ -231,7 +233,9 @@ namespace GroupProject_106
             if (InvokeRequired) l_Result.Invoke(FinishFunc);
             else
             {
+                sw.Stop();
                 l_Result.Text += double.Round(Consumer.Integral, Order((double)Accuracy.Value)).ToString();
+                l_time.Text = "Time: " + sw.ElapsedMilliseconds + "ms";
                 LowerIntegralRange.Enabled = true;
                 UpperIntegralRange.Enabled = true;
                 Accuracy.Enabled = true;
@@ -288,7 +292,7 @@ namespace GroupProject_106
                 inputs.Add(Formula.Text);
             }
 
-            InputDataCheckAndCorrect check = new InputDataCheckAndCorrect(Formula.Text ?? "", listbox10 , (double)LowerIntegralRange.Value , (double)UpperIntegralRange.Value);
+            InputDataCheckAndCorrect check = new InputDataCheckAndCorrect(Formula.Text ?? "", listbox10, (double)LowerIntegralRange.Value, (double)UpperIntegralRange.Value);
             if (check.InputDataDiagnostic())
             {
                 // Graph inisiallise
@@ -301,6 +305,7 @@ namespace GroupProject_106
                 double deltha = (double)Accuracy.Value;
                 double start = (double)LowerIntegralRange.Value;
                 double end = (double)UpperIntegralRange.Value;
+                l_time.Text = "";
                 LowerIntegralRange.Enabled = false;
                 UpperIntegralRange.Enabled = false;
                 Accuracy.Enabled = false;
@@ -329,7 +334,8 @@ namespace GroupProject_106
                 b_RightBracket.Enabled = false;
                 b_X.Enabled = false;
 
-
+                sw.Reset();
+                sw.Start();
                 Producer p1 = new Producer(start, end, deltha, tree);
                 Consumer c = new Consumer();
                 p1.Draw += DrawFunc;

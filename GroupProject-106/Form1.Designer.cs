@@ -31,6 +31,7 @@ namespace GroupProject_106
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            label6 = new Label();
             button26 = new Button();
             b_Power = new Button();
             button24 = new Button();
@@ -60,6 +61,7 @@ namespace GroupProject_106
             b_Count = new Button();
             button22 = new Button();
             panel2 = new Panel();
+            l_time = new Label();
             label2 = new Label();
             Formula = new TextBox();
             UpperIntegralRange = new NumericUpDown();
@@ -91,6 +93,7 @@ namespace GroupProject_106
             // 
             panel1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             panel1.BackColor = SystemColors.ButtonHighlight;
+            panel1.Controls.Add(label6);
             panel1.Controls.Add(button26);
             panel1.Controls.Add(b_Power);
             panel1.Controls.Add(button24);
@@ -124,6 +127,17 @@ namespace GroupProject_106
             panel1.Size = new Size(365, 431);
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint_1;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.ForeColor = SystemColors.Highlight;
+            label6.Location = new Point(59, 234);
+            label6.Name = "label6";
+            label6.Size = new Size(96, 21);
+            label6.TabIndex = 39;
+            label6.Text = "Functions";
             // 
             // button26
             // 
@@ -325,9 +339,9 @@ namespace GroupProject_106
             // 
             // Accuracy
             // 
-            Accuracy.DecimalPlaces = 3;
+            Accuracy.DecimalPlaces = 11;
             Accuracy.ForeColor = SystemColors.Highlight;
-            Accuracy.Increment = new decimal(new int[] { 1, 0, 0, 196608 });
+            Accuracy.Increment = new decimal(new int[] { 1, 0, 0, 655360 });
             Accuracy.Location = new Point(138, 309);
             Accuracy.Margin = new Padding(4);
             Accuracy.Maximum = new decimal(new int[] { 10, 0, 0, 0 });
@@ -335,7 +349,7 @@ namespace GroupProject_106
             Accuracy.Name = "Accuracy";
             Accuracy.Size = new Size(109, 31);
             Accuracy.TabIndex = 22;
-            Accuracy.Value = new decimal(new int[] { 1, 0, 0, 131072 });
+            Accuracy.Value = new decimal(new int[] { 1, 0, 0, 196608 });
             // 
             // textBox2
             // 
@@ -361,7 +375,6 @@ namespace GroupProject_106
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(276, 29);
             comboBox1.TabIndex = 1;
-            comboBox1.Text = "Functions";
             comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // b_6
@@ -540,6 +553,7 @@ namespace GroupProject_106
             // panel2
             // 
             panel2.BackColor = SystemColors.Highlight;
+            panel2.Controls.Add(l_time);
             panel2.Controls.Add(label2);
             panel2.Controls.Add(Formula);
             panel2.Controls.Add(UpperIntegralRange);
@@ -551,6 +565,16 @@ namespace GroupProject_106
             panel2.Size = new Size(365, 160);
             panel2.TabIndex = 0;
             panel2.Paint += panel2_Paint_1;
+            // 
+            // l_time
+            // 
+            l_time.AutoSize = true;
+            l_time.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            l_time.ForeColor = SystemColors.ButtonHighlight;
+            l_time.Location = new Point(137, 118);
+            l_time.Name = "l_time";
+            l_time.Size = new Size(0, 21);
+            l_time.TabIndex = 0;
             // 
             // label2
             // 
@@ -584,7 +608,6 @@ namespace GroupProject_106
             UpperIntegralRange.Location = new Point(15, 4);
             UpperIntegralRange.Margin = new Padding(4);
             UpperIntegralRange.Maximum = new decimal(new int[] { 10000, 0, 0, 0 });
-            UpperIntegralRange.Minimum = new decimal(new int[] { 10000, 0, 0, int.MinValue });
             UpperIntegralRange.Name = "UpperIntegralRange";
             UpperIntegralRange.Size = new Size(109, 24);
             UpperIntegralRange.TabIndex = 2;
@@ -668,7 +691,6 @@ namespace GroupProject_106
             YMax.Location = new Point(392, 5);
             YMax.Margin = new Padding(4);
             YMax.Maximum = new decimal(new int[] { 10000, 0, 0, 0 });
-            YMax.Minimum = new decimal(new int[] { 10000, 0, 0, int.MinValue });
             YMax.Name = "YMax";
             YMax.Size = new Size(127, 31);
             YMax.TabIndex = 3;
@@ -691,11 +713,9 @@ namespace GroupProject_106
             YMin.Location = new Point(130, 5);
             YMin.Margin = new Padding(4);
             YMin.Maximum = new decimal(new int[] { 10000, 0, 0, 0 });
-            YMin.Minimum = new decimal(new int[] { 10000, 0, 0, int.MinValue });
             YMin.Name = "YMin";
             YMin.Size = new Size(130, 31);
             YMin.TabIndex = 2;
-            YMin.Value = new decimal(new int[] { 10, 0, 0, int.MinValue });
             // 
             // l_x
             // 
@@ -836,5 +856,7 @@ namespace GroupProject_106
         private TableLayoutPanel tableLayoutPanel2;
         private Label label5;
         private Label l_Result;
+        private Label label6;
+        private Label l_time;
     }
 }

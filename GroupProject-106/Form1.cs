@@ -23,7 +23,7 @@ namespace GroupProject_106
         private int a;
         private int b;
         private bool flag = false;
-        private Painter g;
+        public Painter g;
 
         ListBox listbox10 = new ListBox();
         List<string> inputs = new List<string>();
@@ -149,12 +149,14 @@ namespace GroupProject_106
 
         private void button19_Click(object sender, EventArgs e)
         {
-            string[] arr = Formula.Lines.ToArray();
+            /*string[] arr = Formula.Lines.ToArray();
             for (int i = 0; i < arr.Length; i++)
             {
                 arr[i] = arr[i].Remove(arr.Length, 1);
             }
             Formula.Lines = arr;
+            */
+            if(Formula.Text !="") Formula.Text = Formula.Text.Remove(Formula.Text.Length - 1);
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

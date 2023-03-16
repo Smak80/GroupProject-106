@@ -650,7 +650,7 @@ namespace GroupProject_106
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(565, 41);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(572, 41);
             this.tableLayoutPanel1.TabIndex = 3;
             // 
             // label3
@@ -661,7 +661,7 @@ namespace GroupProject_106
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(4, 1);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(91, 39);
+            this.label3.Size = new System.Drawing.Size(94, 39);
             this.label3.TabIndex = 0;
             this.label3.Text = "Y Min";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -673,7 +673,7 @@ namespace GroupProject_106
             0,
             0,
             131072});
-            this.YMax.Location = new System.Drawing.Point(308, 4);
+            this.YMax.Location = new System.Drawing.Point(315, 4);
             this.YMax.Minimum = new decimal(new int[] {
             99,
             0,
@@ -694,7 +694,7 @@ namespace GroupProject_106
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(213, 1);
+            this.label4.Location = new System.Drawing.Point(220, 1);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(88, 39);
             this.label4.TabIndex = 1;
@@ -708,7 +708,7 @@ namespace GroupProject_106
             0,
             0,
             131072});
-            this.YMin.Location = new System.Drawing.Point(102, 4);
+            this.YMin.Location = new System.Drawing.Point(105, 4);
             this.YMin.Maximum = new decimal(new int[] {
             99,
             0,
@@ -731,7 +731,7 @@ namespace GroupProject_106
             // l_x
             // 
             this.l_x.AutoSize = true;
-            this.l_x.Location = new System.Drawing.Point(417, 1);
+            this.l_x.Location = new System.Drawing.Point(424, 1);
             this.l_x.Name = "l_x";
             this.l_x.Size = new System.Drawing.Size(0, 20);
             this.l_x.TabIndex = 4;
@@ -739,13 +739,14 @@ namespace GroupProject_106
             // l_y
             // 
             this.l_y.AutoSize = true;
-            this.l_y.Location = new System.Drawing.Point(497, 1);
+            this.l_y.Location = new System.Drawing.Point(504, 1);
             this.l_y.Name = "l_y";
             this.l_y.Size = new System.Drawing.Size(0, 20);
             this.l_y.TabIndex = 5;
             // 
             // tableLayoutPanel2
             // 
+            this.tableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.98592F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 69.01408F));
@@ -764,9 +765,9 @@ namespace GroupProject_106
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 0);
+            this.label5.Location = new System.Drawing.Point(4, 1);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(82, 45);
+            this.label5.Size = new System.Drawing.Size(81, 43);
             this.label5.TabIndex = 0;
             this.label5.Text = "Result:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -777,9 +778,9 @@ namespace GroupProject_106
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.l_Result.AutoSize = true;
-            this.l_Result.Location = new System.Drawing.Point(91, 0);
+            this.l_Result.Location = new System.Drawing.Point(92, 1);
             this.l_Result.Name = "l_Result";
-            this.l_Result.Size = new System.Drawing.Size(190, 45);
+            this.l_Result.Size = new System.Drawing.Size(188, 43);
             this.l_Result.TabIndex = 1;
             this.l_Result.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 

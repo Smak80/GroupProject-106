@@ -327,7 +327,7 @@ namespace GroupProject_106
             // 
             Accuracy.DecimalPlaces = 3;
             Accuracy.ForeColor = SystemColors.Highlight;
-            Accuracy.Increment = new decimal(new int[] { 1, 0, 0, 262144 });
+            Accuracy.Increment = new decimal(new int[] { 1, 0, 0, 196608 });
             Accuracy.Location = new Point(138, 309);
             Accuracy.Margin = new Padding(4);
             Accuracy.Maximum = new decimal(new int[] { 10, 0, 0, 0 });
@@ -580,7 +580,7 @@ namespace GroupProject_106
             UpperIntegralRange.DecimalPlaces = 1;
             UpperIntegralRange.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
             UpperIntegralRange.ForeColor = SystemColors.Highlight;
-            UpperIntegralRange.Increment = new decimal(new int[] { 1, 0, 0, 131072 });
+            UpperIntegralRange.Increment = new decimal(new int[] { 1, 0, 0, 65536 });
             UpperIntegralRange.Location = new Point(15, 4);
             UpperIntegralRange.Margin = new Padding(4);
             UpperIntegralRange.Maximum = new decimal(new int[] { 10000, 0, 0, 0 });
@@ -596,7 +596,7 @@ namespace GroupProject_106
             LowerIntegralRange.DecimalPlaces = 1;
             LowerIntegralRange.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
             LowerIntegralRange.ForeColor = SystemColors.Highlight;
-            LowerIntegralRange.Increment = new decimal(new int[] { 1, 0, 0, 131072 });
+            LowerIntegralRange.Increment = new decimal(new int[] { 1, 0, 0, 65536 });
             LowerIntegralRange.Location = new Point(15, 118);
             LowerIntegralRange.Margin = new Padding(4);
             LowerIntegralRange.Maximum = new decimal(new int[] { 10000, 0, 0, 0 });
@@ -665,9 +665,10 @@ namespace GroupProject_106
             // 
             // YMax
             // 
-            YMax.Increment = new decimal(new int[] { 1, 0, 0, 131072 });
             YMax.Location = new Point(392, 5);
             YMax.Margin = new Padding(4);
+            YMax.Maximum = new decimal(new int[] { 10000, 0, 0, 0 });
+            YMax.Minimum = new decimal(new int[] { 10000, 0, 0, int.MinValue });
             YMax.Name = "YMax";
             YMax.Size = new Size(127, 31);
             YMax.TabIndex = 3;
@@ -687,13 +688,14 @@ namespace GroupProject_106
             // 
             // YMin
             // 
-            YMin.Increment = new decimal(new int[] { 1, 0, 0, 131072 });
             YMin.Location = new Point(130, 5);
             YMin.Margin = new Padding(4);
-            YMin.Maximum = new decimal(new int[] { 99, 0, 0, 0 });
+            YMin.Maximum = new decimal(new int[] { 10000, 0, 0, 0 });
+            YMin.Minimum = new decimal(new int[] { 10000, 0, 0, int.MinValue });
             YMin.Name = "YMin";
             YMin.Size = new Size(130, 31);
             YMin.TabIndex = 2;
+            YMin.Value = new decimal(new int[] { 10, 0, 0, int.MinValue });
             // 
             // l_x
             // 

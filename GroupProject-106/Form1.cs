@@ -281,8 +281,7 @@ namespace GroupProject_106
 
                 // izmenenaya stroka dlya adeli 
                 string expression = check.ExprChangeForParsing();
-                Formula.Text = expression;
-
+                ExprTree tree = new ExprTree(expression);
                 double deltha = (double)Accuracy.Value;
                 double start = (double)LowerIntegralRange.Value;
                 double end = (double)UpperIntegralRange.Value;
@@ -313,7 +312,9 @@ namespace GroupProject_106
                 b_Power.Enabled = false;
                 b_RightBracket.Enabled = false;
                 b_X.Enabled = false;
-                Producer p1 = new Producer(start, end, deltha);
+
+
+                Producer p1 = new Producer(start, end, deltha, tree);
                 Consumer c = new Consumer();
                 p1.Draw += DrawFunc;
                 p1.Finish += FinishFunc;
@@ -321,7 +322,7 @@ namespace GroupProject_106
                 p1.Start();
 
 
-                ExprTree exprTree = new ExprTree(expression);
+
 
                 //exprTree.ExprTreeTarvase(exprTree.Root, 2); 
 

@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -17,10 +18,12 @@ namespace GroupProject_106
         double a;
         double b;
         double dx;
+        ExprTree tree;
         
 
-        public Producer(double a, double b, double dx)
+        public Producer(double a, double b, double dx , ExprTree tree)
         {
+            this.tree = tree;
             this.a = a;
             this.b = b;
             this.dx = dx;
@@ -28,7 +31,7 @@ namespace GroupProject_106
 
         double F(double x)
         {
-            return - x * x + 100;
+            return tree.ExprTreeTarvase(tree.Root, x); 
         }
 
         public void Start()

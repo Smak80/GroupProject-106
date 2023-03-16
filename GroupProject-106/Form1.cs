@@ -39,7 +39,7 @@ namespace GroupProject_106
             InitializeComponent();
             Formula.Text += expression;
             g = new Painter(GraphPanel.CreateGraphics());
-            
+
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

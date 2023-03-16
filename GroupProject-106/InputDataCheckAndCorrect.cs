@@ -20,7 +20,7 @@ namespace GroupProject_106
 
         public bool InputDataDiagnostic() 
         {
-            return BracketDiagnostic() && WordDiagnostic() && SgnDiagnostic();
+            return ConstantDiagnostic() && BracketDiagnostic() && WordDiagnostic() && SgnDiagnostic();
         }
         private bool BracketDiagnostic() 
         {

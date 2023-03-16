@@ -50,7 +50,7 @@ namespace GroupProject_106
             {
                 if (i == expr.Length || expr[i] == '(' || expr[i] == ')' || expr[i] == ',' || IsSgn(expr[i]) || expr[i] == ' ')
                 {
-                    if (IsConst(save)) result += namesAndConsts[expr[i] + ""];
+                    if (IsConst(save)) result += namesAndConsts[save];
                     else result += save;
                     save = "";
                     if (i != expr.Length && expr[i] != ' ' && !flag)
@@ -251,6 +251,10 @@ namespace GroupProject_106
         }
         public string ExprChangeForParsing()
         {
+            for(int i = 0; i <expr.Length; i++)
+            {
+
+            }
             return expr;
         }
     }

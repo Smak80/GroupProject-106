@@ -231,7 +231,6 @@ namespace GroupProject_106
                 // izmenenaya stroka dlya adeli 
                 string expression = check.ExprChangeForParsing();
                 Formula.Text = expression;
-
                 /*
                  
                  zdes proishodit parsing

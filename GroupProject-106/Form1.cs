@@ -207,14 +207,13 @@ namespace GroupProject_106
         }
         private void Count_Click(object sender, EventArgs e)
         {
-            
             if (Formula.Lines != null)
             {
                 inputs.Add(Formula.Text);
             }
 
-            CheckForSyntax check = new CheckForSyntax(Formula.Text);
-            if (check.ExpressionDiagnostic())
+            InputDataCheckAndCorrect check = new InputDataCheckAndCorrect(Formula.Text ?? "" , listbox10);
+            if (check.InputDataDiagnostic())
             {
                 // Graph inisiallise
                 g.initCoord((double)LowerIntegralRange.Value, (double)UpperIntegralRange.Value, (double)YMax.Value, (double)YMin.Value, (double)Accuracy.Value);
@@ -222,9 +221,8 @@ namespace GroupProject_106
 
 
                 // izmenenaya stroka dlya adeli 
-                string expression = check.ExprAdjustment();
-
-
+                string expression = check.ExprChangeForParsing();
+                Formula.Text = expression;
                 /*
                  
                  zdes proishodit parsing

@@ -11,7 +11,7 @@ namespace GroupProject_106
     public class InputDataCheckAndCorrect
     {
         private string expr;
-        private string[] funcs = { "cos", "sin", "tg", "cot", "ln" , "x" };
+        private string[] funcs = { "cos", "sin", "tan", "cot", "ln" , "x" };
         private Dictionary<string, string> namesAndConsts = new Dictionary<string, string> { ["pi"] = "3,14159" , ["e"] = "2,71828" };
         public InputDataCheckAndCorrect(string expr) 
         {

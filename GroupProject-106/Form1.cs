@@ -211,12 +211,27 @@ namespace GroupProject_106
             b = Convert.ToInt32(Accuracy.Value);
         }
 
+        private int Order(double num)
+        {
+            if (num > 0)
+            {
+                int order = 0;
+                while(num < 1)
+                {
+                    order++;
+                    num *= 10;
+                }
+                return order;
+            }
+            return -1;
+        }
+
         public void FinishFunc()
         {
             if (InvokeRequired) l_Result.Invoke(FinishFunc);
             else
             {
-                l_Result.Text = Consumer.Integral.ToString();
+                l_Result.Text += double.Round(Consumer.Integral, Order((double)Accuracy.Value)).ToString();
                 LowerIntegralRange.Enabled = true;
                 UpperIntegralRange.Enabled = true;
                 Accuracy.Enabled = true;
@@ -267,6 +282,7 @@ namespace GroupProject_106
 
         private void Count_Click(object sender, EventArgs e)
         {
+            l_Result.Text = "";
             if (Formula.Lines != null)
             {
                 inputs.Add(Formula.Text);

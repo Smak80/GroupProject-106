@@ -251,11 +251,16 @@ namespace GroupProject_106
         }
         public string ExprChangeForParsing()
         {
+            string save = "";
             for(int i = 0; i <expr.Length; i++)
             {
-
+                if (expr[i] == '-' && ( i == 0 || i!=0 && expr[i-1] == '('))
+                {
+                    save += "0";
+                } 
+                save+= expr[i];
             }
-            return expr;
+            return save;
         }
     }
 }

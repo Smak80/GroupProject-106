@@ -12,9 +12,14 @@ namespace GroupProject_106
     {
         private string expr;
         private string[] funcs = { "cos", "sin", "tan", "cot", "ln" , "x" };
+        private double low, up;
+        public double Low => low;
+        public double Up => up;
         private Dictionary<string, string> namesAndConsts = new Dictionary<string, string> { ["pi"] = "3,14159" , ["e"] = "2,71828" };
-        public InputDataCheckAndCorrect(string expr , ListBox listbox) 
+        public InputDataCheckAndCorrect(string expr , ListBox listbox , double low , double up) 
         {
+            this.up = up;
+            this.low = low;
             foreach(string item in listbox.Items)
             {
                 string save1 = "";
@@ -32,27 +37,38 @@ namespace GroupProject_106
                 {
                     save2 += item[i];
                 }
-                namesAndConsts.Add(save1 , save2);
+                bool flag = true;
+                foreach (var i in namesAndConsts)
+                {
+                    if (i.Key.Equals(save1))
+                    {
+                        flag = false;
+                    }
+                }
+                if (flag)
+                {
+                    namesAndConsts.Add(save1, save2);
+                }
+                else
+                {
+                    MessageBox.Show("Название константы занято используется служебная версия.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                
             }
             this.expr = expr;
         }
 
         public bool InputDataDiagnostic() 
         {
-            return ConstantDiagnostic() && BracketDiagnostic() && WordDiagnostic() && SgnDiagnostic();
+            bool flag = Up - Low > 0;
+            if (!flag) MessageBox.Show("Ошибка! Неправильно заданы пределы интегрирования.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            return ConstantDiagnostic() && BracketDiagnostic() && WordDiagnostic() && SgnDiagnostic()&&flag;
         }
         private bool ConstantDiagnostic()
         {
             foreach (var item in namesAndConsts)
             {
-                foreach(var f in funcs)
-                {
-                    if (funcs.Equals(item.Key))
-                    {
-                        MessageBox.Show("Ошибка! Название константы занято.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return false;
-                    }
-                }
+                
                 for(int i = 0; i < item.Key.Length; i++)
                 {
                     if (IsSgn(item.Key[i]) || item.Key[i] == ',' || item.Key[i] == '(' || item.Key[i] == ')')
@@ -144,7 +160,7 @@ namespace GroupProject_106
             string save = "";
             for (int i = 0; i <= expr.Length; i++)
             {
-                if (i == expr.Length && (save.Equals("") || IsNumber(save))) return true;
+                if (i == expr.Length && (save.Equals("") || IsNumber(save) || expr[i-1] == 'x')) return true;
                 else if (i == expr.Length )
                 {
                     MessageBox.Show("Ошибка! После имени функции должна стоять откр. скобка.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);

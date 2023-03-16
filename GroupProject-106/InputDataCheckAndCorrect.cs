@@ -182,12 +182,12 @@ namespace GroupProject_106
                     MessageBox.Show("Ошибка! Скобки должны быть чем-то заполнены.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return false;
                 }
-                else if (expr[i] == '(' && i != 0 && !IsSgn(expr[i-1]) && expr[i - 1] != '(')
+                else if (expr[i] == '(' && i != 0 && (expr[i-1] == 'x' || IsNumber(expr[i-1]+"")))
                 {
                     MessageBox.Show("Ошибка! Перед откр. скобкой должна стоять операция или откр. скобка.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return false;
                 }
-                else if (expr[i] == ')' && i + 1 != expr.Length && expr[i + 1] != '(' && !IsSgn(expr[i + 1]))
+                else if (expr[i] == ')' && i + 1 != expr.Length && expr[i + 1] != ')' && !IsSgn(expr[i + 1]))
                 {
                     MessageBox.Show("Ошибка! После закр. скобки должна стоять операция или закр. скобка.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return false;

@@ -188,7 +188,7 @@ namespace GroupProject_106
             }
             return flag;
         }
-        private bool IsConst(string str)
+        private bool IsConst(string str) 
         {
             bool flag = false;
             foreach(var item in namesAndConsts)

@@ -286,5 +286,10 @@ namespace GroupProject_106
             // l_x.Text = (g.X + (double)(e.X) / g.multiplierX).ToString();
             //l_y.Text = (g.Y - (e.Y < 0 ? 0 : e.Y / g.multiplierY)).ToString();*/
         }
+
+        private void panel1_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

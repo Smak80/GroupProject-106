@@ -73,6 +73,9 @@ namespace GroupProject_106
             this.YMin = new System.Windows.Forms.NumericUpDown();
             this.l_x = new System.Windows.Forms.Label();
             this.l_y = new System.Windows.Forms.Label();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.l_Result = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Accuracy)).BeginInit();
             this.panel2.SuspendLayout();
@@ -81,6 +84,7 @@ namespace GroupProject_106
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.YMax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.YMin)).BeginInit();
+            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -114,17 +118,18 @@ namespace GroupProject_106
             this.panel1.Controls.Add(this.b_2);
             this.panel1.Controls.Add(this.b_1);
             this.panel1.Controls.Add(this.b_Count);
-            this.panel1.Location = new System.Drawing.Point(0, 136);
+            this.panel1.Location = new System.Drawing.Point(6, 187);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(292, 406);
+            this.panel1.Size = new System.Drawing.Size(292, 345);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_1);
             // 
             // button26
             // 
             this.button26.BackColor = System.Drawing.SystemColors.Window;
             this.button26.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button26.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.button26.Location = new System.Drawing.Point(35, 274);
+            this.button26.Location = new System.Drawing.Point(39, 216);
             this.button26.Name = "button26";
             this.button26.Size = new System.Drawing.Size(158, 27);
             this.button26.TabIndex = 38;
@@ -139,7 +144,7 @@ namespace GroupProject_106
             this.b_Power.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.b_Power.ForeColor = System.Drawing.SystemColors.Highlight;
             this.b_Power.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.b_Power.Location = new System.Drawing.Point(60, 175);
+            this.b_Power.Location = new System.Drawing.Point(64, 142);
             this.b_Power.Name = "b_Power";
             this.b_Power.Size = new System.Drawing.Size(40, 37);
             this.b_Power.TabIndex = 37;
@@ -152,7 +157,7 @@ namespace GroupProject_106
             this.button24.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button24.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button24.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.button24.Location = new System.Drawing.Point(198, 274);
+            this.button24.Location = new System.Drawing.Point(202, 216);
             this.button24.Name = "button24";
             this.button24.Size = new System.Drawing.Size(59, 58);
             this.button24.TabIndex = 36;
@@ -167,7 +172,7 @@ namespace GroupProject_106
             this.b_X.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.b_X.ForeColor = System.Drawing.SystemColors.Highlight;
             this.b_X.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.b_X.Location = new System.Drawing.Point(153, 174);
+            this.b_X.Location = new System.Drawing.Point(157, 141);
             this.b_X.Name = "b_X";
             this.b_X.Size = new System.Drawing.Size(40, 37);
             this.b_X.TabIndex = 33;
@@ -182,7 +187,7 @@ namespace GroupProject_106
             this.b_Comma.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.b_Comma.ForeColor = System.Drawing.SystemColors.Highlight;
             this.b_Comma.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.b_Comma.Location = new System.Drawing.Point(106, 174);
+            this.b_Comma.Location = new System.Drawing.Point(110, 141);
             this.b_Comma.Name = "b_Comma";
             this.b_Comma.Size = new System.Drawing.Size(40, 37);
             this.b_Comma.TabIndex = 32;
@@ -196,7 +201,7 @@ namespace GroupProject_106
             this.b_Plus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b_Plus.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.b_Plus.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.b_Plus.Location = new System.Drawing.Point(240, 22);
+            this.b_Plus.Location = new System.Drawing.Point(244, 17);
             this.b_Plus.Name = "b_Plus";
             this.b_Plus.Size = new System.Drawing.Size(32, 33);
             this.b_Plus.TabIndex = 31;
@@ -210,7 +215,7 @@ namespace GroupProject_106
             this.b_Minus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b_Minus.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.b_Minus.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.b_Minus.Location = new System.Drawing.Point(202, 22);
+            this.b_Minus.Location = new System.Drawing.Point(206, 17);
             this.b_Minus.Name = "b_Minus";
             this.b_Minus.Size = new System.Drawing.Size(32, 33);
             this.b_Minus.TabIndex = 30;
@@ -224,7 +229,7 @@ namespace GroupProject_106
             this.b_Multiply.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b_Multiply.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.b_Multiply.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.b_Multiply.Location = new System.Drawing.Point(164, 22);
+            this.b_Multiply.Location = new System.Drawing.Point(168, 17);
             this.b_Multiply.Name = "b_Multiply";
             this.b_Multiply.Size = new System.Drawing.Size(32, 33);
             this.b_Multiply.TabIndex = 29;
@@ -238,7 +243,7 @@ namespace GroupProject_106
             this.b_Divide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b_Divide.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.b_Divide.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.b_Divide.Location = new System.Drawing.Point(126, 22);
+            this.b_Divide.Location = new System.Drawing.Point(130, 17);
             this.b_Divide.Name = "b_Divide";
             this.b_Divide.Size = new System.Drawing.Size(32, 33);
             this.b_Divide.TabIndex = 28;
@@ -252,7 +257,7 @@ namespace GroupProject_106
             this.b_RightBracket.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b_RightBracket.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.b_RightBracket.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.b_RightBracket.Location = new System.Drawing.Point(88, 22);
+            this.b_RightBracket.Location = new System.Drawing.Point(92, 17);
             this.b_RightBracket.Name = "b_RightBracket";
             this.b_RightBracket.Size = new System.Drawing.Size(32, 33);
             this.b_RightBracket.TabIndex = 27;
@@ -266,7 +271,7 @@ namespace GroupProject_106
             this.b_LeftBracket.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b_LeftBracket.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.b_LeftBracket.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.b_LeftBracket.Location = new System.Drawing.Point(50, 22);
+            this.b_LeftBracket.Location = new System.Drawing.Point(54, 17);
             this.b_LeftBracket.Name = "b_LeftBracket";
             this.b_LeftBracket.Size = new System.Drawing.Size(32, 33);
             this.b_LeftBracket.TabIndex = 26;
@@ -280,7 +285,7 @@ namespace GroupProject_106
             this.b_Erase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b_Erase.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.b_Erase.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.b_Erase.Location = new System.Drawing.Point(12, 22);
+            this.b_Erase.Location = new System.Drawing.Point(16, 17);
             this.b_Erase.Name = "b_Erase";
             this.b_Erase.Size = new System.Drawing.Size(32, 33);
             this.b_Erase.TabIndex = 25;
@@ -295,7 +300,7 @@ namespace GroupProject_106
             this.b_Back.Font = new System.Drawing.Font("Arial", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.b_Back.ForeColor = System.Drawing.SystemColors.Highlight;
             this.b_Back.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.b_Back.Location = new System.Drawing.Point(202, 174);
+            this.b_Back.Location = new System.Drawing.Point(206, 141);
             this.b_Back.Name = "b_Back";
             this.b_Back.Size = new System.Drawing.Size(40, 37);
             this.b_Back.TabIndex = 24;
@@ -313,7 +318,7 @@ namespace GroupProject_106
             0,
             0,
             262144});
-            this.Accuracy.Location = new System.Drawing.Point(106, 305);
+            this.Accuracy.Location = new System.Drawing.Point(110, 247);
             this.Accuracy.Maximum = new decimal(new int[] {
             10,
             0,
@@ -337,7 +342,7 @@ namespace GroupProject_106
             // 
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.textBox2.Location = new System.Drawing.Point(35, 307);
+            this.textBox2.Location = new System.Drawing.Point(39, 249);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(65, 20);
             this.textBox2.TabIndex = 21;
@@ -358,7 +363,7 @@ namespace GroupProject_106
             "ln()",
             "pi",
             "e"});
-            this.comboBox1.Location = new System.Drawing.Point(35, 243);
+            this.comboBox1.Location = new System.Drawing.Point(39, 185);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(222, 25);
             this.comboBox1.TabIndex = 1;
@@ -371,7 +376,7 @@ namespace GroupProject_106
             this.b_6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b_6.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.b_6.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.b_6.Location = new System.Drawing.Point(35, 132);
+            this.b_6.Location = new System.Drawing.Point(39, 99);
             this.b_6.Name = "b_6";
             this.b_6.Size = new System.Drawing.Size(40, 37);
             this.b_6.TabIndex = 10;
@@ -385,7 +390,7 @@ namespace GroupProject_106
             this.b_7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b_7.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.b_7.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.b_7.Location = new System.Drawing.Point(80, 132);
+            this.b_7.Location = new System.Drawing.Point(84, 99);
             this.b_7.Name = "b_7";
             this.b_7.Size = new System.Drawing.Size(40, 37);
             this.b_7.TabIndex = 9;
@@ -399,7 +404,7 @@ namespace GroupProject_106
             this.b_5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b_5.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.b_5.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.b_5.Location = new System.Drawing.Point(219, 89);
+            this.b_5.Location = new System.Drawing.Point(223, 56);
             this.b_5.Name = "b_5";
             this.b_5.Size = new System.Drawing.Size(40, 37);
             this.b_5.TabIndex = 8;
@@ -413,7 +418,7 @@ namespace GroupProject_106
             this.b_0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b_0.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.b_0.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.b_0.Location = new System.Drawing.Point(219, 132);
+            this.b_0.Location = new System.Drawing.Point(223, 99);
             this.b_0.Name = "b_0";
             this.b_0.Size = new System.Drawing.Size(40, 37);
             this.b_0.TabIndex = 7;
@@ -427,7 +432,7 @@ namespace GroupProject_106
             this.b_9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b_9.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.b_9.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.b_9.Location = new System.Drawing.Point(172, 132);
+            this.b_9.Location = new System.Drawing.Point(176, 99);
             this.b_9.Name = "b_9";
             this.b_9.Size = new System.Drawing.Size(40, 37);
             this.b_9.TabIndex = 6;
@@ -441,7 +446,7 @@ namespace GroupProject_106
             this.b_8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b_8.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.b_8.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.b_8.Location = new System.Drawing.Point(125, 132);
+            this.b_8.Location = new System.Drawing.Point(129, 99);
             this.b_8.Name = "b_8";
             this.b_8.Size = new System.Drawing.Size(40, 37);
             this.b_8.TabIndex = 5;
@@ -455,7 +460,7 @@ namespace GroupProject_106
             this.b_4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b_4.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.b_4.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.b_4.Location = new System.Drawing.Point(172, 89);
+            this.b_4.Location = new System.Drawing.Point(176, 56);
             this.b_4.Name = "b_4";
             this.b_4.Size = new System.Drawing.Size(40, 37);
             this.b_4.TabIndex = 4;
@@ -469,7 +474,7 @@ namespace GroupProject_106
             this.b_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b_3.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.b_3.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.b_3.Location = new System.Drawing.Point(125, 89);
+            this.b_3.Location = new System.Drawing.Point(129, 56);
             this.b_3.Name = "b_3";
             this.b_3.Size = new System.Drawing.Size(40, 37);
             this.b_3.TabIndex = 3;
@@ -483,7 +488,7 @@ namespace GroupProject_106
             this.b_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b_2.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.b_2.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.b_2.Location = new System.Drawing.Point(80, 89);
+            this.b_2.Location = new System.Drawing.Point(84, 56);
             this.b_2.Name = "b_2";
             this.b_2.Size = new System.Drawing.Size(40, 37);
             this.b_2.TabIndex = 2;
@@ -497,7 +502,7 @@ namespace GroupProject_106
             this.b_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b_1.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.b_1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.b_1.Location = new System.Drawing.Point(36, 89);
+            this.b_1.Location = new System.Drawing.Point(40, 56);
             this.b_1.Name = "b_1";
             this.b_1.Size = new System.Drawing.Size(40, 37);
             this.b_1.TabIndex = 1;
@@ -507,15 +512,13 @@ namespace GroupProject_106
             // 
             // b_Count
             // 
-            this.b_Count.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
             this.b_Count.BackColor = System.Drawing.SystemColors.Highlight;
             this.b_Count.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b_Count.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.b_Count.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.b_Count.Location = new System.Drawing.Point(2, 360);
+            this.b_Count.Location = new System.Drawing.Point(2, 291);
             this.b_Count.Name = "b_Count";
-            this.b_Count.Size = new System.Drawing.Size(292, 43);
+            this.b_Count.Size = new System.Drawing.Size(292, 50);
             this.b_Count.TabIndex = 0;
             this.b_Count.Text = "Count In Mind";
             this.b_Count.UseVisualStyleBackColor = false;
@@ -741,12 +744,52 @@ namespace GroupProject_106
             this.l_y.Size = new System.Drawing.Size(0, 20);
             this.l_y.TabIndex = 5;
             // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.98592F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 69.01408F));
+            this.tableLayoutPanel2.Controls.Add(this.label5, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.l_Result, 1, 0);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(8, 136);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(284, 45);
+            this.tableLayoutPanel2.TabIndex = 4;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(3, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(82, 45);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Result:";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // l_Result
+            // 
+            this.l_Result.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.l_Result.AutoSize = true;
+            this.l_Result.Location = new System.Drawing.Point(91, 0);
+            this.l_Result.Name = "l_Result";
+            this.l_Result.Size = new System.Drawing.Size(190, 45);
+            this.l_Result.TabIndex = 1;
+            this.l_Result.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(884, 542);
+            this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.GraphPanel);
             this.Controls.Add(this.panel2);
@@ -767,6 +810,8 @@ namespace GroupProject_106
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.YMax)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.YMin)).EndInit();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -815,5 +860,8 @@ namespace GroupProject_106
         private NumericUpDown YMin;
         private Label l_x;
         private Label l_y;
+        private TableLayoutPanel tableLayoutPanel2;
+        private Label label5;
+        private Label l_Result;
     }
 }

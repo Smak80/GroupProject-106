@@ -13,7 +13,6 @@ using System.Xml.Linq;
 using WinFormsApp1;
 using static System.Windows.Forms.DataFormats;
 using System.Linq;
-using Test_Graph_painting;
 
 namespace GroupProject_106
 {
@@ -24,7 +23,8 @@ namespace GroupProject_106
         private int b;
         private bool flag = false;
         private Painter g;
-        
+
+        ListBox listbox10 = new ListBox();
         List<string> inputs = new List<string>();
         //BindingList<Inputs> input = new BindingList<Inputs>();
         //BindingList<Const> constants = new BindingList<Const>();
@@ -56,11 +56,6 @@ namespace GroupProject_106
         {
             Button B = (Button)sender;
             Formula.Text = Formula.Text + B.Text;
-        }
-
-        private void Formula_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void button9_Click(object sender, EventArgs e)
@@ -174,17 +169,14 @@ namespace GroupProject_106
                 case "sin()":
                     Formula.Text = Formula.Text + "sin(";
                     break;
-                case "tg()":
-                    Formula.Text = Formula.Text + "tg(";
+                case "tan()":
+                    Formula.Text = Formula.Text + "tan(";
                     break;
-                case "ctg()":
-                    Formula.Text = Formula.Text + "ctg(";
+                case "cot()":
+                    Formula.Text = Formula.Text + "cot(";
                     break;
                 case "ln()":
                     Formula.Text = Formula.Text + "ln(";
-                    break;
-                case "log(x,y)":
-                    Formula.Text = Formula.Text + "log(";
                     break;
                 case "pi":
                     Formula.Text = Formula.Text + "pi";
@@ -268,7 +260,8 @@ namespace GroupProject_106
         private void button26_Click(object sender, EventArgs e)
         {
             var frm2 = new Const(constants, flag);
-            ListBox listbox10 = new ListBox();
+            flag = true;
+            
             frm2.ShowDialog();
             listbox10.Items.Clear();
             foreach (var constantValue in constants)

@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Test_Graph_painting
+namespace GroupProject_106
 {
     public class Painter
     {
@@ -73,6 +73,7 @@ namespace Test_Graph_painting
                 diffX = Math.Abs(U - L) / 1;
                 diffY = (Math.Abs(Ymax) + Math.Abs(Ymin)) / 1;
 
+
                 multiplierX = containerSize.Width / diffX;
                 multiplierY = containerSize.Height / diffY;
 
@@ -112,13 +113,36 @@ namespace Test_Graph_painting
                 //draw x lines
                 double c = 0;
                 double cond;
-                if (multiplierX >= 50) cond = 1;
-                else if (multiplierX <= 5) cond = 10;
+                double sum = 0;
+                if (multiplierX >= 17)
+                {
+                    cond = 0.1;
+                    sum = 0.05;
+                }
+                else if (multiplierX <= 15)
+                {
+                    cond = 10;
+                    sum = 1;
+                }
+
                 else cond = Math.Round(multiplierX);
-                for (double i = 0; i <= containerSize.Width; i += multiplierX)
+                for (double i = X; i <= containerSize.Width; i += multiplierX)
                 {
 
-                    if (c == cond || i == 0)
+                    if (c == cond)
+                    {
+                        mainGraphics.DrawLine(p, (int)(i), (int)(Y - 10), (int)(i), (int)(Y + 10));
+                        mainGraphics.DrawString(Math.Round(Xmin + 1 * i / multiplierX, 2).ToString(), Control.DefaultFont, brush, new Point((int)i, (int)(Y + 15)));
+                        c = 0;
+                    }
+                    mainGraphics.DrawLine(p, (int)(i), (int)(Y - 5), (int)(i), (int)(Y + 5));
+                    c += sum; ;
+                }
+                c = 0;
+                for (double i = X; i >=0 ; i -= multiplierX)
+                {
+
+                    if (c == cond)
                     {
                         mainGraphics.DrawLine(p, (int)(i), (int)(Y - 10), (int)(i), (int)(Y + 10));
                         mainGraphics.DrawString(Math.Round(Xmin + 1 * i / multiplierX, 2).ToString(), Control.DefaultFont, brush, new Point((int)i, (int)(Y + 15)));
@@ -126,7 +150,7 @@ namespace Test_Graph_painting
                     }
                     mainGraphics.DrawLine(p, (int)(i), (int)(Y - 5), (int)(i), (int)(Y + 5));
                     c++;
-                } 
+                }
             }
             
         }
@@ -156,47 +180,56 @@ namespace Test_Graph_painting
             var a = p.Brush;
             double c = 0;
             double condit;
-
+            double sum = 0;
             double upperDiff = Y / Ymax;
 
-            if (upperDiff >= 25) condit = 1;
-            else if (upperDiff <= 5) condit = 10;
-            else condit = Math.Round(upperDiff);
+            if (multiplierY >= 17)
+            {
+                condit = 0.1;
+                sum = 0.05;
+            }
+
+            else if (multiplierY <= 15)
+            {
+                condit = 10;
+                sum = 1;
+            }
+            else condit = Math.Round(multiplierY);
 
             
 
-            for (double i = 0; i <= Y; i += upperDiff)
+            for (double i = Y; i >= 0; i -= multiplierY)
             {
-                if (c == condit||i==0)
+                if (c == condit)
                 {
 
                         mainGraphics.DrawLine(p, (int)cond - 10, (int)i, (int)cond + 10, (int)i);
-                        mainGraphics.DrawString(Math.Round(Ymax - i / upperDiff, 2).ToString(), Control.DefaultFont, a, new Point((int)(cond <= 0 ? 40 : cond - 40), (int)i));
+                        mainGraphics.DrawString(Math.Round((Y- i) / multiplierY, 2).ToString(), Control.DefaultFont, a, new Point((int)(cond <= 0 ? 40 : cond - 40), (int)i));
                     c = 0;
                 }
                 else
                 {
                     mainGraphics.DrawLine(p,(int) cond-5, (int)i, (int)cond+5, (int)i);
                 }
-                c++;
+                c+=sum;
             }
 
             double condit2;
 
             double lowerDiff = containerSize.Height / 2 / Math.Abs(Ymin);
-            if (lowerDiff >= 25) condit2 = 1;
-            else if (lowerDiff <= 5) condit2 = 10;
-            else condit2 = Math.Round(lowerDiff);
+            if (multiplierY >= 25) condit2 = 1;
+            else if (multiplierY <= 10) condit2 = 10;
+            else condit2 = Math.Round(multiplierY);
 
 
-
-            for (double i = containerSize.Height;i>Y ; i -= lowerDiff)
+            c = 0;
+            for (double i = Y;i<=containerSize.Height ; i += multiplierY)
             {
-                if (c == condit2 || i == containerSize.Height)
+                if (c == condit)
                 {
 
                     mainGraphics.DrawLine(p, (int)cond - 10, (int)i, (int)cond + 10, (int)i);
-                    double res = -Math.Round(Ymin + i / lowerDiff, 2);
+                    double res = -Math.Round((i-Y) / multiplierY, 2);
                     mainGraphics.DrawString(Math.Round(res).ToString(), Control.DefaultFont, a, new Point((int)(cond <= 0 ? 40 : cond - 40), (int)i));
                     c = 0;
                 }
@@ -204,8 +237,10 @@ namespace Test_Graph_painting
                 {
                     mainGraphics.DrawLine(p, (int)cond - 5, (int)i, (int)cond + 5, (int)i);
                 }
-                c++;
+                c += sum; ;
             }
+            mainGraphics.DrawString(0.ToString(), Control.DefaultFont, a, new Point((int)(cond <= 0 ? 40 : cond - 40), (int)Y));
+
         }
     }
 }

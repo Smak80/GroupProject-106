@@ -34,7 +34,6 @@ namespace GroupProject_106
             this.button26 = new System.Windows.Forms.Button();
             this.button24 = new System.Windows.Forms.Button();
             this.Accuracy = new System.Windows.Forms.NumericUpDown();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.b_Count = new System.Windows.Forms.Button();
             this.button22 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -88,6 +87,7 @@ namespace GroupProject_106
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
             this.label7 = new System.Windows.Forms.Label();
             this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Accuracy)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LowerIntegralRange)).BeginInit();
@@ -140,6 +140,7 @@ namespace GroupProject_106
             this.button26.TabIndex = 38;
             this.button26.Text = "Const";
             this.button26.UseVisualStyleBackColor = false;
+            this.button26.Click += new System.EventHandler(this.button26_Click);
             // 
             // button24
             // 
@@ -156,6 +157,7 @@ namespace GroupProject_106
             this.button24.TabIndex = 36;
             this.button24.Text = "⏱";
             this.button24.UseVisualStyleBackColor = true;
+            this.button24.Click += new System.EventHandler(this.button24_Click);
             // 
             // Accuracy
             // 
@@ -190,20 +192,6 @@ namespace GroupProject_106
             0,
             196608});
             // 
-            // textBox2
-            // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.textBox2.Location = new System.Drawing.Point(3, 2);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(61, 16);
-            this.textBox2.TabIndex = 21;
-            this.textBox2.Text = "Delta:";
-            // 
             // b_Count
             // 
             this.b_Count.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -220,6 +208,7 @@ namespace GroupProject_106
             this.b_Count.TabIndex = 0;
             this.b_Count.Text = "Count In Mind";
             this.b_Count.UseVisualStyleBackColor = false;
+            this.b_Count.Click += new System.EventHandler(this.Count_Click);
             // 
             // button22
             // 
@@ -1034,6 +1023,7 @@ namespace GroupProject_106
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(207, 23);
             this.comboBox1.TabIndex = 1;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // tableLayoutPanel4
             // 
@@ -1117,7 +1107,7 @@ namespace GroupProject_106
             this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.5F));
             this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.5F));
             this.tableLayoutPanel11.Controls.Add(this.Accuracy, 1, 0);
-            this.tableLayoutPanel11.Controls.Add(this.textBox2, 0, 0);
+            this.tableLayoutPanel11.Controls.Add(this.label8, 0, 0);
             this.tableLayoutPanel11.Location = new System.Drawing.Point(3, 35);
             this.tableLayoutPanel11.Name = "tableLayoutPanel11";
             this.tableLayoutPanel11.RowCount = 1;
@@ -1151,6 +1141,21 @@ namespace GroupProject_106
             this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel12.Size = new System.Drawing.Size(291, 26);
             this.tableLayoutPanel12.TabIndex = 6;
+            // 
+            // label8
+            // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label8.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label8.Location = new System.Drawing.Point(3, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(61, 18);
+            this.label8.TabIndex = 23;
+            this.label8.Text = "Delta:";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
@@ -1202,7 +1207,6 @@ namespace GroupProject_106
         private Panel panel2;
         private Button b_Count;
         private NumericUpDown Accuracy;
-        private TextBox textBox2;
         private Label label1;
         private Label label2;
         private TextBox Formula;
@@ -1257,5 +1261,6 @@ namespace GroupProject_106
         private TableLayoutPanel tableLayoutPanel11;
         private Label label7;
         private TableLayoutPanel tableLayoutPanel12;
+        private Label label8;
     }
 }

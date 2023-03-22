@@ -8,6 +8,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace WinFormsApp1
 {
@@ -22,9 +26,9 @@ namespace WinFormsApp1
             _constants = constants;
             if (flag == false)
             {
-                constants.Add(new() { Name = "a", Value = 0.0 });
-                constants.Add(new() { Name = "b", Value = 0.0 });
-                constants.Add(new() { Name = "c", Value = 0.0 });
+                //constants.Add(new() { Name = "a", Value = 0.0 });
+                //constants.Add(new() { Name = "b", Value = 0.0 });
+                //constants.Add(new() { Name = "c", Value = 0.0 });
             }
             dataGridView1.DataSource = _constants;
             dataGridView1.DataError += dataGridView1_DataError;

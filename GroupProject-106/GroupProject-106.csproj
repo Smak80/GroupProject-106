@@ -18,7 +18,6 @@
     <None Include="bin\Debug\net7.0-windows\Parsing.dll" />
     <None Include="bin\Debug\net7.0-windows\Parsing.exe" />
     <None Include="bin\Debug\net7.0-windows\Parsing.pdb" />
-    <None Include="Parsing.csproj" />
   </ItemGroup>
 
 </Project>

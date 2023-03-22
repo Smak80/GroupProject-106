@@ -42,85 +42,10 @@ namespace GroupProject_106
 
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-            //panel1.BackColor = Color.White;
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-            //panel2.BackColor = Color.Highlight;
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-            //panel3.BringToFront();
-        }
-
         private void label1_Click(object sender, EventArgs e)
         {
             Button B = (Button)sender;
             Formula.Text = Formula.Text + B.Text;
-        }
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-            Button One = (Button)sender;
-            Formula.Text = Formula.Text + One.Text;
-        }
-
-        private void button10_Click(object sender, EventArgs e)
-        {
-            Button Two = (Button)sender;
-            Formula.Text = Formula.Text + Two.Text;
-        }
-
-        private void button11_Click(object sender, EventArgs e)
-        {
-            Button Three = (Button)sender;
-            Formula.Text = Formula.Text + Three.Text;
-        }
-
-        private void button12_Click(object sender, EventArgs e)
-        {
-            Button Three = (Button)sender;
-            Formula.Text = Formula.Text + Three.Text;
-        }
-
-        private void button16_Click(object sender, EventArgs e)
-        {
-            Button Three = (Button)sender;
-            Formula.Text = Formula.Text + Three.Text;
-        }
-
-        private void button18_Click(object sender, EventArgs e)
-        {
-            Button Three = (Button)sender;
-            Formula.Text = Formula.Text + Three.Text;
-        }
-
-        private void button17_Click(object sender, EventArgs e)
-        {
-            Button Three = (Button)sender;
-            Formula.Text = Formula.Text + Three.Text;
-        }
-
-        private void button13_Click(object sender, EventArgs e)
-        {
-            Button Three = (Button)sender;
-            Formula.Text = Formula.Text + Three.Text;
-        }
-
-        private void button14_Click(object sender, EventArgs e)
-        {
-            Button Three = (Button)sender;
-            Formula.Text = Formula.Text + Three.Text;
-        }
-
-        private void button15_Click(object sender, EventArgs e)
-        {
-            Button Three = (Button)sender;
-            Formula.Text = Formula.Text + Three.Text;
         }
 
         private void button20_Click(object sender, EventArgs e)
@@ -128,38 +53,13 @@ namespace GroupProject_106
             Formula.Text = "";
         }
 
-        private void button6_Click(object sender, EventArgs e)
-        {
-            Button Three = (Button)sender;
-            Formula.Text = Formula.Text + Three.Text;
-        }
-
-        private void button21_Click(object sender, EventArgs e)
-        {
-            Button Three = (Button)sender;
-            Formula.Text = Formula.Text + Three.Text;
-        }
-
         private void button23_Click(object sender, EventArgs e)
         {
             Formula.Text = Formula.Text + "(-";
         }
 
-        private void button7_Click(object sender, EventArgs e)
-        {
-            Button Three = (Button)sender;
-            Formula.Text = Formula.Text + Three.Text;
-        }
-
         private void button19_Click(object sender, EventArgs e)
         {
-            /*string[] arr = Formula.Lines.ToArray();
-            for (int i = 0; i < arr.Length; i++)
-            {
-                arr[i] = arr[i].Remove(arr.Length, 1);
-            }
-            Formula.Lines = arr;
-            */
             if (Formula.Text != "") Formula.Text = Formula.Text.Remove(Formula.Text.Length - 1);
         }
 
@@ -197,11 +97,6 @@ namespace GroupProject_106
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Button Three = (Button)sender;
-            Formula.Text = Formula.Text + Three.Text;
-        }
 
         private void UpperIntegralRange_ValueChanged(object sender, EventArgs e)
         {
@@ -235,7 +130,7 @@ namespace GroupProject_106
             {
                 sw.Stop();
                 l_Result.Text += double.Round(Consumer.Integral, Order((double)Accuracy.Value)).ToString();
-                l_time.Text = "Time: " + sw.ElapsedMilliseconds + "ms";
+                l_timeResult.Text = sw.ElapsedMilliseconds + "ms";
                 LowerIntegralRange.Enabled = true;
                 UpperIntegralRange.Enabled = true;
                 Accuracy.Enabled = true;
@@ -295,8 +190,8 @@ namespace GroupProject_106
             InputDataCheckAndCorrect check = new InputDataCheckAndCorrect(Formula.Text ?? "", listbox10, (double)LowerIntegralRange.Value, (double)UpperIntegralRange.Value);
             if (check.InputDataDiagnostic())
             {
-                // Graph inisiallise
-                g.initCoord((double)LowerIntegralRange.Value, (double)UpperIntegralRange.Value, (double)YMax.Value, (double)YMin.Value, (double)Accuracy.Value);
+                // Graph initialization
+                g.initCoord((double)LowerIntegralRange.Value,(double)UpperIntegralRange.Value,(double)YMax.Value, (double)YMin.Value, (double)Accuracy.Value);
                 g.PaintCordPlane();
 
                 // izmenenaya stroka dlya adeli 
@@ -305,7 +200,7 @@ namespace GroupProject_106
                 double deltha = (double)Accuracy.Value;
                 double start = (double)LowerIntegralRange.Value;
                 double end = (double)UpperIntegralRange.Value;
-                l_time.Text = "";
+                l_timeResult.Text = "";
                 LowerIntegralRange.Enabled = false;
                 UpperIntegralRange.Enabled = false;
                 Accuracy.Enabled = false;
@@ -344,27 +239,8 @@ namespace GroupProject_106
                 p1.Start();
 
 
-
-
-                //exprTree.ExprTreeTarvase(exprTree.Root, 2); 
-
-                /*
-                 
-                 zdes proishodit parsing
- 
-                 i schet integrala
-                 
-                 */
-
-
                 //Formula.Clear();
             }
-        }
-
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
-        {
-            //if (flag == false) richTextBox1.Visible = false;
-            //else if (flag == true) richTextBox1.Show();
         }
 
         private void button24_Click(object sender, EventArgs e)
@@ -409,16 +285,6 @@ namespace GroupProject_106
             if (e.Y > g.Y) l_y.Text = (0-e.Y / g.multiplierX).ToString();
             // l_x.Text = (g.X + (double)(e.X) / g.multiplierX).ToString();
             //l_y.Text = (g.Y - (e.Y < 0 ? 0 : e.Y / g.multiplierY)).ToString();*/
-        }
-
-        private void panel1_Paint_1(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint_1(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

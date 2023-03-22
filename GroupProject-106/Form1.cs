@@ -301,7 +301,9 @@ namespace GroupProject_106
 
                 // izmenenaya stroka dlya adeli 
                 string expression = check.ExprChangeForParsing();
-                ExprTree tree = new ExprTree(expression);
+                Parsing parse = new Parsing(expression);
+                List<string> parsingList = parse.StartParse();
+                ExpressionTree tree = new ExpressionTree(parsingList);
                 double deltha = (double)Accuracy.Value;
                 double start = (double)LowerIntegralRange.Value;
                 double end = (double)UpperIntegralRange.Value;

@@ -31,8 +31,10 @@ namespace GroupProject_106
 
         double F(double x)
         {
-            return tree.ExprTreeTarvase(tree.Root, x);
-            //return Math.Pow(Math.Sin(2 * x), 2) - Math.Cos(3 * (x * x * x * x));
+            //return tree.ExprTreeTarvase(tree.Root, x);
+            //return Math.Pow(Math.Sin(2 * x), 2) - Math.Cos(3 * (x * x * x * x)); works
+            //return Math.Tan(Math.Log(x * x)) * x; //does not work for more than 1 cores
+            return x;
         }
 
         public void Start()
@@ -46,7 +48,7 @@ namespace GroupProject_106
 
 
             object locker = new object();
-            var threadCount = 1;
+            var threadCount = 3;
             var counter = 0;
             var threadcounter = 0;
             for (int tn = 0; tn < threadCount; tn++)
@@ -55,7 +57,7 @@ namespace GroupProject_106
                 {   
                     List<double[]> coordinates = new List<double[]>();
                     double result = 0;
-                    for (double i = a; i <= b; i += dx * threadCount)
+                    for (double i = a + tn*dx; i < b; i += dx * threadCount)
                     {
                         double[] coord = new double[] { i, F(i) };
                         coordinates.Add(coord);

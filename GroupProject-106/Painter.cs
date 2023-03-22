@@ -165,7 +165,7 @@ namespace GroupProject_106
                 PointF[] pois = new PointF[2] { points[points.Length - 2], points[points.Length - 1] };
                
                 k++;
-                mainGraphics.FillRectangle(brushR, (int)(X + x * multiplierX), (int)(Y - (y < 0 ? 0 : y * multiplierY)), (int)(step * multiplierX) < 1 ? 1 : (int)(step * multiplierX)+1, (int)(Math.Abs(y) * multiplierY));
+                mainGraphics.FillRectangle(brushR, (int)(X + x * multiplierX), (int)(Y - (y < 0 ? 0 : y * multiplierY)), (int)(step * multiplierX) < 1 ? 1 : (int)(step * multiplierX)+7, (int)(Math.Abs(y) * multiplierY));
             }
             
         }

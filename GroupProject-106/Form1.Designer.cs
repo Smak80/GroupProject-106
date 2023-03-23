@@ -31,7 +31,6 @@ namespace GroupProject_106
         private void InitializeComponent()
         {
             this.label6 = new System.Windows.Forms.Label();
-            this.button26 = new System.Windows.Forms.Button();
             this.button24 = new System.Windows.Forms.Button();
             this.Accuracy = new System.Windows.Forms.NumericUpDown();
             this.b_Count = new System.Windows.Forms.Button();
@@ -84,7 +83,6 @@ namespace GroupProject_106
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
@@ -104,7 +102,6 @@ namespace GroupProject_106
             this.tableLayoutPanel8.SuspendLayout();
             this.tableLayoutPanel9.SuspendLayout();
             this.tableLayoutPanel10.SuspendLayout();
-            this.tableLayoutPanel11.SuspendLayout();
             this.tableLayoutPanel12.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -124,36 +121,18 @@ namespace GroupProject_106
             this.label6.Text = "Functions";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button26
-            // 
-            this.button26.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button26.BackColor = System.Drawing.SystemColors.Window;
-            this.button26.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button26.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button26.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.button26.Location = new System.Drawing.Point(3, 2);
-            this.button26.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button26.Name = "button26";
-            this.button26.Size = new System.Drawing.Size(205, 28);
-            this.button26.TabIndex = 38;
-            this.button26.Text = "Const";
-            this.button26.UseVisualStyleBackColor = false;
-            this.button26.Click += new System.EventHandler(this.button26_Click);
-            // 
             // button24
             // 
             this.button24.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.button24.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button24.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button24.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button24.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.button24.Location = new System.Drawing.Point(220, 2);
+            this.button24.Location = new System.Drawing.Point(235, 2);
             this.button24.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(63, 58);
+            this.button24.Size = new System.Drawing.Size(48, 28);
             this.button24.TabIndex = 36;
             this.button24.Text = "⏱";
             this.button24.UseVisualStyleBackColor = true;
@@ -171,7 +150,7 @@ namespace GroupProject_106
             0,
             0,
             655360});
-            this.Accuracy.Location = new System.Drawing.Point(70, 2);
+            this.Accuracy.Location = new System.Drawing.Point(76, 2);
             this.Accuracy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Accuracy.Maximum = new decimal(new int[] {
             10,
@@ -184,7 +163,7 @@ namespace GroupProject_106
             0,
             655360});
             this.Accuracy.Name = "Accuracy";
-            this.Accuracy.Size = new System.Drawing.Size(127, 23);
+            this.Accuracy.Size = new System.Drawing.Size(147, 23);
             this.Accuracy.TabIndex = 22;
             this.Accuracy.Value = new decimal(new int[] {
             1,
@@ -201,10 +180,10 @@ namespace GroupProject_106
             this.b_Count.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b_Count.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.b_Count.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.b_Count.Location = new System.Drawing.Point(4, 313);
+            this.b_Count.Location = new System.Drawing.Point(4, 283);
             this.b_Count.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.b_Count.Name = "b_Count";
-            this.b_Count.Size = new System.Drawing.Size(286, 51);
+            this.b_Count.Size = new System.Drawing.Size(286, 81);
             this.b_Count.TabIndex = 0;
             this.b_Count.Text = "Count In Mind";
             this.b_Count.UseVisualStyleBackColor = false;
@@ -334,13 +313,15 @@ namespace GroupProject_106
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.l_timeResult.AutoSize = true;
+            this.l_timeResult.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.l_timeResult.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.l_timeResult.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.l_timeResult.ForeColor = System.Drawing.SystemColors.Highlight;
             this.l_timeResult.Location = new System.Drawing.Point(97, 32);
             this.l_timeResult.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.l_timeResult.Name = "l_timeResult";
             this.l_timeResult.Size = new System.Drawing.Size(195, 25);
             this.l_timeResult.TabIndex = 0;
+            this.l_timeResult.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // GraphPanel
             // 
@@ -513,6 +494,8 @@ namespace GroupProject_106
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.l_Result.AutoSize = true;
+            this.l_Result.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.l_Result.ForeColor = System.Drawing.SystemColors.Highlight;
             this.l_Result.Location = new System.Drawing.Point(98, 3);
             this.l_Result.Name = "l_Result";
             this.l_Result.Size = new System.Drawing.Size(193, 26);
@@ -1045,8 +1028,8 @@ namespace GroupProject_106
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.016394F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.85246F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.65574F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 23.49727F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(294, 367);
             this.tableLayoutPanel4.TabIndex = 5;
             // 
@@ -1073,15 +1056,15 @@ namespace GroupProject_106
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel9.ColumnCount = 2;
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75.87412F));
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.12587F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 81.11888F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.88112F));
             this.tableLayoutPanel9.Controls.Add(this.button24, 1, 0);
             this.tableLayoutPanel9.Controls.Add(this.tableLayoutPanel10, 0, 0);
             this.tableLayoutPanel9.Location = new System.Drawing.Point(4, 245);
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
             this.tableLayoutPanel9.RowCount = 1;
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(286, 62);
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(286, 32);
             this.tableLayoutPanel9.TabIndex = 9;
             // 
             // tableLayoutPanel10
@@ -1089,31 +1072,17 @@ namespace GroupProject_106
             this.tableLayoutPanel10.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel10.ColumnCount = 1;
+            this.tableLayoutPanel10.ColumnCount = 2;
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel10.Controls.Add(this.button26, 0, 0);
-            this.tableLayoutPanel10.Controls.Add(this.tableLayoutPanel11, 0, 1);
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 153F));
+            this.tableLayoutPanel10.Controls.Add(this.Accuracy, 1, 0);
+            this.tableLayoutPanel10.Controls.Add(this.label8, 0, 0);
             this.tableLayoutPanel10.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel10.Name = "tableLayoutPanel10";
-            this.tableLayoutPanel10.RowCount = 2;
+            this.tableLayoutPanel10.RowCount = 1;
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
-            this.tableLayoutPanel10.Size = new System.Drawing.Size(211, 56);
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(226, 26);
             this.tableLayoutPanel10.TabIndex = 0;
-            // 
-            // tableLayoutPanel11
-            // 
-            this.tableLayoutPanel11.ColumnCount = 2;
-            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.5F));
-            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.5F));
-            this.tableLayoutPanel11.Controls.Add(this.Accuracy, 1, 0);
-            this.tableLayoutPanel11.Controls.Add(this.label8, 0, 0);
-            this.tableLayoutPanel11.Location = new System.Drawing.Point(3, 35);
-            this.tableLayoutPanel11.Name = "tableLayoutPanel11";
-            this.tableLayoutPanel11.RowCount = 1;
-            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel11.Size = new System.Drawing.Size(200, 18);
-            this.tableLayoutPanel11.TabIndex = 39;
             // 
             // label8
             // 
@@ -1125,7 +1094,7 @@ namespace GroupProject_106
             this.label8.ForeColor = System.Drawing.SystemColors.Highlight;
             this.label8.Location = new System.Drawing.Point(3, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(61, 18);
+            this.label8.Size = new System.Drawing.Size(67, 26);
             this.label8.TabIndex = 23;
             this.label8.Text = "Delta:";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1195,8 +1164,7 @@ namespace GroupProject_106
             this.tableLayoutPanel8.PerformLayout();
             this.tableLayoutPanel9.ResumeLayout(false);
             this.tableLayoutPanel10.ResumeLayout(false);
-            this.tableLayoutPanel11.ResumeLayout(false);
-            this.tableLayoutPanel11.PerformLayout();
+            this.tableLayoutPanel10.PerformLayout();
             this.tableLayoutPanel12.ResumeLayout(false);
             this.tableLayoutPanel12.PerformLayout();
             this.ResumeLayout(false);
@@ -1214,7 +1182,6 @@ namespace GroupProject_106
         private NumericUpDown LowerIntegralRange;
         private Button button22;
         private Button button24;
-        private Button button26;
         private Panel GraphPanel;
         private TableLayoutPanel tableLayoutPanel1;
         private Label label3;
@@ -1258,7 +1225,6 @@ namespace GroupProject_106
         private TableLayoutPanel tableLayoutPanel8;
         private TableLayoutPanel tableLayoutPanel9;
         private TableLayoutPanel tableLayoutPanel10;
-        private TableLayoutPanel tableLayoutPanel11;
         private Label label7;
         private TableLayoutPanel tableLayoutPanel12;
         private Label label8;

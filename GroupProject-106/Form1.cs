@@ -146,6 +146,9 @@ namespace GroupProject_106
                 b_7.Enabled = true;
                 b_8.Enabled = true;
                 b_9.Enabled = true;
+                button1.Enabled = true;
+                button24.Enabled = true;
+                //button26.Enabled = true;
                 b_Back.Enabled = true;
                 b_Comma.Enabled = true;
                 b_Count.Enabled = true;
@@ -209,6 +212,7 @@ namespace GroupProject_106
                 Formula.Enabled = false;
                 comboBox1.Enabled = false;
                 b_0.Enabled = false;
+                button1.Enabled = false;
                 b_1.Enabled = false;
                 b_2.Enabled = false;
                 b_3.Enabled = false;
@@ -218,6 +222,8 @@ namespace GroupProject_106
                 b_7.Enabled = false;
                 b_8.Enabled = false;
                 b_9.Enabled = false;
+                button24.Enabled = false;
+                //button26.Enabled = false;
                 b_Back.Enabled = false;
                 b_Comma.Enabled = false;
                 b_Count.Enabled = false;

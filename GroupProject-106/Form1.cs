@@ -292,7 +292,16 @@ namespace GroupProject_106
                 inputs.Add(Formula.Text);
             }
 
-            InputDataCheckAndCorrect check = new InputDataCheckAndCorrect(Formula.Text ?? "", listbox10, (double)LowerIntegralRange.Value, (double)UpperIntegralRange.Value);
+            InputDataCheckAndCorrect check = new InputDataCheckAndCorrect(Formula.Text ?? "", (double)LowerIntegralRange.Value, (double)UpperIntegralRange.Value);
+            if (check.NamesConstants.Count != 0)
+            {
+                var frm2 = new Const(constants, check.NamesConstants);
+                frm2.ShowDialog();
+                check.RenameConsts(constants);
+                constants.Clear();
+                Formula.Text = check.PullExpr();
+            }
+            check.ChangeBinMinusToUnary();
             if (check.InputDataDiagnostic())
             {
                 // Graph inisiallise
@@ -300,8 +309,7 @@ namespace GroupProject_106
                 g.PaintCordPlane();
 
                 // izmenenaya stroka dlya adeli 
-                string expression = check.ExprChangeForParsing();
-                Parsing parse = new Parsing(expression);
+                Parsing parse = new Parsing(check.PullExpr());
                 List<string> parsingList = parse.StartParse();
                 ExpressionTree tree = new ExpressionTree(parsingList);
                 double deltha = (double)Accuracy.Value;
@@ -383,9 +391,10 @@ namespace GroupProject_106
         {
             Formula.Text = Formula.Text + "^(";
         }
-
+        
         private void button26_Click(object sender, EventArgs e)
         {
+            /*
             var frm2 = new Const(constants, flag);
             flag = true;
 
@@ -396,6 +405,7 @@ namespace GroupProject_106
                 listbox10.Items.Add(constantValue.ToString()); //ñâÿçûâàíèå äàííûõ
             }
             //Const.Show();
+        */
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)

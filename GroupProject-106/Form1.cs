@@ -15,6 +15,7 @@ using static System.Windows.Forms.DataFormats;
 using System.Linq;
 using System.Reflection.Emit;
 using System.Diagnostics;
+using System.CodeDom;
 
 namespace GroupProject_106
 {
@@ -123,12 +124,12 @@ namespace GroupProject_106
             return -1;
         }
 
-        public void FinishFunc()
+        public void FinishFunc(ExpressionTree tree)
         {
-            if (InvokeRequired) l_Result.Invoke(FinishFunc);
+            sw.Stop();
+            if (InvokeRequired) l_Result.Invoke(FinishFunc, tree);
             else
             {
-                sw.Stop();
                 l_Result.Text += double.Round(Consumer.Integral, Order((double)Accuracy.Value)).ToString();
                 l_timeResult.Text = sw.ElapsedMilliseconds + "ms";
                 LowerIntegralRange.Enabled = true;
@@ -161,6 +162,10 @@ namespace GroupProject_106
                 b_Power.Enabled = true;
                 b_RightBracket.Enabled = true;
                 b_X.Enabled = true;
+                for (double i = (double)LowerIntegralRange.Value; i < (double)UpperIntegralRange.Value; i += (double)Accuracy.Value)
+                {
+                    g.PaintGraph(i, tree.Tarvase(i));
+                }
             }
         }
 
@@ -184,13 +189,21 @@ namespace GroupProject_106
 
         private void Count_Click(object sender, EventArgs e)
         {
-            l_Result.Text = "";
             if (Formula.Lines != null)
             {
                 inputs.Add(Formula.Text);
             }
 
-            InputDataCheckAndCorrect check = new InputDataCheckAndCorrect(Formula.Text ?? "", listbox10, (double)LowerIntegralRange.Value, (double)UpperIntegralRange.Value);
+            InputDataCheckAndCorrect check = new InputDataCheckAndCorrect(Formula.Text ?? "", (double)LowerIntegralRange.Value, (double)UpperIntegralRange.Value);
+            if (check.NamesConstants.Count != 0)
+            {
+                var frm2 = new Const(constants, check.NamesConstants);
+                frm2.ShowDialog();
+                check.RenameConsts(constants);
+                constants.Clear();
+                Formula.Text = check.PullExpr();
+            }
+            check.ChangeBinMinusToUnary();
             if (check.InputDataDiagnostic())
             {
                 // Graph initialization
@@ -198,14 +211,14 @@ namespace GroupProject_106
                 g.PaintCordPlane();
 
                 // izmenenaya stroka dlya adeli 
-                string expression = check.ExprChangeForParsing();
-                Parsing parse = new Parsing(expression);
+                Parsing parse = new Parsing(check.PullExpr());
                 List<string> parsingList = parse.StartParse();
                 ExpressionTree tree = new ExpressionTree(parsingList);
                 double deltha = (double)Accuracy.Value;
                 double start = (double)LowerIntegralRange.Value;
                 double end = (double)UpperIntegralRange.Value;
-                l_timeResult.Text = "";
+                l_Result.Text = "";
+                l_time.Text = "";
                 LowerIntegralRange.Enabled = false;
                 UpperIntegralRange.Enabled = false;
                 Accuracy.Enabled = false;
@@ -241,7 +254,6 @@ namespace GroupProject_106
                 sw.Start();
                 Producer p1 = new Producer(start, end, deltha, tree);
                 Consumer c = new Consumer();
-                p1.Draw += DrawFunc;
                 p1.Finish += FinishFunc;
                 c.Start(0.001);
                 p1.Start();
@@ -265,9 +277,10 @@ namespace GroupProject_106
         {
             Formula.Text = Formula.Text + "^(";
         }
-
+        
         private void button26_Click(object sender, EventArgs e)
         {
+            /*
             var frm2 = new Const(constants, flag);
             flag = true;
 
@@ -278,6 +291,7 @@ namespace GroupProject_106
                 listbox10.Items.Add(constantValue.ToString()); //ñâÿçûâàíèå äàííûõ
             }
             //Const.Show();
+        */
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)

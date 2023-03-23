@@ -189,10 +189,7 @@ namespace GroupProject_106
 
         private void Count_Click(object sender, EventArgs e)
         {
-            if (Formula.Lines != null)
-            {
-                inputs.Add(Formula.Text);
-            }
+            
 
             InputDataCheckAndCorrect check = new InputDataCheckAndCorrect(Formula.Text ?? "", (double)LowerIntegralRange.Value, (double)UpperIntegralRange.Value);
             if (check.NamesConstants.Count != 0)
@@ -206,6 +203,10 @@ namespace GroupProject_106
             check.ChangeBinMinusToUnary();
             if (check.InputDataDiagnostic())
             {
+                if (Formula.Lines != null)
+                {
+                    inputs.Add(Formula.Text);
+                }
                 // Graph initialization
                 g.initCoord((double)LowerIntegralRange.Value,(double)UpperIntegralRange.Value,(double)YMax.Value, (double)YMin.Value, (double)Accuracy.Value);
                 g.PaintCordPlane();
@@ -218,7 +219,7 @@ namespace GroupProject_106
                 double start = (double)LowerIntegralRange.Value;
                 double end = (double)UpperIntegralRange.Value;
                 l_Result.Text = "";
-                l_time.Text = "";
+                //l_time.Text = "";
                 LowerIntegralRange.Enabled = false;
                 UpperIntegralRange.Enabled = false;
                 Accuracy.Enabled = false;

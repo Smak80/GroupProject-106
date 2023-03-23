@@ -92,14 +92,13 @@ namespace GroupProject_106
                 {
                     if (!save.Equals("")) result.Add(save);
                 }
-                else if (IsOperator(expr[i] + "") || expr[i] == '(' || expr[i] == ')' || (expr[i] == ',' && i + 1 != expr.Length && expr[i + 1] == ' '))
+                else if (IsOperator(expr[i] + "") || expr[i] == '(' || expr[i] == ')' || expr[i] == ' ')
                 {
                     if (!save.Equals("")) result.Add(save);
                     save = "";
-                    if (expr[i] != ',') result.Add(expr[i] + "");
-                    else devidedFormula.Add(", ");
+                    if (expr[i] != ' ') result.Add(expr[i] + "");
                 }
-                else if (expr[i] != ' ')
+                else 
                 {
                     save += expr[i];
                 }

@@ -196,10 +196,10 @@ namespace GroupProject_106
             {
                 var frm2 = new Const(constants, check.NamesConstants);
                 frm2.ShowDialog();
-                constants.Clear();
-                Formula.Text = check.PullExpr();
             }
             check.RenameConsts(constants);
+            constants.Clear();
+            Formula.Text = check.PullExpr();
             check.ChangeBinMinusToUnary();
             if (check.InputDataDiagnostic())
             {

@@ -44,9 +44,9 @@ namespace GroupProject_106
             }
             for (int i = 0; i < devidedFormula.Count; i++)
             {
-                foreach (ConstantValues v in consts)
+                foreach (var v in namesAndConsts)
                 {
-                    if (devidedFormula[i].Equals(v.Name)) devidedFormula[i] = v.Value.ToString();
+                    if (devidedFormula[i].Equals(v.Key)) devidedFormula[i] = v.Value;
                 }
             }
         }
@@ -74,7 +74,7 @@ namespace GroupProject_106
             List<string> result = new List<string>();
             foreach (string s in devidedFormula)
             {
-                if (!IsOperator(s) && !IsFunc(s) && !s.Equals("(") && !IsNumber(s) && !s.Equals(")") && !s.Equals(", "))
+                if (!IsOperator(s) && !IsFunc(s) && !s.Equals("(") && !IsNumber(s) && !s.Equals(")") && !s.Equals(", ") && !s.Equals("e") && !s.Equals("pi"))
                 {
                     result.Add(s);
                 }

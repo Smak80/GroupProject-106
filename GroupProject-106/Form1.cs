@@ -220,6 +220,7 @@ namespace GroupProject_106
                 double end = (double)UpperIntegralRange.Value;
                 l_Result.Text = "";
                 //l_time.Text = "";
+                //
                 LowerIntegralRange.Enabled = false;
                 UpperIntegralRange.Enabled = false;
                 Accuracy.Enabled = false;

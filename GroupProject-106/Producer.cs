@@ -9,12 +9,10 @@ using System.Threading.Tasks;
 
 namespace GroupProject_106
 {
-    public delegate void Finishdelegate();
-    public delegate void Drawdelegate(List<double[]> coordinates);
+    public delegate void Finishdelegate(ExpressionTree tree);
     public class Producer
     {
         public event Finishdelegate? Finish;
-        public event Drawdelegate? Draw;
         double a;
         double b;
         double dx;
@@ -47,28 +45,20 @@ namespace GroupProject_106
             object locker = new object();
             var threadCount = 4;
             var counter = 0;
-            var threadcounter = 0;
             for (int tn = 0; tn < threadCount; tn++)
             {
                 var t = new Thread(() =>
                 {   
                     List<double[]> coordinates = new List<double[]>();
                     double result = 0;
-                    for (double i = a + tn*dx; i < b; i += dx * threadCount)
+                    for (double i = a + tn * dx; i < b; i += dx * threadCount)
                     {
-                        double[] coord = new double[] { i, F(i) };
-                        coordinates.Add(coord);
-                    }
-                    threadcounter++;
-                    if ( Draw != null)
-                        Draw(coordinates);
-                    foreach (var coord in coordinates)
-                    {
-                        result += coord[1] * dx;
+                        result += F(i) * dx;
                     }
                     CommonData.Put(result);
                     counter++;
-                    if (counter == threadCount && Finish != null) Finish();
+                    if (counter == threadCount && Finish != null)
+                        Finish(tree);
                 });
                 t.IsBackground = true;
                 t.Start();

@@ -15,6 +15,7 @@ using static System.Windows.Forms.DataFormats;
 using System.Linq;
 using System.Reflection.Emit;
 using System.Diagnostics;
+using System.CodeDom;
 
 namespace GroupProject_106
 {
@@ -228,12 +229,12 @@ namespace GroupProject_106
             return -1;
         }
 
-        public void FinishFunc()
+        public void FinishFunc(ExpressionTree tree)
         {
-            if (InvokeRequired) l_Result.Invoke(FinishFunc);
+            sw.Stop();
+            if (InvokeRequired) l_Result.Invoke(FinishFunc, tree);
             else
             {
-                sw.Stop();
                 l_Result.Text += double.Round(Consumer.Integral, Order((double)Accuracy.Value)).ToString();
                 l_time.Text = "Time: " + sw.ElapsedMilliseconds + "ms";
                 LowerIntegralRange.Enabled = true;
@@ -263,6 +264,10 @@ namespace GroupProject_106
                 b_Power.Enabled = true;
                 b_RightBracket.Enabled = true;
                 b_X.Enabled = true;
+                for (double i = (double)LowerIntegralRange.Value; i < (double)UpperIntegralRange.Value; i += (double)Accuracy.Value)
+                {
+                    g.PaintGraph(i, tree.Tarvase(i));
+                }
             }
         }
 
@@ -286,7 +291,6 @@ namespace GroupProject_106
 
         private void Count_Click(object sender, EventArgs e)
         {
-            l_Result.Text = "";
             if (Formula.Lines != null)
             {
                 inputs.Add(Formula.Text);
@@ -307,6 +311,7 @@ namespace GroupProject_106
                 double deltha = (double)Accuracy.Value;
                 double start = (double)LowerIntegralRange.Value;
                 double end = (double)UpperIntegralRange.Value;
+                l_Result.Text = "";
                 l_time.Text = "";
                 LowerIntegralRange.Enabled = false;
                 UpperIntegralRange.Enabled = false;
@@ -340,7 +345,6 @@ namespace GroupProject_106
                 sw.Start();
                 Producer p1 = new Producer(start, end, deltha, tree);
                 Consumer c = new Consumer();
-                p1.Draw += DrawFunc;
                 p1.Finish += FinishFunc;
                 c.Start(0.001);
                 p1.Start();

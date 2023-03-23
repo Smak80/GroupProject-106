@@ -65,8 +65,10 @@ namespace WinFormsApp1
             // Const
             // 
             this.ClientSize = new System.Drawing.Size(387, 479);
+            this.ControlBox = false;
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Const";
             this.Text = "Constants";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

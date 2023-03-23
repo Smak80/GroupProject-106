@@ -9,4 +9,15 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Content Include="bin\Debug\net7.0-windows\Parsing.deps.json" />
+    <Content Include="bin\Debug\net7.0-windows\Parsing.runtimeconfig.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="bin\Debug\net7.0-windows\Parsing.dll" />
+    <None Include="bin\Debug\net7.0-windows\Parsing.exe" />
+    <None Include="bin\Debug\net7.0-windows\Parsing.pdb" />
+  </ItemGroup>
+
 </Project>
